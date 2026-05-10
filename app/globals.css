@@ -953,6 +953,310 @@ h4 em,
 }
 
 /* ─────────────────────────────────────────────────────────────────────────
+   Thesis (dark editorial pull-quote)
+   ───────────────────────────────────────────────────────────────────────── */
+.sh-thesis {
+  background: var(--color-deep);
+  border: 1px solid var(--color-divider);
+  border-radius: var(--radius-xl);
+  padding: clamp(48px, 7vw, 96px);
+  position: relative;
+  overflow: hidden;
+}
+.sh-thesis::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(20, 184, 166, 0.025) 0,
+    rgba(20, 184, 166, 0.025) 1px,
+    transparent 1px,
+    transparent 18px
+  );
+  pointer-events: none;
+}
+.sh-thesis-quote {
+  font-size: clamp(36px, 5.4vw, 76px);
+  line-height: 1.05;
+  color: var(--color-ink);
+  margin: 0 0 28px;
+  max-width: 22ch;
+  position: relative;
+  font-weight: 700;
+}
+.sh-thesis-period {
+  color: var(--color-accent);
+}
+.sh-thesis-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--color-ink-2);
+  margin: 0;
+}
+.sh-thesis-meta::before {
+  content: "";
+  width: 28px;
+  height: 1px;
+  background: var(--color-accent);
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   What I do — 4 verbs
+   ───────────────────────────────────────────────────────────────────────── */
+.sh-verbs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--color-divider);
+  border: 1px solid var(--color-divider);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+@media (max-width: 760px) {
+  .sh-verbs {
+    grid-template-columns: 1fr;
+  }
+}
+.sh-verb {
+  background: var(--color-deep);
+  padding: clamp(24px, 3vw, 36px);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  transition: background 220ms var(--ease);
+}
+.sh-verb::after {
+  content: "";
+  position: absolute;
+  left: clamp(24px, 3vw, 36px);
+  right: clamp(24px, 3vw, 36px);
+  bottom: clamp(24px, 3vw, 36px);
+  height: 1px;
+  background: var(--color-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 380ms var(--ease);
+}
+.sh-verb:hover {
+  background: var(--color-charcoal);
+}
+.sh-verb:hover::after {
+  transform: scaleX(1);
+}
+.sh-verb-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+  margin-bottom: 6px;
+}
+.sh-verb h3 {
+  font-size: clamp(22px, 2vw, 28px);
+  margin: 0;
+}
+.sh-verb p {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--color-ink-2);
+  line-height: 1.55;
+  max-width: 36ch;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Leadership pillar
+   ───────────────────────────────────────────────────────────────────────── */
+.sh-leadership {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: clamp(28px, 4vw, 56px);
+  align-items: center;
+}
+@media (max-width: 760px) {
+  .sh-leadership {
+    grid-template-columns: 1fr;
+  }
+}
+.sh-leadership-portrait {
+  position: relative;
+  background: var(--color-deep);
+  border: 1px solid rgba(217, 226, 236, 0.12);
+  border-radius: var(--radius-lg);
+  padding: 14px;
+  max-width: 420px;
+  margin-inline: auto;
+}
+.sh-leadership-portrait::after {
+  content: "";
+  position: absolute;
+  left: 14px;
+  bottom: 6px;
+  width: 56px;
+  height: 1px;
+  background: var(--color-accent);
+}
+.sh-leadership-portrait img {
+  border-radius: var(--radius-md);
+  filter: grayscale(0.05) contrast(1.04);
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+.sh-leadership-body h2 {
+  font-size: clamp(28px, 3.5vw, 44px);
+  margin: 8px 0 16px;
+  max-width: 18ch;
+}
+.sh-leadership-body .sh-lead {
+  margin-bottom: 28px;
+}
+.sh-leadership-stats {
+  list-style: none;
+  margin: 0 0 24px;
+  padding: 18px 0 0;
+  border-top: 1px solid var(--color-divider);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+@media (max-width: 760px) {
+  .sh-leadership-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+.sh-leadership-stats li {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.sh-leadership-stats .figure {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 2.4vw, 32px);
+  font-weight: 700;
+  color: var(--color-ink);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.sh-leadership-stats .label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--color-ink-2);
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   AI pillar (light contrast section)
+   ───────────────────────────────────────────────────────────────────────── */
+.sh-ai-pillar {
+  background: var(--color-mist);
+  position: relative;
+}
+.sh-ai-pillar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    -8deg,
+    rgba(31, 94, 140, 0.04) 0,
+    rgba(31, 94, 140, 0.04) 1px,
+    transparent 1px,
+    transparent 26px
+  );
+  pointer-events: none;
+}
+.sh-ai-pillar > .sh-container {
+  position: relative;
+  z-index: 1;
+}
+.sh-ai-pillar .sh-eyebrow {
+  color: var(--color-ocean);
+}
+.sh-ai-pillar .sh-eyebrow::before {
+  color: var(--color-ocean);
+}
+.sh-ai-pillar h2 {
+  color: var(--color-deep);
+}
+.sh-ai-pillar h2 em {
+  color: var(--color-ocean);
+}
+.sh-ai-pillar .sh-lead {
+  color: #4d5d72;
+}
+.sh-ai-badge {
+  background: var(--color-deep);
+  border-radius: var(--radius-lg);
+  padding: clamp(28px, 3vw, 40px);
+  margin: 0 0 32px;
+  box-shadow: var(--shadow-md);
+}
+.sh-ai-code {
+  margin: 0 0 24px;
+  font-size: clamp(13px, 1.05vw, 15px);
+  color: var(--color-ink);
+  line-height: 1.55;
+  overflow-x: auto;
+  white-space: pre;
+  scrollbar-width: thin;
+}
+.sh-ai-code::-webkit-scrollbar {
+  height: 6px;
+}
+.sh-ai-code::-webkit-scrollbar-thumb {
+  background: rgba(20, 184, 166, 0.4);
+  border-radius: 3px;
+}
+.sh-ai-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.sh-ai-subtiles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(16px, 2vw, 24px);
+}
+@media (max-width: 760px) {
+  .sh-ai-subtiles {
+    grid-template-columns: 1fr;
+  }
+}
+.sh-ai-subtiles article {
+  background: var(--color-surface-light);
+  border: 1px solid var(--color-divider-light);
+  border-radius: var(--radius-md);
+  padding: clamp(20px, 2.4vw, 28px);
+}
+.sh-ai-subtiles h4 {
+  color: var(--color-deep);
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+.sh-ai-subtiles p {
+  font-family: var(--font-sans);
+  color: #4d5d72;
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.55;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
    Modal — Calendly booking
    ───────────────────────────────────────────────────────────────────────── */
 .sh-modal-backdrop {
