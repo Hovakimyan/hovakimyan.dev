@@ -4,7 +4,7 @@ import Icon from "@/app/components/Icon";
 import { useIde } from "./IdeContext";
 
 export default function Titlebar() {
-  const { activeFile, openCommandPalette, openBooking, toggleSidebar } = useIde();
+  const { activeFile, openBooking, toggleSidebar, toggleTerminal } = useIde();
 
   return (
     <div className="sh-titlebar" role="banner">
@@ -24,22 +24,25 @@ export default function Titlebar() {
       <span className="sh-titlebar-crumb">
         <span className="part">sergey-hovakimyan</span>
         <span className="sep">/</span>
-        <span className="part">src</span>
-        <span className="sep">/</span>
+        <span className="part">
+          {activeFile?.group === "public" ? "public" : activeFile?.group === "root" ? "" : "src"}
+        </span>
+        {activeFile?.group !== "root" ? <span className="sep">/</span> : null}
         <span className="current">
-          {activeFile ? `${activeFile.name}.${activeFile.ext}` : "index.tsx"}
+          {activeFile
+            ? `${activeFile.name}.${activeFile.ext}`
+            : "index.tsx"}
         </span>
       </span>
       <span className="sh-titlebar-actions">
         <button
           type="button"
-          className="sh-cmd-trigger"
-          onClick={openCommandPalette}
-          aria-label="Open command palette"
+          className="sh-titlebar-icon-btn"
+          aria-label="Toggle terminal"
+          title="Toggle terminal (`)"
+          onClick={toggleTerminal}
         >
-          <Icon name="search" size={14} />
-          <span>Ask sergey.dev</span>
-          <kbd>⌘K</kbd>
+          <Icon name="terminal" size={14} />
         </button>
         <button
           type="button"

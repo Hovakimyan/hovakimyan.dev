@@ -131,28 +131,44 @@ button:focus-visible,
 }
 
 /* ─────────────────────────────────────────────────────────────────────────
-   IDE Shell
+   IDE Shell — fills the viewport exactly. Only .sh-main and the
+   terminal panel (if open) scroll; everything else is anchored.
+   100dvh handles iOS Safari URL-bar transitions gracefully.
    ───────────────────────────────────────────────────────────────────────── */
+html,
+body {
+  overflow: hidden;
+  overscroll-behavior: none;
+}
 .sh-ide {
   display: grid;
   grid-template-columns: var(--sidebar-w) minmax(0, 1fr) var(--inspector-w);
-  grid-template-rows: var(--titlebar-h) var(--tab-h) minmax(0, 1fr) var(--status-h);
+  grid-template-rows:
+    var(--titlebar-h)
+    var(--tab-h)
+    minmax(0, 1fr)
+    auto
+    var(--status-h);
   grid-template-areas:
-    "title  title  title"
-    "side   tabs   tabs"
-    "side   main   inspector"
-    "status status status";
-  min-height: 100vh;
+    "title    title    title"
+    "side     tabs     tabs"
+    "side     main     inspector"
+    "terminal terminal terminal"
+    "status   status   status";
+  height: 100vh;
+  height: 100dvh;
   background: var(--color-bg);
+  overflow: hidden;
 }
 @media (max-width: 1200px) {
   .sh-ide {
     grid-template-columns: var(--sidebar-w) minmax(0, 1fr);
     grid-template-areas:
-      "title  title"
-      "side   tabs"
-      "side   main"
-      "status status";
+      "title    title"
+      "side     tabs"
+      "side     main"
+      "terminal terminal"
+      "status   status";
   }
   .sh-ide .sh-inspector {
     display: none;
@@ -165,11 +181,12 @@ button:focus-visible,
       "title"
       "tabs"
       "main"
+      "terminal"
       "status";
   }
   .sh-ide .sh-sidebar {
     position: fixed;
-    inset: var(--titlebar-h) auto 0 0;
+    inset: var(--titlebar-h) auto var(--status-h) 0;
     width: min(280px, 80vw);
     z-index: 90;
     transform: translateX(-110%);
@@ -180,7 +197,7 @@ button:focus-visible,
   }
   .sh-ide .sh-sidebar-backdrop {
     position: fixed;
-    inset: var(--titlebar-h) 0 0 0;
+    inset: var(--titlebar-h) 0 var(--status-h) 0;
     background: rgba(6, 15, 28, 0.6);
     backdrop-filter: blur(2px);
     z-index: 89;
@@ -249,34 +266,22 @@ button:focus-visible,
   align-items: center;
   gap: 10px;
 }
-.sh-cmd-trigger {
+.sh-titlebar-icon-btn {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 5px 10px 5px 8px;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
   background: var(--color-panel-2);
   border: 1px solid var(--color-border);
   border-radius: 6px;
   color: var(--color-ink-2);
-  font-family: var(--font-mono);
-  font-size: 12px;
   cursor: pointer;
   transition: border-color 220ms var(--ease), color 220ms var(--ease);
 }
-.sh-cmd-trigger:hover {
+.sh-titlebar-icon-btn:hover {
   border-color: var(--color-accent);
-  color: var(--color-ink);
-}
-.sh-cmd-trigger kbd {
-  display: inline-flex;
-  align-items: center;
-  padding: 1px 5px;
-  background: var(--color-panel-3);
-  border: 1px solid var(--color-border);
-  border-radius: 3px;
-  font-size: 10px;
-  color: var(--color-ink-3);
-  font-family: var(--font-mono);
+  color: var(--color-accent);
 }
 .sh-titlebar-schedule {
   display: inline-flex;
@@ -338,17 +343,11 @@ button:focus-visible,
   .sh-titlebar-crumb .current {
     color: var(--color-ink);
   }
-  .sh-cmd-trigger kbd {
-    display: none;
-  }
-  .sh-cmd-trigger {
-    padding: 5px 8px;
-  }
-  .sh-cmd-trigger span:not(.kbd) {
+  .sh-titlebar-schedule span {
     display: none;
   }
   .sh-titlebar-schedule {
-    display: none;
+    padding: 6px 10px;
   }
 }
 
@@ -936,142 +935,242 @@ button:focus-visible,
   border-radius: 2px;
 }
 
-/* ─── Command Palette (Cmd+K) ────────────────────────────────────── */
-.sh-palette-backdrop {
-  position: fixed;
-  inset: 0;
-  background: rgba(6, 15, 28, 0.6);
-  backdrop-filter: blur(4px);
-  z-index: 100;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 80px 20px;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 220ms var(--ease);
-}
-.sh-palette-backdrop.is-open {
-  opacity: 1;
-  pointer-events: auto;
-}
-.sh-palette {
-  background: var(--color-panel-2);
-  border: 1px solid var(--color-border-strong);
-  border-radius: 14px;
-  width: min(640px, 100%);
-  max-height: 70vh;
+/* ─── Integrated terminal (bottom panel) ─────────────────────────── */
+.sh-terminal {
+  grid-area: terminal;
+  background: var(--color-panel);
+  border-top: 1px solid var(--color-border);
   display: flex;
   flex-direction: column;
+  height: clamp(180px, 28vh, 280px);
+  transition: height 280ms var(--ease), opacity 220ms var(--ease);
   overflow: hidden;
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
-  transform: translateY(-8px) scale(0.98);
+}
+.sh-terminal.is-closed {
+  height: 0;
+  border-top: 0;
   opacity: 0;
-  transition: transform 220ms var(--ease), opacity 220ms var(--ease);
+  pointer-events: none;
 }
-.sh-palette-backdrop.is-open .sh-palette {
-  transform: translateY(0) scale(1);
-  opacity: 1;
-}
-.sh-palette-input {
+.sh-terminal-head {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 16px 20px;
+  gap: 10px;
+  padding: 6px 12px;
+  background: var(--color-panel-2);
   border-bottom: 1px solid var(--color-border);
-}
-.sh-palette-input .prompt {
-  color: var(--color-accent);
   font-family: var(--font-mono);
-  font-size: 16px;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  flex-shrink: 0;
 }
-.sh-palette-input input {
+.sh-terminal-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  color: var(--color-ink-2);
+  border-bottom: 1px solid transparent;
+}
+.sh-terminal-tab.is-active {
+  color: var(--color-ink);
+  border-bottom-color: var(--color-accent);
+}
+.sh-terminal-spacer {
+  flex: 1;
+}
+.sh-terminal-meta {
+  color: var(--color-ink-3);
+}
+.sh-terminal-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  border: 0;
+  background: transparent;
+  color: var(--color-ink-2);
+  cursor: pointer;
+}
+.sh-terminal-close:hover {
+  background: var(--color-panel-3);
+  color: var(--color-ink);
+}
+.sh-terminal-body {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 12px 16px 8px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--color-ink);
+}
+.sh-terminal-line {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.sh-terminal-line.is-system {
+  color: var(--color-accent);
+  letter-spacing: 0.02em;
+}
+.sh-terminal-line.is-stdout {
+  color: var(--color-ink);
+}
+.sh-terminal-line.is-stderr {
+  color: #ff8a8a;
+}
+.sh-terminal-line.is-prompt {
+  color: var(--color-ink-2);
+  padding-top: 6px;
+}
+.sh-terminal-prompt {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+.sh-terminal-cwd {
+  color: var(--color-accent);
+}
+.sh-terminal-branch {
+  color: var(--color-ocean);
+}
+.sh-terminal-caret {
+  color: var(--color-accent);
+}
+.sh-terminal-input {
   flex: 1;
   background: transparent;
   border: 0;
   outline: 0;
   color: var(--color-ink);
   font-family: var(--font-mono);
-  font-size: 15px;
-}
-.sh-palette-input input::placeholder {
-  color: var(--color-ink-3);
-}
-.sh-palette-list {
-  list-style: none;
-  margin: 0;
-  padding: 8px;
-  overflow-y: auto;
-  flex: 1;
-  min-height: 0;
-}
-.sh-palette-item {
-  display: grid;
-  grid-template-columns: 24px 1fr auto;
-  gap: 12px;
-  padding: 12px 14px;
-  border-radius: 8px;
-  font-family: var(--font-mono);
   font-size: 13px;
-  color: var(--color-ink-2);
-  cursor: pointer;
-  align-items: center;
-  transition: background 180ms var(--ease), color 180ms var(--ease);
-}
-.sh-palette-item:hover,
-.sh-palette-item.is-focus {
-  background: var(--color-panel-3);
-  color: var(--color-ink);
-}
-.sh-palette-item .icon {
-  color: var(--color-accent);
-}
-.sh-palette-item .meta {
-  color: var(--color-ink-3);
-  font-size: 11px;
-}
-.sh-palette-response {
-  padding: 14px 20px;
-  background: var(--color-bg);
-  border-top: 1px solid var(--color-border);
-  font-family: var(--font-mono);
-  font-size: 13px;
-  color: var(--color-ink-2);
-  line-height: 1.55;
-}
-.sh-palette-response .prompt {
-  color: var(--color-accent);
-}
-.sh-palette-response code {
-  background: var(--color-panel);
-  padding: 1px 6px;
-  border-radius: 3px;
-  color: var(--color-ink);
+  caret-color: var(--color-accent);
 }
 
-/* ─── Floating Ask button (mobile) ───────────────────────────────── */
-.sh-ask-fab {
-  display: none;
+/* Floating "Open terminal" button — shown when terminal is hidden */
+.sh-terminal-toggle {
+  position: fixed;
+  bottom: calc(var(--status-h) + 14px);
+  right: 14px;
+  z-index: 50;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: var(--color-panel-2);
+  color: var(--color-ink);
+  border: 1px solid var(--color-border-strong);
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  cursor: pointer;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+  transition: border-color 220ms var(--ease);
+}
+.sh-terminal-toggle:hover {
+  border-color: var(--color-accent);
+}
+.sh-terminal-toggle kbd {
+  padding: 1px 6px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 3px;
+  font-size: 10px;
+  color: var(--color-ink-3);
+}
+
+/* ─── Image preview file ─────────────────────────────────────────── */
+.sh-image-preview {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 320px);
+  gap: clamp(24px, 4vw, 56px);
+  align-items: start;
 }
 @media (max-width: 920px) {
-  .sh-ask-fab {
-    display: inline-flex;
-    position: fixed;
-    bottom: calc(var(--status-h) + 14px);
-    right: 14px;
-    z-index: 50;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 14px;
-    background: var(--color-accent);
-    color: var(--color-bg);
-    border: 0;
-    border-radius: 999px;
-    font-family: var(--font-mono);
-    font-size: 12px;
-    font-weight: 600;
-    box-shadow: 0 12px 30px rgba(20, 184, 166, 0.35);
-    cursor: pointer;
+  .sh-image-preview {
+    grid-template-columns: 1fr;
+  }
+}
+.sh-image-preview-head {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.sh-image-preview-head .label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin: 0;
+}
+.sh-image-preview-head h1 {
+  font-family: var(--font-mono);
+  font-size: clamp(28px, 3.4vw, 44px);
+  margin: 6px 0 0;
+  letter-spacing: -0.01em;
+}
+.sh-image-preview-head .meta {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+.sh-image-preview-head .meta li {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px dashed var(--color-border);
+}
+.sh-image-preview-head .meta li:last-child {
+  border-bottom: none;
+}
+.sh-image-preview-head .meta .k {
+  color: var(--color-ink-3);
+}
+.sh-image-preview-head .meta .v {
+  color: var(--color-ink);
+}
+.sh-image-preview-figure {
+  margin: 0;
+  position: relative;
+  background: var(--color-panel);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: var(--shadow-md, 0 8px 24px rgba(0, 0, 0, 0.25));
+}
+.sh-image-preview-figure::after {
+  content: "";
+  position: absolute;
+  left: 16px;
+  bottom: 8px;
+  width: 56px;
+  height: 1px;
+  background: var(--color-accent);
+}
+.sh-image-preview-figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  filter: grayscale(0.05) contrast(1.04);
+  display: block;
+}
+@media (max-width: 920px) {
+  .sh-image-preview-figure {
+    order: -1;
+    max-width: 420px;
+    margin-inline: auto;
   }
 }
 

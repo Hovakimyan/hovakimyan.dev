@@ -6,12 +6,10 @@ import Tabs from "./Tabs";
 import Titlebar from "./Titlebar";
 import StatusBar from "./StatusBar";
 import Inspector from "./Inspector";
-import AskFab from "./AskFab";
+import Terminal from "./Terminal";
+import TerminalToggle from "./TerminalToggle";
 import { IdeProvider } from "./IdeContext";
 
-const CommandPalette = dynamic(() => import("./CommandPalette"), {
-  ssr: false,
-});
 const BookingModal = dynamic(() => import("./BookingModal"), { ssr: false });
 
 export default function IdeShell({
@@ -25,14 +23,14 @@ export default function IdeShell({
         <Titlebar />
         <Sidebar />
         <Tabs />
-        <main className="sh-main" id="main">
+        <section className="sh-main" id="main" aria-label="Open file">
           {children}
-        </main>
+        </section>
         <Inspector />
+        <Terminal />
         <StatusBar />
       </div>
-      <AskFab />
-      <CommandPalette />
+      <TerminalToggle />
       <BookingModal />
     </IdeProvider>
   );

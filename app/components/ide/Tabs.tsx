@@ -7,9 +7,18 @@ import { FILES } from "@/lib/files";
 
 export default function Tabs() {
   const pathname = usePathname();
+  // Tab strip always shows the canonical src/ files; non-src files
+  // (README, portrait) get a tab inserted to the right when active so
+  // navigation always reflects the open file.
+  const activeFile = FILES.find((f) => f.href === pathname);
+  const srcFiles = FILES.filter((f) => f.group === "src");
+  const visible = [
+    ...srcFiles,
+    ...(activeFile && activeFile.group !== "src" ? [activeFile] : []),
+  ];
   return (
     <nav className="sh-tabs" aria-label="Open files">
-      {FILES.map((f) => {
+      {visible.map((f) => {
         const active = pathname === f.href;
         return (
           <Link

@@ -13,6 +13,8 @@ export interface FileEntry {
   icon: IconName;
   /** descriptive tooltip / aria label. */
   description: string;
+  /** is this file in src/ (shows up in tabs) or under a different group? */
+  group: "src" | "public" | "root";
 }
 
 export const FILES: readonly FileEntry[] = [
@@ -22,6 +24,7 @@ export const FILES: readonly FileEntry[] = [
     href: "/",
     icon: "code",
     description: "Home — the engineer as a TypeScript declaration.",
+    group: "src",
   },
   {
     name: "work",
@@ -29,6 +32,7 @@ export const FILES: readonly FileEntry[] = [
     href: "/work",
     icon: "doc",
     description: "Selected work — case studies in markdown.",
+    group: "src",
   },
   {
     name: "ventures",
@@ -36,6 +40,7 @@ export const FILES: readonly FileEntry[] = [
     href: "/ventures",
     icon: "braces",
     description: "Personal projects (Ashoon + this site) as JSON.",
+    group: "src",
   },
   {
     name: "about",
@@ -43,6 +48,7 @@ export const FILES: readonly FileEntry[] = [
     href: "/about",
     icon: "doc",
     description: "Story, leadership, career git log.",
+    group: "src",
   },
   {
     name: "contact",
@@ -50,8 +56,28 @@ export const FILES: readonly FileEntry[] = [
     href: "/contact",
     icon: "terminal",
     description: "Bash script — run schedule_call or send_email.",
+    group: "src",
+  },
+  {
+    name: "portrait",
+    ext: "jpg",
+    href: "/portrait",
+    icon: "image",
+    description: "B&W portrait — image preview.",
+    group: "public",
+  },
+  {
+    name: "README",
+    ext: "md",
+    href: "/readme",
+    icon: "doc",
+    description: "How to navigate this site.",
+    group: "root",
   },
 ] as const;
+
+/** Files that get a tab strip entry — only the src/ files. */
+export const TAB_FILES = FILES.filter((f) => f.group === "src");
 
 export function fileForPath(pathname: string): FileEntry | undefined {
   return FILES.find((f) => f.href === pathname);

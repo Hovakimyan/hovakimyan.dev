@@ -15,9 +15,10 @@ interface IdeState {
   sidebarOpen: boolean;
   toggleSidebar: () => void;
   closeSidebar: () => void;
-  paletteOpen: boolean;
-  openCommandPalette: () => void;
-  closeCommandPalette: () => void;
+  terminalOpen: boolean;
+  toggleTerminal: () => void;
+  openTerminal: () => void;
+  closeTerminal: () => void;
   bookingOpen: boolean;
   openBooking: () => void;
   closeBooking: () => void;
@@ -29,7 +30,7 @@ export function IdeProvider({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const activeFile = fileForPath(pathname);
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [paletteOpen, setPaletteOpen] = useState(false);
+  const [terminalOpen, setTerminalOpen] = useState(true);
   const [bookingOpen, setBookingOpen] = useState(false);
   const [trackedPath, setTrackedPath] = useState(pathname);
 
@@ -39,14 +40,27 @@ export function IdeProvider({ children }: { children: React.ReactNode }) {
     if (sidebarOpen) setSidebarOpen(false);
   }
 
-  // Cmd/Ctrl+K to toggle palette.
+  // ⌘K + ` shortcuts.
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
+      const target = e.target as HTMLElement | null;
+      const isInput =
+        target?.tagName === "INPUT" ||
+        target?.tagName === "TEXTAREA" ||
+        target?.isContentEditable;
+      if ((e.key === "k" || e.key === "K") && (e.metaKey || e.ctrlKey)) {
         e.preventDefault();
-        setPaletteOpen((o) => !o);
+        setTerminalOpen(true);
+        // Move focus to the terminal input on the next frame.
+        requestAnimationFrame(() => {
+          document
+            .querySelector<HTMLInputElement>(".sh-terminal-input")
+            ?.focus();
+        });
+      } else if (e.key === "`" && !isInput) {
+        e.preventDefault();
+        setTerminalOpen((o) => !o);
       } else if (e.key === "Escape") {
-        setPaletteOpen(false);
         setBookingOpen(false);
         setSidebarOpen(false);
       }
@@ -55,25 +69,26 @@ export function IdeProvider({ children }: { children: React.ReactNode }) {
     return () => window.removeEventListener("keydown", onKey);
   }, []);
 
-  // Body scroll lock when any modal is open.
+  // Body scroll lock for booking modal only — the IDE shell already
+  // handles the rest (overflow: hidden on html/body).
   useEffect(() => {
-    const anyOpen = paletteOpen || bookingOpen;
-    if (!anyOpen) return;
+    if (!bookingOpen) return;
     const prev = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     return () => {
       document.body.style.overflow = prev;
     };
-  }, [paletteOpen, bookingOpen]);
+  }, [bookingOpen]);
 
   const value: IdeState = {
     activeFile,
     sidebarOpen,
     toggleSidebar: useCallback(() => setSidebarOpen((o) => !o), []),
     closeSidebar: useCallback(() => setSidebarOpen(false), []),
-    paletteOpen,
-    openCommandPalette: useCallback(() => setPaletteOpen(true), []),
-    closeCommandPalette: useCallback(() => setPaletteOpen(false), []),
+    terminalOpen,
+    toggleTerminal: useCallback(() => setTerminalOpen((o) => !o), []),
+    openTerminal: useCallback(() => setTerminalOpen(true), []),
+    closeTerminal: useCallback(() => setTerminalOpen(false), []),
     bookingOpen,
     openBooking: useCallback(() => setBookingOpen(true), []),
     closeBooking: useCallback(() => setBookingOpen(false), []),

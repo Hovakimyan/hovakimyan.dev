@@ -2,13 +2,45 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Icon from "@/app/components/Icon";
+import Icon, { type IconName } from "@/app/components/Icon";
 import { FILES } from "@/lib/files";
 import { useIde } from "./IdeContext";
+
+interface RowProps {
+  href: string;
+  icon: IconName;
+  name: string;
+  ext: string;
+  active: boolean;
+  indent?: number;
+}
+
+function FileRow({ href, icon, name, ext, active, indent = 32 }: RowProps) {
+  return (
+    <Link
+      href={href}
+      className={`file${active ? " is-active" : ""}`}
+      style={{ paddingLeft: indent }}
+      aria-current={active ? "page" : undefined}
+    >
+      <span className="icon">
+        <Icon name={icon} size={13} />
+      </span>
+      <span>
+        {name}
+        <span className="ext">.{ext}</span>
+      </span>
+    </Link>
+  );
+}
 
 export default function Sidebar() {
   const pathname = usePathname();
   const { sidebarOpen, closeSidebar } = useIde();
+
+  const srcFiles = FILES.filter((f) => f.group === "src");
+  const publicFiles = FILES.filter((f) => f.group === "public");
+  const rootFiles = FILES.filter((f) => f.group === "root");
 
   return (
     <>
@@ -28,6 +60,7 @@ export default function Sidebar() {
             <Icon name="folder" size={13} />
             sergey-hovakimyan
           </li>
+
           <li>
             <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
               <li className="group">
@@ -37,55 +70,57 @@ export default function Sidebar() {
               </li>
               <li>
                 <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-                  {FILES.map((f) => {
-                    const active = pathname === f.href;
-                    return (
-                      <li key={f.href}>
-                        <Link
-                          href={f.href}
-                          className={`file${active ? " is-active" : ""}`}
-                          aria-current={active ? "page" : undefined}
-                        >
-                          <span className="icon">
-                            <Icon name={f.icon} size={13} />
-                          </span>
-                          <span>
-                            {f.name}
-                            <span className="ext">.{f.ext}</span>
-                          </span>
-                        </Link>
-                      </li>
-                    );
-                  })}
+                  {srcFiles.map((f) => (
+                    <li key={f.href}>
+                      <FileRow
+                        href={f.href}
+                        icon={f.icon}
+                        name={f.name}
+                        ext={f.ext}
+                        active={pathname === f.href}
+                      />
+                    </li>
+                  ))}
                 </ul>
               </li>
-              <li className="group" style={{ paddingTop: 8 }}>
-                <Icon name="chevron-right" size={12} className="chev" />
-                <Icon name="folder" size={13} />
-                .git
-              </li>
-              <li className="group">
-                <Icon name="chevron-right" size={12} className="chev" />
+
+              <li className="group" style={{ paddingTop: 4 }}>
+                <Icon name="chevron-down" size={12} className="chev" />
                 <Icon name="folder" size={13} />
                 public
               </li>
               <li>
                 <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-                  <li>
-                    <span className="file" aria-disabled style={{ opacity: 0.6 }}>
-                      <span className="icon">
-                        <Icon name="doc" size={13} />
-                      </span>
-                      <span>
-                        README<span className="ext">.md</span>
-                      </span>
-                    </span>
-                  </li>
+                  {publicFiles.map((f) => (
+                    <li key={f.href}>
+                      <FileRow
+                        href={f.href}
+                        icon={f.icon}
+                        name={f.name}
+                        ext={f.ext}
+                        active={pathname === f.href}
+                      />
+                    </li>
+                  ))}
                 </ul>
               </li>
+
+              {rootFiles.map((f) => (
+                <li key={f.href} style={{ paddingTop: 2 }}>
+                  <FileRow
+                    href={f.href}
+                    icon={f.icon}
+                    name={f.name}
+                    ext={f.ext}
+                    active={pathname === f.href}
+                    indent={16}
+                  />
+                </li>
+              ))}
             </ul>
           </li>
         </ul>
+
         <div className="sh-sidebar-meta">
           <strong>SH</strong>
           Engineer · Leader · Builder
