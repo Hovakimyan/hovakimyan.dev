@@ -2,6 +2,14 @@
 
 export type IconName =
   | "code"
+  | "doc"
+  | "braces"
+  | "terminal"
+  | "folder"
+  | "image"
+  | "branch"
+  | "command"
+  | "search"
   | "users"
   | "spark"
   | "shield"
@@ -15,7 +23,11 @@ export type IconName =
   | "external"
   | "check"
   | "chevron-right"
-  | "hex";
+  | "chevron-down"
+  | "close"
+  | "hex"
+  | "play"
+  | "menu";
 
 interface Props {
   name: IconName;
@@ -26,7 +38,7 @@ interface Props {
 
 export default function Icon({
   name,
-  size = 22,
+  size = 18,
   className,
   "aria-hidden": ariaHidden = true,
 }: Props) {
@@ -54,6 +66,56 @@ const paths: Record<IconName, React.ReactNode> = {
       <path d="M9 8l-5 4 5 4M15 8l5 4-5 4" />
     </>
   ),
+  doc: (
+    <>
+      <path d="M6 3h9l4 4v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" />
+      <path d="M14 3v4h5" />
+      <path d="M8 12h8M8 16h5" />
+    </>
+  ),
+  braces: (
+    <>
+      <path d="M9 4c-2 0-2 1-2 3v3c0 1-1 2-2 2 1 0 2 1 2 2v3c0 2 0 3 2 3" />
+      <path d="M15 4c2 0 2 1 2 3v3c0 1 1 2 2 2-1 0-2 1-2 2v3c0 2 0 3-2 3" />
+    </>
+  ),
+  terminal: (
+    <>
+      <rect x="3" y="4" width="18" height="16" rx="2" />
+      <path d="M7 9l3 3-3 3M13 15h4" />
+    </>
+  ),
+  folder: (
+    <>
+      <path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z" />
+    </>
+  ),
+  image: (
+    <>
+      <rect x="3" y="4" width="18" height="16" rx="2" />
+      <circle cx="9" cy="10" r="1.6" />
+      <path d="M21 17l-5-5-9 9" />
+    </>
+  ),
+  branch: (
+    <>
+      <circle cx="6" cy="6" r="2.2" />
+      <circle cx="6" cy="18" r="2.2" />
+      <circle cx="18" cy="8" r="2.2" />
+      <path d="M6 8.5v7.5M16 9c-2.4 1.5-4 4-4 7" />
+    </>
+  ),
+  command: (
+    <>
+      <path d="M9 9V6.5a2.5 2.5 0 1 0-2.5 2.5H9zM9 9h6M9 9v6M15 9V6.5a2.5 2.5 0 1 1 2.5 2.5H15zM15 9v6M9 15H6.5A2.5 2.5 0 1 0 9 17.5V15zM15 15v2.5a2.5 2.5 0 1 0 2.5-2.5H15z" />
+    </>
+  ),
+  search: (
+    <>
+      <circle cx="11" cy="11" r="6.4" />
+      <path d="M16 16l4 4" />
+    </>
+  ),
   users: (
     <>
       <circle cx="9" cy="9" r="3.4" />
@@ -65,7 +127,6 @@ const paths: Record<IconName, React.ReactNode> = {
   spark: (
     <>
       <path d="M12 3.5l1.7 5 5 1.7-5 1.7-1.7 5-1.7-5-5-1.7 5-1.7L12 3.5z" />
-      <path d="M19 16l.6 1.6 1.6.6-1.6.6-.6 1.6-.6-1.6-1.6-.6 1.6-.6.6-1.6z" />
     </>
   ),
   shield: (
@@ -133,9 +194,29 @@ const paths: Record<IconName, React.ReactNode> = {
       <path d="M9 6l6 6-6 6" />
     </>
   ),
+  "chevron-down": (
+    <>
+      <path d="M6 9l6 6 6-6" />
+    </>
+  ),
+  close: (
+    <>
+      <path d="M5 5l14 14M19 5L5 19" />
+    </>
+  ),
   hex: (
     <>
       <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z" />
+    </>
+  ),
+  play: (
+    <>
+      <path d="M7 5l12 7-12 7V5z" />
+    </>
+  ),
+  menu: (
+    <>
+      <path d="M4 6h16M4 12h16M4 18h16" />
     </>
   ),
 };

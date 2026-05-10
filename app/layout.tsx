@@ -1,9 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Sora, DM_Sans, Fira_Code } from "next/font/google";
-import SiteHeader from "@/app/components/SiteHeader";
-import SiteFooter from "@/app/components/SiteFooter";
-import Interactivity from "@/app/components/Interactivity";
-import ScrollProgress from "@/app/components/ScrollProgress";
+import IdeShell from "@/app/components/ide/IdeShell";
 import { SITE } from "@/lib/content";
 import "./globals.css";
 
@@ -29,7 +26,10 @@ const firaCode = Fira_Code({
 });
 
 export const metadata: Metadata = {
-  title: { default: `${SITE.name} — ${SITE.role}`, template: `%s · ${SITE.name}` },
+  title: {
+    default: `${SITE.name} — ${SITE.role}`,
+    template: `%s · ${SITE.name}`,
+  },
   description: SITE.lead,
   openGraph: {
     title: `${SITE.name} — ${SITE.role}`,
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0A1929",
+  themeColor: "#060F1C",
   colorScheme: "dark",
 };
 
@@ -61,11 +61,7 @@ export default function RootLayout({
         <a href="#main" className="sh-skip">
           Skip to main content
         </a>
-        <ScrollProgress />
-        <SiteHeader />
-        <main id="main">{children}</main>
-        <SiteFooter />
-        <Interactivity />
+        <IdeShell>{children}</IdeShell>
       </body>
     </html>
   );
