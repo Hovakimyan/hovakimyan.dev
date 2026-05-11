@@ -13,11 +13,12 @@ export interface FileEntry {
   icon: IconName;
   /** descriptive tooltip / aria label. */
   description: string;
-  /** is this file in src/ (shows up in tabs) or under a different group? */
+  /** which group / folder this file belongs to. */
   group: "src" | "public" | "root";
 }
 
 export const FILES: readonly FileEntry[] = [
+  // src/
   {
     name: "index",
     ext: "tsx",
@@ -58,6 +59,7 @@ export const FILES: readonly FileEntry[] = [
     description: "Bash script — run schedule_call or send_email.",
     group: "src",
   },
+  // public/
   {
     name: "portrait",
     ext: "jpg",
@@ -66,12 +68,37 @@ export const FILES: readonly FileEntry[] = [
     description: "B&W portrait — image preview.",
     group: "public",
   },
+  // root files (workspace-level)
   {
     name: "README",
     ext: "md",
     href: "/readme",
     icon: "doc",
     description: "How to navigate this site.",
+    group: "root",
+  },
+  {
+    name: "package",
+    ext: "json",
+    href: "/package",
+    icon: "braces",
+    description: "npm dependencies and scripts.",
+    group: "root",
+  },
+  {
+    name: "tsconfig",
+    ext: "json",
+    href: "/tsconfig",
+    icon: "braces",
+    description: "TypeScript compiler config.",
+    group: "root",
+  },
+  {
+    name: ".gitignore",
+    ext: "",
+    href: "/gitignore",
+    icon: "doc",
+    description: "Files git should ignore.",
     group: "root",
   },
 ] as const;
