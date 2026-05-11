@@ -38,9 +38,11 @@ EXPERIENCE
 
 BuildOps                                              Apr 2025 - Present
 IC5 Software Engineer                       Los Angeles, California, US
-  - Vertical SaaS platform for the trades industry; high-leverage
-    frontend work across web and mobile-web surfaces.
-  - Stack: TypeScript, React, performance optimisation.
+  - Individual-contributor frontend engineering on BuildOps, a
+    vertical SaaS platform for service contractors in the trades.
+  - Feature development, performance optimisation, and code quality
+    across the platform's web surfaces.
+  - Stack: TypeScript, React, Node.js.
 
 EPAM Systems                                                4y 8mo total
 
@@ -179,14 +181,6 @@ HIGHLIGHTS
 - Continuous Improvement Advocate: Implemented TDD, BDD, and CI/CD
   best practices, ensuring high-quality, maintainable code.
 
-================================================================
-OPEN TO
-================================================================
-- Engineering leadership
-- Micro-frontend architecture
-- Accessibility audits & WCAG programs
-- AI-augmented development workflows
-- Team development & mentorship
 `;
 
 export const dynamic = "force-static";

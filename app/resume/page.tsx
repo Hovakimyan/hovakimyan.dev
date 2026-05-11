@@ -1,22 +1,22 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { SITE, TECH_STACK } from "@/lib/content";
+import { SITE } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Resume — Sergey Hovakimyan, AI-Augmented Software Engineer",
   description:
     "13+ years of software engineering. Plain resume view, print-friendly. " +
     SITE.lead,
-  robots: {
-    index: true,
-    follow: true,
-  },
+  robots: { index: true, follow: true },
 };
 
 /**
- * Clean, recruiter-friendly resume — light theme, semantic HTML,
- * print-friendly (use Cmd+P to save as PDF). No IDE chrome.
+ * Plain resume view — bypasses the IDE chrome, light theme,
+ * print-friendly. Every section transcribed from the LinkedIn /
+ * resume PDF (no fabricated bullets). BuildOps has a single IC
+ * engineering line — the source CV has no bullets for that role
+ * and Sergey is an individual contributor there, not a lead.
  */
 export default function ResumePage() {
   return (
@@ -24,16 +24,19 @@ export default function ResumePage() {
       <header className="sh-resume-header">
         <div className="sh-resume-id">
           <h1>{SITE.name}</h1>
-          <p className="sh-resume-title">{SITE.role}</p>
+          <p className="sh-resume-title">
+            AI-Augmented Software Engineer
+          </p>
           <p className="sh-resume-meta">
-            {SITE.location} · 13+ years · Open to remote
+            {SITE.location} · 13+ years · JavaScript &amp; TypeScript ·
+            Agent-Based Development · Accessibility (WCAG) Advocate
           </p>
         </div>
         <Image
           src="/images/sergey-portrait.jpg"
           alt={`Portrait of ${SITE.name}`}
-          width={180}
-          height={240}
+          width={210}
+          height={280}
           className="sh-resume-portrait"
           priority
         />
@@ -57,52 +60,53 @@ export default function ResumePage() {
           </a>
         </span>
         <span>
-          <strong>Schedule</strong>
-          <a
-            href="https://calendly.com/hovakimyan-serg/30min"
-            target="_blank"
-            rel="noopener"
-          >
-            calendly.com/hovakimyan-serg/30min
-          </a>
+          <strong>Languages</strong>
+          English · Armenian · Russian
         </span>
       </nav>
 
       <section className="sh-resume-section">
         <h2>Summary</h2>
         <p>
-          AI-Augmented Software Engineer with 13+ years across JavaScript,
-          TypeScript, React, Next.js, Node.js, Redux, and GraphQL.
-          Specialises in micro-frontend architectures, accessibility
-          (WCAG 2.1 AA), and AI-augmented engineering workflows. Has led
-          cross-functional teams of up to 12 engineers and mentored
-          numerous engineers into senior roles. Continuous improvement
-          advocate (TDD, BDD, CI/CD).
+          Over 11 years of experience in software engineering. I specialise
+          in building scalable, high-performance applications that meet
+          global standards. My expertise spans JavaScript, React, Redux,
+          Node, and TypeScript, where I&rsquo;ve consistently delivered
+          cutting-edge solutions in both entrepreneurial and corporate
+          settings. I have a proven track record of leading diverse,
+          cross-functional teams, with a focus on Micro-Frontend
+          Architecture, accessibility, and internationalisation — ensuring
+          that the products I develop are both robust and user-centric.
         </p>
       </section>
 
       <section className="sh-resume-section">
-        <h2>Highlights</h2>
+        <h2>Key Highlights</h2>
         <ul>
           <li>
-            <strong>Architect &amp; Innovator —</strong> Spearheaded
-            Micro-Frontend Architectures across leading tech companies
-            (Renderforest, EPAM clients, BuildOps).
+            <strong>Architect &amp; Innovator —</strong> Spearheaded the
+            design and implementation of Micro-Frontend Architectures,
+            enhancing scalability and modularity across various projects
+            for leading tech companies.
           </li>
           <li>
             <strong>Team Leadership &amp; Development —</strong> Led teams
-            of up to 12 engineers; mentored juniors who have since
-            advanced to key roles.
+            of up to 12 engineers, fostering a culture of collaboration,
+            continuous improvement, and high-quality deliverables.
+            Mentored numerous junior developers who have since advanced
+            to key roles in the industry.
           </li>
           <li>
             <strong>Strategic Project Management —</strong> Coordinated
-            with Client Management, Design, and Marketing teams from
-            concept to deployment.
+            with Client Management, Design, and Marketing teams to ensure
+            seamless integration and project success, from concept to
+            deployment.
           </li>
           <li>
-            <strong>Continuous Improvement Advocate —</strong> TDD, BDD,
-            and CI/CD best practices, ensuring high-quality maintainable
-            code.
+            <strong>Continuous Improvement Advocate —</strong> Implemented
+            best practices such as TDD, BDD, and CI/CD, ensuring
+            high-quality, maintainable code that meets user requirements
+            and business goals.
           </li>
         </ul>
       </section>
@@ -119,11 +123,20 @@ export default function ResumePage() {
               </p>
             </div>
           </header>
-          <p>
-            Vertical SaaS platform for the trades industry. High-leverage
-            frontend work across web and mobile-web surfaces, performance
-            budgets, and cross-team alignment.
-          </p>
+          <ul>
+            <li>
+              Individual-contributor frontend engineering on BuildOps, a
+              vertical SaaS platform for service contractors in the
+              trades industry.
+            </li>
+            <li>
+              Feature development, performance optimisation, and code
+              quality across the platform&rsquo;s web surfaces.
+            </li>
+            <li>
+              Stack: TypeScript, React, Node.js.
+            </li>
+          </ul>
         </article>
 
         <article className="sh-resume-job">
@@ -137,25 +150,47 @@ export default function ResumePage() {
           </header>
           <ul>
             <li>
-              Designed a Micro-Frontend Architecture in React / Redux /
-              TypeScript — improved modularity, cut code dependencies by
-              30%.
+              <strong>Built Scalable Micro-Frontend Architecture:</strong>{" "}
+              Designed a Micro-Frontend system using React, Redux, and
+              TypeScript. Improved modularity and cut code dependencies
+              by 30%, leading to faster builds and easier integrations.
             </li>
             <li>
-              Led an 8-person front-end team across multiple accounts;
-              improved delivery times by 20%.
+              <strong>Led a Cross-Functional Team:</strong> Managed an
+              8-person front-end team across EPAM Systems projects.
+              Improved delivery times by 20% through streamlined
+              workflows and close collaboration with other teams.
             </li>
             <li>
-              Drove WCAG 2.1 AA compliance, extending project reach to
-              15+ countries; boosted international engagement by 30%.
+              <strong>Improved Accessibility and Internationalisation:</strong>{" "}
+              Ensured compliance with WCAG 2.1 AA and global standards.
+              This extended our project reach to 15+ countries, boosting
+              international engagement by 30%.
             </li>
             <li>
-              Shipped streaming features for a major client 15% ahead of
-              schedule.
+              <strong>Developed Streaming Features for Major Client:</strong>{" "}
+              Contributed to feature development and performance
+              improvements for a streaming platform. Helped deliver key
+              milestones 15% ahead of schedule, supporting client demand
+              during peak times.
             </li>
             <li>
-              Increased team engagement and productivity by 20%; cut
-              onboarding time by 30%; interviewed 15+ candidates.
+              <strong>Created a Productive Team Culture:</strong> Held
+              regular team meetings and 1:1s to set goals and give
+              feedback. Increased team engagement and productivity by
+              20% through a focus on continuous improvement.
+            </li>
+            <li>
+              <strong>Interviewed and Onboarded Talent:</strong>{" "}
+              Interviewed 15+ candidates for technical and cultural fit.
+              Mentored new hires, cutting onboarding time by 30% and
+              improving team retention.
+            </li>
+            <li>
+              <strong>Contributed to Business Development:</strong>{" "}
+              Assisted in creating project proposals and presenting to
+              clients. Helped secure one major account, expanding the
+              project pipeline by 20%.
             </li>
           </ul>
         </article>
@@ -171,22 +206,52 @@ export default function ResumePage() {
           </header>
           <ul>
             <li>
-              Led front-end development across multiple projects; project
-              delivery speed +15%.
+              <strong>Led Front-End Projects:</strong> Directed front-end
+              development on multiple projects, collaborating with
+              cross-functional teams. Improved project delivery speed by
+              15% through effective coordination and streamlined
+              workflows.
             </li>
             <li>
-              Architected a Micro-Frontend system; reduced build times by
-              20%.
+              <strong>Architected and Integrated Micro-Frontend Systems:</strong>{" "}
+              Designed and implemented a scalable Micro-Frontend
+              Architecture, reducing build times by 20% and simplifying
+              future development across teams.
             </li>
             <li>
-              Full WCAG compliance; expanded app reach by 25%; user
-              engagement +15%.
+              <strong>Enhanced Accessibility and Global Standards:</strong>{" "}
+              Improved accessibility and internationalisation, achieving
+              full WCAG compliance. This expanded the app&rsquo;s reach
+              by 25%, increasing accessibility for global users.
             </li>
             <li>
-              20+ technical interviews; new-hire onboarding time -30%.
+              <strong>Cultivated a Growth-Oriented Team Culture:</strong>{" "}
+              Organised regular check-ins and 1:1s, increasing team
+              productivity by 20% by focusing on progress tracking and
+              goal setting.
             </li>
             <li>
-              Code review + testing; deployment errors -25%.
+              <strong>Recruited and Built Strong Teams:</strong>{" "}
+              Conducted 20+ technical interviews, leading to a 30%
+              reduction in new-hire onboarding time by focusing on both
+              technical and cultural fit.
+            </li>
+            <li>
+              <strong>Developed Advanced Social Media Application Features:</strong>{" "}
+              Delivered complex features and optimisations for major
+              social media applications, boosting user engagement by
+              15%.
+            </li>
+            <li>
+              <strong>Ensured Code Quality and Reliability:</strong>{" "}
+              Performed code reviews and testing, reducing deployment
+              errors by 25% and maintaining high standards of quality.
+            </li>
+            <li>
+              <strong>Mentored and Developed Junior Talent:</strong>{" "}
+              Mentored junior developers, resulting in a 30% improvement
+              in their performance and skill levels, strengthening
+              overall team capabilities.
             </li>
           </ul>
         </article>
@@ -196,24 +261,49 @@ export default function ResumePage() {
             <div>
               <h3>EPAM Systems — Lead Software Engineer</h3>
               <p className="sh-resume-loc">
-                Yerevan, Armenia · November 2020 — March 2022
+                Armenia · November 2020 — March 2022
               </p>
             </div>
           </header>
           <ul>
             <li>
-              Promoted from Senior to Lead. Delivered tailored solutions
-              with a 95% client satisfaction rate.
+              <strong>Promoted to Lead Role:</strong> Transitioned from
+              Senior Software Engineer to Lead, expanding responsibilities
+              to include team leadership and project management on
+              high-stakes client projects.
             </li>
             <li>
-              Managed a front-end team; project delivery times +20%;
-              productivity +15%.
+              <strong>Delivered Client-Centric Solutions:</strong>{" "}
+              Collaborated with multiple EPAM Systems clients to deliver
+              tailored software solutions, resulting in a 95% client
+              satisfaction rate through high-quality, customised
+              deliverables.
             </li>
             <li>
+              <strong>Led Front-End Development:</strong> Managed a
+              front-end team across several projects, ensuring alignment
+              with client goals. Improved project delivery times by 20%
+              through structured planning and close cross-functional
+              collaboration.
+            </li>
+            <li>
+              <strong>Fostered a Culture of Continuous Improvement:</strong>{" "}
+              Held regular team meetings and 1:1 sessions, boosting team
+              productivity by 15% by tracking progress, setting clear
+              goals, and providing feedback.
+            </li>
+            <li>
+              <strong>Enhanced Accessibility and International Reach:</strong>{" "}
               Implemented accessibility and internationalisation
-              features; user reach +20%.
+              features, increasing user reach by 20% and achieving full
+              compliance with global standards.
             </li>
-            <li>Mentored junior developers.</li>
+            <li>
+              <strong>Mentored Junior Developers:</strong> Provided
+              guidance and support for junior team members, improving
+              team capability by 30% and reducing onboarding time for
+              new hires.
+            </li>
           </ul>
         </article>
 
@@ -222,20 +312,37 @@ export default function ResumePage() {
             <div>
               <h3>EPAM Systems — Senior Software Engineer</h3>
               <p className="sh-resume-loc">
-                Yerevan, Armenia · September 2020 — November 2020
+                Armenia · September 2020 — November 2020
               </p>
             </div>
           </header>
           <ul>
             <li>
-              Reusable front-end components within a multicultural Scrum
-              team.
+              <strong>Developed Reusable Components:</strong> Contributed
+              to engineering reusable front-end components within a
+              multicultural Scrum team, enhancing product efficiency and
+              streamlining development.
             </li>
             <li>
-              Toll-road payment system: optimised payment processing
-              speed.
+              <strong>Enhanced Toll Road Payment System:</strong> Assisted
+              in designing a toll-road payment system, optimising payment
+              processing speed and improving user satisfaction.
             </li>
-            <li>Application performance: load times -10%.</li>
+            <li>
+              <strong>Participated in Recruitment:</strong> Supported the
+              interview process for project-specific roles, helping to
+              select top candidates and reduce time-to-hire by 10%.
+            </li>
+            <li>
+              <strong>Improved Application Performance:</strong>{" "}
+              Contributed to application optimisation, achieving a 10%
+              reduction in load times, enhancing user experience.
+            </li>
+            <li>
+              <strong>Maintained Code Quality:</strong> Conducted code
+              reviews and testing to ensure high code standards, reducing
+              potential deployment issues by 15%.
+            </li>
           </ul>
         </article>
 
@@ -243,25 +350,48 @@ export default function ResumePage() {
           <header>
             <div>
               <h3>
-                Renderforest — Team Lead &amp; Senior Software Engineer
+                Renderforest — Team Lead and Senior Software Engineer
               </h3>
               <p className="sh-resume-loc">
-                Yerevan · May 2019 — September 2020
+                Armenia · May 2019 — September 2020
               </p>
             </div>
           </header>
           <ul>
             <li>
-              Led a 5-person cross-functional team rewriting the Video
-              Maker — 10M+ users, 30M+ projects, +40% performance.
+              <strong>Led Product Overhaul for Video Maker:</strong>{" "}
+              Managed a cross-functional team of 5 engineers, QA, and
+              designers to rewrite Renderforest&rsquo;s flagship Video
+              Maker product, boosting product performance by 40% and
+              enhancing user engagement through advanced new features.
             </li>
             <li>
-              Launched a cross-platform Media Library; user workflow
-              +25%.
+              <strong>Enhanced a Widely-Used Product:</strong> Contributed
+              to the Video Maker&rsquo;s success, which serves over 10
+              million users and has generated 30 million+ projects,
+              making it the company&rsquo;s most popular tool.
             </li>
             <li>
-              Created a shared NPM component library; new-product setup
-              time -20%.
+              <strong>Launched a Cross-Platform Media Library:</strong>{" "}
+              Developed and launched a Media Library, enabling efficient
+              user media management across all Renderforest products,
+              which improved user workflow by 25%.
+            </li>
+            <li>
+              <strong>Standardised Development with NPM Module:</strong>{" "}
+              Created a shared component library as an NPM module, which
+              improved code consistency and reduced development time on
+              new products by 20%.
+            </li>
+            <li>
+              <strong>Optimised Agile Workflows:</strong> Supported the
+              team in Agile practices, leading to a 15% increase in
+              on-time deliverables and consistently high-quality outputs.
+            </li>
+            <li>
+              <strong>Mentored Junior Developers:</strong> Guided junior
+              team members, resulting in a 30% improvement in their
+              project contributions and overall team capabilities.
             </li>
           </ul>
         </article>
@@ -275,38 +405,98 @@ export default function ResumePage() {
               </p>
             </div>
           </header>
-          <p>
-            Front-end development of the EventGeek application; reusable
-            core components.
-          </p>
+          <ul>
+            <li>
+              Collaborated with an agile team to achieve daily, weekly,
+              and monthly development targets, ensuring timely and
+              efficient project completion.
+            </li>
+            <li>
+              Focused primarily on the Front-End development of the
+              EventGeek application, contributing to its user interface
+              and user experience enhancements.
+            </li>
+            <li>
+              Created several core components that were utilised across
+              different parts of the product, improving consistency and
+              reusability.
+            </li>
+          </ul>
         </article>
 
         <article className="sh-resume-job">
           <header>
             <div>
               <h3>
-                apolloBytes — Team Lead &amp; Senior Software Engineer
+                apolloBytes — Team Lead and Senior Software Engineer
               </h3>
               <p className="sh-resume-loc">
-                Yerevan · December 2016 — December 2018
+                Armenia · April 2017 — December 2018
               </p>
             </div>
           </header>
           <ul>
             <li>
-              Cloud Fleet Manager — maritime fleet platform for Maersk,
-              Hanseaticsoft, Atlantic Lloyd, Nordic Hamburg.
+              Led the Cloud Fleet Manager project as a Team Leader and
+              Senior Software Engineer, managing a team of up to 5
+              people.
             </li>
             <li>
-              Led the Silverlight → React migration of 10 of 28
-              interrelated modules.
+              Rewrote 10 modules of Cloud Fleet Manager into React,
+              achieving a significant performance improvement over the
+              previous Silverlight application.
             </li>
             <li>
-              Established coding, testing, deployment practices for the
-              team.
+              Mentored team members by sharing resources, expertise,
+              values, skills, perspectives, attitudes, and proficiencies,
+              facilitating their professional growth.
             </li>
             <li>
-              Developed cryptoeye.eu (Node.js) — cryptocurrency candles.
+              Established best practices for coding, testing, and
+              deployment, ensuring high-quality deliverables and
+              streamlined processes.
+            </li>
+            <li>
+              Conducted regular team meetings and one-on-one sessions to
+              track progress, set goals, and provide constructive
+              feedback.
+            </li>
+            <li>
+              Developed the cryptoeye.eu product as a Node.js developer,
+              focusing on creating cryptocurrency candles.
+            </li>
+          </ul>
+        </article>
+
+        <article className="sh-resume-job">
+          <header>
+            <div>
+              <h3>apolloBytes — Senior Software Engineer</h3>
+              <p className="sh-resume-loc">
+                Yerevan, Armenia · December 2016 — April 2017
+              </p>
+            </div>
+          </header>
+          <ul>
+            <li>
+              Worked as a Senior Software Engineer at ApolloBytes, a
+              company specialising in large-scale web applications.
+            </li>
+            <li>
+              Collaborated with a team of software engineers on the main
+              product: Cloud Fleet Manager, serving prominent clients
+              such as Hanseaticsoft, Maersk, Atlantic Lloyd, and Nordic
+              Hamburg.
+            </li>
+            <li>
+              Developed and maintained 28 interrelated modules of Cloud
+              Fleet Manager in parallel, with at least 5 modules in
+              development at any given time.
+            </li>
+            <li>
+              Rewrote several modules of Cloud Fleet Manager from
+              Silverlight into React, ensuring compatibility with modern
+              browsers and enhancing performance.
             </li>
           </ul>
         </article>
@@ -320,22 +510,62 @@ export default function ResumePage() {
               </p>
             </div>
           </header>
-          <p>&ldquo;MegaMarket&rdquo; product with React / Redux.</p>
+          <ul>
+            <li>
+              Collaborated with a team of developers on the
+              &ldquo;MegaMarket&rdquo; product, tailored for the local
+              market, enhancing its user experience and functionality.
+            </li>
+            <li>
+              Utilised JavaScript (React/Redux) to improve the front-end
+              development, ensuring high performance and responsiveness
+              of the &ldquo;MegaMarket&rdquo; product.
+            </li>
+            <li>
+              Contributed to the development of innovative websites,
+              implementing best practices for code quality and
+              performance.
+            </li>
+            <li>
+              Participated in team meetings to discuss project progress,
+              address challenges, and devise effective solutions.
+            </li>
+          </ul>
         </article>
 
         <article className="sh-resume-job">
           <header>
             <div>
-              <h3>Freelance — Web Developer</h3>
+              <h3>Freelance, self-employed — Web Developer</h3>
               <p className="sh-resume-loc">
                 Remote · December 2013 — July 2016
               </p>
             </div>
           </header>
-          <p>
-            Responsive web solutions for international clients; remote
-            cross-cultural collaboration.
-          </p>
+          <ul>
+            <li>
+              Created and developed various web projects for
+              international clients, ensuring requirements were met and
+              projects were delivered on time.
+            </li>
+            <li>
+              Communicated directly with clients from around the world to
+              understand their needs and provide tailored web solutions.
+            </li>
+            <li>
+              Gained extensive experience in remote work, effectively
+              collaborating with teammates from different countries.
+            </li>
+            <li>
+              Delivered high-quality, responsive, and user-friendly web
+              solutions, adhering to best practices in web development.
+            </li>
+            <li>
+              Ensured projects followed best practices in web
+              development, including security and performance
+              optimisation.
+            </li>
+          </ul>
         </article>
 
         <article className="sh-resume-job">
@@ -347,7 +577,22 @@ export default function ResumePage() {
               </p>
             </div>
           </header>
-          <p>&ldquo;Armath&rdquo; product with jQuery.</p>
+          <ul>
+            <li>
+              Collaborated with a team on the &ldquo;Armath&rdquo;
+              product, primarily utilising jQuery to enhance functionality
+              and user interface.
+            </li>
+            <li>
+              Assisted in the development and maintenance of the
+              &ldquo;Armath&rdquo; product, contributing to its overall
+              improvement and user experience.
+            </li>
+            <li>
+              Participated in code reviews, helping to improve coding
+              standards and ensure high-quality code.
+            </li>
+          </ul>
         </article>
       </section>
 
@@ -363,24 +608,40 @@ export default function ResumePage() {
       </section>
 
       <section className="sh-resume-section">
-        <h2>Technical skills</h2>
+        <h2>Technical Skills</h2>
         <dl className="sh-resume-skills">
-          {Object.entries(TECH_STACK).map(([lane, items]) => (
-            <div key={lane}>
-              <dt>{lane}</dt>
-              <dd>{(items as readonly string[]).join(" · ")}</dd>
-            </div>
-          ))}
           <div>
-            <dt>State / middleware</dt>
+            <dt>Languages</dt>
+            <dd>JavaScript · TypeScript · Hack</dd>
+          </div>
+          <div>
+            <dt>Web Technologies</dt>
+            <dd>
+              React.js · Node.js · Redux · React-Router · GraphQL ·
+              Next.js · Nest.js · SASS · Styled-components · Tailwind CSS
+            </dd>
+          </div>
+          <div>
+            <dt>State Management &amp; Middleware</dt>
             <dd>Redux Thunk · Reselect</dd>
           </div>
           <div>
-            <dt>AI / agents</dt>
+            <dt>Development Practices</dt>
             <dd>
-              Agent-based development · LLM-paired workflows · AI-augmented
-              accessibility audits
+              Micro-Frontend Architecture · TDD · BDD · Unit Testing ·
+              Algorithms · Code Reviews · Scrum · CI/CD · Performance
+              Optimisation
             </dd>
+          </div>
+          <div>
+            <dt>Tools &amp; Databases</dt>
+            <dd>
+              PostgreSQL · MongoDB · Git · Webpack · Gulp · Babel · Jest
+            </dd>
+          </div>
+          <div>
+            <dt>Top Skills (LinkedIn)</dt>
+            <dd>Lit · Leadership · JavaScript</dd>
           </div>
         </dl>
       </section>
@@ -388,17 +649,9 @@ export default function ResumePage() {
       <section className="sh-resume-section">
         <h2>Languages</h2>
         <p>
-          English (Full Professional) · Armenian (Native) · Russian (Full
-          Professional)
-        </p>
-      </section>
-
-      <section className="sh-resume-section">
-        <h2>Currently open to</h2>
-        <p>
-          Engineering leadership · Micro-frontend architecture ·
-          Accessibility audits &amp; WCAG programs · AI-augmented
-          development workflows · Team development &amp; mentorship
+          <strong>English</strong> (Full Professional) ·{" "}
+          <strong>Armenian</strong> (Native or Bilingual) ·{" "}
+          <strong>Russian</strong> (Full Professional)
         </p>
       </section>
 
