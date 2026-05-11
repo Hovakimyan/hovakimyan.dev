@@ -37,10 +37,10 @@ export const FILES: readonly FileEntry[] = [
   },
   {
     name: "ventures",
-    ext: "json",
+    ext: "md",
     href: "/ventures",
-    icon: "braces",
-    description: "Personal projects (Ashoon + this site) as JSON.",
+    icon: "doc",
+    description: "Personal projects — Ashoon and this site.",
     group: "src",
   },
   {

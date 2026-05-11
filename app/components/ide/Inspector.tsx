@@ -30,9 +30,10 @@ const OUTLINES: Record<string, OutlineEntry[]> = {
     { level: 2, label: "send_email()" },
   ],
   "/ventures": [
-    { level: 2, label: "Ashoon" },
-    { level: 2, label: "hovakimyan.dev" },
-    { level: 2, label: "(reserved)" },
+    { level: 2, label: "01 Ashoon" },
+    { level: 2, label: "02 hovakimyan.dev" },
+    { level: 2, label: "03 cryptoeye.eu" },
+    { level: 2, label: "In the bench" },
   ],
 };
 
@@ -54,8 +55,8 @@ export default function Inspector() {
           </div>
           <ul className="sh-inspector-stats" aria-label="Engineer impact metrics">
             <li>
-              <span className="key">yearsLeading:</span>
-              <span className="val">7+</span>
+              <span className="key">yearsEngineering:</span>
+              <span className="val">13+</span>
             </li>
             <li>
               <span className="key">engineersLed:</span>
@@ -70,8 +71,8 @@ export default function Inspector() {
               <span className="val">−30%</span>
             </li>
             <li>
-              <span className="key">satisfaction:</span>
-              <span className="val">+15%</span>
+              <span className="key">clientSat:</span>
+              <span className="val">95%</span>
             </li>
             <li>
               <span className="key">countries:</span>

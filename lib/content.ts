@@ -100,7 +100,7 @@ export const HEADLINE_STATS = [
     display: "WCAG 2.1 AA",
   },
   {
-    value: 30,
+    value: 15,
     prefix: "",
     suffix: "+",
     label: "Countries reached",
@@ -138,7 +138,7 @@ export const PRINCIPLES = [
 
 export const TECH_STACK = {
   Languages: ["TypeScript", "JavaScript", "Hack"],
-  Frameworks: ["React", "Next.js", "Node.js", "Redux", "GraphQL", "Nest.js"],
+  Frameworks: ["React", "Next.js", "Node.js", "Redux", "GraphQL", "Nest.js", "Lit"],
   Practices: [
     "TDD",
     "BDD",
@@ -211,14 +211,14 @@ export const WORK = [
     period: "December 2016 — December 2018",
     location: "Yerevan",
     pitch:
-      "Led the Silverlight → React migration of 28 modules for Maersk, Atlantic Lloyd, and Hanseaticsoft.",
-    body: "Senior IC then Team Lead on Cloud Fleet Manager, a maritime fleet platform serving Maersk, Hanseaticsoft, Atlantic Lloyd, and Nordic Hamburg. Migrated 28 interrelated modules from Silverlight to React, ensuring performance + modern-browser compatibility while the legacy system stayed live. Established best practices for coding, testing, and deployment that the team continued using long after I left.",
+      "Led the Silverlight → React migration of 10 modules in a 28-module maritime platform for Maersk + 3.",
+    body: "Senior IC then Team Lead on Cloud Fleet Manager — a maritime fleet platform serving Maersk, Hanseaticsoft, Atlantic Lloyd, and Nordic Hamburg. Owned 10 of the platform's 28 interrelated modules through the Silverlight → React migration, ensuring performance and modern-browser compatibility while the legacy system stayed live. Established the team's coding, testing, and deployment practices that survived long after I left. Also contributed to cryptoeye.eu on the Node.js side, building cryptocurrency candles.",
     metrics: [
-      { label: "Modules migrated", value: "28" },
+      { label: "Modules migrated", value: "10 / 28" },
       { label: "Clients", value: "Maersk + 3" },
       { label: "Team size", value: "5" },
     ],
-    tags: ["React", "Migration", "Maritime", "Architecture"],
+    tags: ["React", "Migration", "Maritime", "Architecture", "Node.js"],
   },
 ] as const;
 
@@ -276,7 +276,12 @@ export const ABOUT_TIMELINE = [
   {
     date: "2020-11",
     branch: "epam/lead-yerevan",
-    label: "Lead Software Engineer · Yerevan",
+    label: "Lead Software Engineer · promoted · Yerevan",
+  },
+  {
+    date: "2020-09",
+    branch: "epam/senior",
+    label: "Senior Software Engineer · joined EPAM · Armenia",
   },
   {
     date: "2019-05",
