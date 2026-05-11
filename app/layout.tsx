@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Sora, DM_Sans, Fira_Code } from "next/font/google";
 import IdeShell from "@/app/components/ide/IdeShell";
 import { SITE } from "@/lib/content";
+import { personJsonLd } from "@/lib/seo";
 import "./globals.css";
 
 const sora = Sora({
@@ -61,6 +62,14 @@ export default function RootLayout({
         <a href="#main" className="sh-skip">
           Skip to main content
         </a>
+        {/* schema.org/Person — explicit machine-readable identity for
+            Google, AI bots, and LLM agents. */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(personJsonLd()),
+          }}
+        />
         <IdeShell>{children}</IdeShell>
       </body>
     </html>

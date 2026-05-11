@@ -35,6 +35,16 @@ export default function Titlebar() {
         </span>
       </span>
       <span className="sh-titlebar-actions">
+        <a
+          href="/resume"
+          target="_blank"
+          rel="noopener"
+          className="sh-titlebar-resume"
+          title="Open the plain resume in a new tab (recruiter-friendly, print as PDF)"
+        >
+          <Icon name="doc" size={13} />
+          <span>Resume</span>
+        </a>
         <button
           type="button"
           className="sh-titlebar-icon-btn"
