@@ -1,6 +1,8 @@
 "use client";
 
 import { usePathname } from "next/navigation";
+import Image from "next/image";
+import Link from "next/link";
 import HexPrism from "@/app/components/HexPrism";
 import Icon from "@/app/components/Icon";
 
@@ -52,6 +54,26 @@ export default function Inspector() {
           <div className="sh-inspector-preview">
             <span className="corner">@render</span>
             <HexPrism />
+          </div>
+          <div className="sh-inspector-id">
+            <Image
+              src="/images/sergey-portrait.jpg"
+              alt="Sergey Hovakimyan portrait"
+              width={44}
+              height={56}
+              className="sh-inspector-portrait"
+            />
+            <div className="sh-inspector-id-text">
+              <p className="sh-inspector-name">Sergey Hovakimyan</p>
+              <p className="sh-inspector-role">AI-Augmented Engineer</p>
+              <p className="sh-inspector-now">
+                <span className="sh-inspector-now-dot" aria-hidden="true" />
+                Now @ <strong>BuildOps</strong>
+              </p>
+              <Link href="/resume" className="sh-inspector-resume-link">
+                View resume →
+              </Link>
+            </div>
           </div>
           <ul className="sh-inspector-stats" aria-label="Engineer impact metrics">
             <li>

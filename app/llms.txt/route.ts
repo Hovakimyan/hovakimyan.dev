@@ -72,8 +72,21 @@ SUMMARY
 
 EXPERIENCE
 
-  BuildOps · IC5 Software Engineer · April 2025 — Present · Los Angeles, CA
-    Vertical SaaS platform for the trades industry.
+  BuildOps · IC5 Software Engineer · AI-Augmented Practice
+                · April 2025 — Present · Los Angeles, CA
+    Vertical SaaS platform for the trades industry. Operating an
+    AI-orchestrated engineering practice — agents, custom Claude Code
+    skills, and slash commands as the primary interface; manual code
+    writing has been near-zero for ~6 months. Activities span:
+      * designing reusable agents/skills/commands for the team
+        (code review, a11y audits, architecture, design-to-code)
+      * AI-driven research and architecture: deep-research agents
+        evaluate options and pressure-test trade-offs before
+        implementation
+      * AI-paired testing and PR review (agent proposes, human owns)
+      * AI-led WCAG 2.1 AA accessibility audits surfaced in CI
+      * design-to-code via Figma + MCP integrations
+    Stack: TypeScript, React, Node.js, Claude Code, MCP.
 
   EPAM Systems · Software Engineering Team Leader · Nov 2023 — April 2025 · Glendale, CA
     - Designed a Micro-Frontend Architecture in React/Redux/TypeScript;
@@ -90,7 +103,7 @@ EXPERIENCE
   EPAM Systems · Lead Software Engineer · March 2022 — Nov 2023 · Glendale, CA
     Front-end leadership across multiple projects. Architected
     micro-frontend systems (build times -20%); recruited and built
-    teams (30+ technical interviews); delivered advanced social-media
+    teams (20+ technical interviews); delivered advanced social-media
     application features (user engagement +15%); maintained 25%
     reduction in deployment errors via thorough code review.
 

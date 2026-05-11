@@ -155,18 +155,27 @@ export const WORK = [
     slug: "buildops",
     number: "01",
     company: "BuildOps",
-    role: "IC5 Software Engineer",
+    role: "IC5 Software Engineer · AI-Augmented Practice",
     period: "April 2025 — Present",
     location: "Los Angeles, California",
     pitch:
-      "Senior IC role on a vertical SaaS platform for the trades industry.",
-    body: "Joined BuildOps in 2025 to contribute to a platform serving service contractors with a unified field-service-management toolset. Day-to-day: high-leverage frontend work across web and mobile-web surfaces, performance budgets, and cross-team alignment.",
+      "Engineering a vertical SaaS platform through an AI-orchestrated workflow — agents and skills as the primary tool, no manual code for ~6 months.",
+    body: "Joined BuildOps as IC5 on a vertical SaaS platform for the trades industry. Since mid-2025 I've operated almost entirely through AI-augmented workflows — orchestrating coding agents, custom skills, and slash commands instead of typing implementation by hand. Day-to-day spans agent design (Claude Code skills/commands/hooks for the team), AI-driven research and architecture (deep-research agents to evaluate trade-offs before writing a line), AI-paired testing and code review, AI-led accessibility audits aligned to WCAG 2.1 AA, and design-to-code translation via Figma/MCP integrations. The result: higher throughput, more consistent architectural choices, and audit-grade quality on accessibility and tests by default.",
     metrics: [
-      { label: "Role", value: "IC5" },
-      { label: "Stack", value: "TypeScript · React" },
-      { label: "Domain", value: "Field Service" },
+      { label: "Practice", value: "AI-Orchestrated" },
+      { label: "Hand-written code", value: "≈ 0 in 6mo" },
+      { label: "Domain", value: "Field Service SaaS" },
+      { label: "Stack", value: "Agents · MCP · TS · React" },
     ],
-    tags: ["TypeScript", "React", "Performance"],
+    tags: [
+      "AI-Augmented",
+      "Agent Orchestration",
+      "Claude Code",
+      "MCP",
+      "TypeScript",
+      "React",
+      "WCAG 2.1 AA",
+    ],
   },
   {
     slug: "epam",
@@ -242,7 +251,7 @@ export const VENTURES = [
   {
     name: "hovakimyan.dev",
     tagline: "The site you're on.",
-    body: "Built from scratch as a showcase of the practice — Sora display + DM Sans body + Fira Code accents, Three.js hex prism in the hero, full WCAG-compliant interactive surfaces. Open-sourced once the codebase settles.",
+    body: "Built from scratch as a showcase of the practice — Sora display + DM Sans body + Fira Code accents, Three.js hex prism in the hero, full WCAG-compliant interactive surfaces. Source is public on GitHub.",
     services: null,
     stack: [
       "Next.js 16",
@@ -252,8 +261,13 @@ export const VENTURES = [
       "OpenNext",
       "Cloudflare Workers",
     ],
-    urls: [],
-    primaryHref: "",
+    urls: [
+      {
+        label: "github.com/Hovakimyan/hovakimyan.dev",
+        href: "https://github.com/Hovakimyan/hovakimyan.dev",
+      },
+    ],
+    primaryHref: "https://github.com/Hovakimyan/hovakimyan.dev",
   },
 ] as const;
 

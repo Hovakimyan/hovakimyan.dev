@@ -61,7 +61,7 @@ export default function PackageFile() {
         <a
           href="https://hovakimyan.dev"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           className="tok-string sh-json-link"
         >
           {'"https://hovakimyan.dev"'}
@@ -73,7 +73,7 @@ export default function PackageFile() {
         <a
           href="https://github.com/Hovakimyan/hovakimyan.dev"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           className="tok-string sh-json-link"
         >
           {'"github:Hovakimyan/hovakimyan.dev"'}
@@ -85,7 +85,7 @@ export default function PackageFile() {
         <a
           href="https://www.linkedin.com/in/hovakimyanserg/"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           className="tok-string sh-json-link"
         >
           {'"linkedin.com/in/hovakimyanserg"'}

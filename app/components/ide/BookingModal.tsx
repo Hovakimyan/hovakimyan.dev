@@ -42,8 +42,6 @@ export default function BookingModal() {
     return () => window.removeEventListener("keydown", onKey);
   }, [bookingOpen]);
 
-  if (typeof document === "undefined") return null;
-
   return createPortal(
     <div
       className={`sh-modal-backdrop${bookingOpen ? " is-open" : ""}`}

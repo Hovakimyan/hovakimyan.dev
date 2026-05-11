@@ -3,8 +3,10 @@ import { WORK } from "@/lib/content";
 
 const COMMITS: Record<string, string[]> = {
   buildops: [
-    "* a92f47c (HEAD -> main) feat: ship route optimization v2",
-    "* 5e1b083                 perf: shave 240ms off mobile LCP",
+    "* a92f47c (HEAD -> main) feat(agent): a11y-audit skill — WCAG 2.1 AA in CI",
+    "* 7b9d104                 chore(commands): /architecture-review slash cmd",
+    "* 5e1b083                 perf: agent-paired LCP cut · −240ms",
+    "* 2f8e16a                 docs: design-to-code MCP recipe (Figma → React)",
   ],
   epam: [
     "* 8b2f1a9 (epam/streaming) feat: streaming player v2 · 15% ahead",

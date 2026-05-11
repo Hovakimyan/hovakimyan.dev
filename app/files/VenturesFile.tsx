@@ -23,7 +23,7 @@ export default function VenturesFile() {
       <blockquote>A studio building web systems for product-led teams.</blockquote>
       <p>
         Ashoon is the studio I run alongside my engineering work. We
-        build production-grade websites for founders — accessibility-audited and AI-augmented from day one. The portfolio of client sites lives at <a href="https://ashoon.online" target="_blank" rel="noopener">ashoon.online</a>.
+        build production-grade websites for founders — accessibility-audited and AI-augmented from day one. The portfolio of client sites lives at <a href="https://ashoon.online" target="_blank" rel="noopener noreferrer">ashoon.online</a>.
       </p>
 
       <h3>Services</h3>
@@ -45,11 +45,11 @@ export default function VenturesFile() {
 
       <h3>Visit</h3>
       <p>
-        <a href="https://ashoon.online" target="_blank" rel="noopener">
+        <a href="https://ashoon.online" target="_blank" rel="noopener noreferrer">
           ashoon.online
         </a>{" "}
         ·{" "}
-        <a href="https://ashoon.com" target="_blank" rel="noopener">
+        <a href="https://ashoon.com" target="_blank" rel="noopener noreferrer">
           ashoon.com
         </a>
       </p>
@@ -79,7 +79,7 @@ export default function VenturesFile() {
         <a
           href="https://github.com/Hovakimyan/hovakimyan.dev"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
         >
           github.com/Hovakimyan/hovakimyan.dev
         </a>

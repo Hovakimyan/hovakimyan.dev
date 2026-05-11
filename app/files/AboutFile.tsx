@@ -31,10 +31,30 @@ export default function AboutFile() {
 
       <h2 id="ai">Engineering with AI</h2>
       <p>
-        I treat large language models the way I treat a sharp pair-programmer with patchy domain knowledge — fast, generative, occasionally wrong, always best when scoped. My day-to-day blends agent-paired coding for boilerplate and refactors, LLM-driven code review for quality patches, and accessibility audits that surface issues before they ship.
+        At BuildOps the practice has compounded into something concrete: I haven&rsquo;t hand-written implementation code in roughly six months. The day is spent orchestrating coding agents, custom <code>skills</code>, and slash commands rather than typing the work myself. Higher throughput, more consistent architectural choices, audit-grade tests and accessibility by default.
       </p>
       <p>
-        Rigor still belongs to the engineer. The agent can suggest; the human owns.
+        What that looks like in practice:
+      </p>
+      <ul>
+        <li>
+          <strong>Agents, skills &amp; commands —</strong> reusable Claude Code agents and slash commands for code review, a11y audits, architecture analysis, and design-to-code translation. Team conventions captured as durable tooling.
+        </li>
+        <li>
+          <strong>AI-driven research &amp; architecture —</strong> deep-research agents pressure-test trade-offs before any code is written. Decisions stay auditable.
+        </li>
+        <li>
+          <strong>AI-paired testing and code review —</strong> tests, refactors, and PR reviews are agent-paired by default. The agent proposes; the human owns the merge.
+        </li>
+        <li>
+          <strong>WCAG 2.1 AA at CI quality —</strong> AI-led audit workflows surface a11y issues before they ship, not at the end of a compliance cycle.
+        </li>
+        <li>
+          <strong>Design-to-code via MCP —</strong> Figma + design-system integrations turn hand-offs into production components without boilerplate.
+        </li>
+      </ul>
+      <p>
+        Rigor still belongs to the engineer. The agent suggests; the human owns.
       </p>
 
       <h2 id="git-log">Career git log</h2>

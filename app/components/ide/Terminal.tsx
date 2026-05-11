@@ -36,7 +36,7 @@ const HELP_LINES = [
 const FILE_ROUTES: Record<string, string> = {
   "about.md": "/about",
   "work.md": "/work",
-  "ventures.json": "/ventures",
+  "ventures.md": "/ventures",
   "contact.sh": "/contact",
   "index.tsx": "/",
   "readme.md": "/readme",
@@ -54,18 +54,17 @@ const NAV_ALIASES: Record<string, string> = {
   portrait: "/portrait",
 };
 
-let nextId = 0;
-const id = () => ++nextId;
-
 export default function Terminal() {
   const router = useRouter();
   const { terminalOpen, closeTerminal, openBooking } = useIde();
   const inputRef = useRef<HTMLInputElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
+  const nextIdRef = useRef(3);
+  const id = () => ++nextIdRef.current;
   const [lines, setLines] = useState<TermLine[]>(() => [
-    { id: id(), kind: "system", text: "sergey.terminal v1.0 · type `help` to start" },
-    { id: id(), kind: "stdout", text: `welcome, ${" ".repeat(0)}engineer.` },
-    { id: id(), kind: "stdout", text: "press ⌘K to focus me · backtick (\\`) to toggle" },
+    { id: 1, kind: "system", text: "sergey.terminal v1.0 · type `help` to start" },
+    { id: 2, kind: "stdout", text: `welcome, ${" ".repeat(0)}engineer.` },
+    { id: 3, kind: "stdout", text: "press ⌘K to focus me · backtick (\\`) to toggle" },
   ]);
   const [input, setInput] = useState("");
   const [history, setHistory] = useState<string[]>([]);
@@ -113,7 +112,7 @@ export default function Terminal() {
         push("stdout", "src/");
         push(
           "stdout",
-          "  index.tsx  work.md  ventures.json  about.md  contact.sh",
+          "  index.tsx  work.md  ventures.md  about.md  contact.sh",
         );
         push("stdout", "public/");
         push("stdout", "  portrait.jpg");

@@ -38,7 +38,7 @@ export default function Titlebar() {
         <a
           href="/resume"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           className="sh-titlebar-resume"
           title="Open the plain resume in a new tab (recruiter-friendly, print as PDF)"
         >

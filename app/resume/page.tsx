@@ -2,13 +2,37 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { SITE } from "@/lib/content";
+import PrintButton from "./PrintButton";
+
+const RESUME_TITLE = `Resume · ${SITE.name} — ${SITE.role}`;
+const RESUME_DESCRIPTION =
+  "13+ years of software engineering. Plain, print-friendly resume — JavaScript, TypeScript, React, Next.js, Node.js, micro-frontend architecture, WCAG 2.1 AA, AI-augmented workflows. Currently IC5 Software Engineer at BuildOps in Los Angeles.";
 
 export const metadata: Metadata = {
-  title: "Resume — Sergey Hovakimyan, AI-Augmented Software Engineer",
-  description:
-    "13+ years of software engineering. Plain resume view, print-friendly. " +
-    SITE.lead,
+  title: RESUME_TITLE,
+  description: RESUME_DESCRIPTION,
+  alternates: { canonical: "/resume" },
   robots: { index: true, follow: true },
+  openGraph: {
+    title: RESUME_TITLE,
+    description: RESUME_DESCRIPTION,
+    type: "profile",
+    url: "https://hovakimyan.dev/resume",
+    images: [
+      {
+        url: "/images/sergey-portrait.jpg",
+        width: 800,
+        height: 1067,
+        alt: `${SITE.name} — ${SITE.role}`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: RESUME_TITLE,
+    description: RESUME_DESCRIPTION,
+    images: ["/images/sergey-portrait.jpg"],
+  },
 };
 
 /**
@@ -21,6 +45,17 @@ export const metadata: Metadata = {
 export default function ResumePage() {
   return (
     <div className="sh-resume">
+      <div className="sh-resume-toolbar" role="toolbar" aria-label="Resume actions">
+        <Link href="/" className="sh-resume-back">
+          ← Back to hovakimyan.dev
+        </Link>
+        <div className="sh-resume-actions">
+          <PrintButton />
+          <a className="sh-resume-action" href="/resume.txt">
+            View .txt
+          </a>
+        </div>
+      </div>
       <header className="sh-resume-header">
         <div className="sh-resume-id">
           <h1>{SITE.name}</h1>
@@ -49,13 +84,13 @@ export default function ResumePage() {
         </span>
         <span>
           <strong>LinkedIn</strong>
-          <a href={SITE.linkedin} target="_blank" rel="noopener">
+          <a href={SITE.linkedin} target="_blank" rel="noopener noreferrer">
             /in/hovakimyanserg
           </a>
         </span>
         <span>
           <strong>Website</strong>
-          <a href="https://hovakimyan.dev" target="_blank" rel="noopener">
+          <a href="https://hovakimyan.dev" target="_blank" rel="noopener noreferrer">
             hovakimyan.dev
           </a>
         </span>
@@ -68,7 +103,7 @@ export default function ResumePage() {
       <section className="sh-resume-section">
         <h2>Summary</h2>
         <p>
-          Over 11 years of experience in software engineering. I specialise
+          13+ years of experience in software engineering. I specialise
           in building scalable, high-performance applications that meet
           global standards. My expertise spans JavaScript, React, Redux,
           Node, and TypeScript, where I&rsquo;ve consistently delivered
@@ -117,7 +152,7 @@ export default function ResumePage() {
         <article className="sh-resume-job">
           <header>
             <div>
-              <h3>BuildOps — IC5 Software Engineer</h3>
+              <h3>BuildOps — IC5 Software Engineer · AI-Augmented Practice</h3>
               <p className="sh-resume-loc">
                 Los Angeles, California · April 2025 — Present
               </p>
@@ -125,16 +160,48 @@ export default function ResumePage() {
           </header>
           <ul>
             <li>
-              Individual-contributor frontend engineering on BuildOps, a
-              vertical SaaS platform for service contractors in the
-              trades industry.
+              <strong>AI-Orchestrated Engineering:</strong> Operating
+              full-stack frontend work on BuildOps&rsquo; vertical SaaS
+              platform through AI-augmented workflows for the past ~6
+              months. Orchestrating coding agents, custom skills, and
+              slash commands rather than writing implementation by hand.
             </li>
             <li>
-              Feature development, performance optimisation, and code
-              quality across the platform&rsquo;s web surfaces.
+              <strong>Agents, Skills &amp; Commands:</strong> Designed
+              and shipped reusable Claude Code agents, skills, and slash
+              commands for the team — covering code review, accessibility
+              audits, architecture analysis, design-to-code translation,
+              and repo conventions. Captured team practice as durable
+              tooling so quality scales with headcount.
             </li>
             <li>
-              Stack: TypeScript, React, Node.js.
+              <strong>AI-Driven Architecture &amp; Research:</strong> Use
+              deep-research and design-review agents to evaluate options
+              and pressure-test trade-offs before any implementation
+              lands. Reduces wasted refactors; keeps architectural
+              decisions auditable and reviewable.
+            </li>
+            <li>
+              <strong>AI-Paired Testing &amp; Code Review:</strong> Tests,
+              refactors, and PR reviews are agent-paired by default — the
+              agent proposes, the human owns the merge. Maintains rigor
+              while compressing the test-and-review loop.
+            </li>
+            <li>
+              <strong>Accessibility (WCAG 2.1 AA) at CI Quality:</strong>{" "}
+              Built AI-led audit workflows that surface a11y issues
+              before they ship — bringing audit-grade scrutiny into
+              every feature, not just compliance cycles.
+            </li>
+            <li>
+              <strong>Design-to-Code via MCP:</strong> Wired Figma and
+              design-system integrations through MCP, turning design
+              hand-offs into production components without manual
+              boilerplate.
+            </li>
+            <li>
+              <strong>Stack:</strong> TypeScript · React · Node.js ·
+              Claude Code · MCP · custom agents/skills/commands.
             </li>
           </ul>
         </article>

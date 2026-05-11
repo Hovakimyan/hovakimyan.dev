@@ -6,11 +6,21 @@ import { SITE } from "@/lib/content";
  * composition with hand-classed token spans gives us pixel-precise
  * syntax coloring and the ability to inject interactive elements
  * (clickable arrays, the engineer.impact line, the schedule call).
+ *
+ * sr-only headings give crawlers and screen readers a semantic
+ * skeleton the rendered <pre> intentionally omits — so the page is
+ * indexable as "Sergey Hovakimyan, AI-Augmented Software Engineer"
+ * even when the IDE metaphor isn't readable.
  */
 export default function IndexFile() {
   return (
     <article className="sh-content sh-file-index">
-      <pre className="sh-code">
+      <h1 className="sh-sr-only">{SITE.name}</h1>
+      <h2 className="sh-sr-only">
+        {SITE.role} · 13+ years · {SITE.location} · Currently at BuildOps
+      </h2>
+      <p className="sh-sr-only">{SITE.lead}</p>
+      <pre className="sh-code" aria-label={`${SITE.name} profile card`}>
         <Tok type="comment">{`// ${SITE.role}`}</Tok>
         {"\n"}
         <Tok type="comment">{`// ${SITE.location} · 13+ years`}</Tok>
@@ -141,7 +151,7 @@ export default function IndexFile() {
         <Tok type="punct">{"},"}</Tok>
         {"\n\n"}
         {"  "}
-        <Tok type="comment">{"// What I&rsquo;ve shipped"}</Tok>
+        <Tok type="comment">{"// What I’ve shipped"}</Tok>
         {"\n"}
         {"  "}
         <Tok type="prop">selectedWork</Tok>
@@ -174,7 +184,7 @@ export default function IndexFile() {
         </a>
         <Tok type="punct">,</Tok>
         {"          "}
-        <Tok type="comment">{"// current · IC5, Los Angeles"}</Tok>
+        <Tok type="comment">{"// current · AI-orchestrated IC5, LA"}</Tok>
         {"\n  "}
         <Tok type="punct">],</Tok>
         {"\n\n"}
@@ -268,7 +278,7 @@ export default function IndexFile() {
         <a
           href={SITE.linkedin}
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           className="tok-string sh-json-link"
         >
           {'"/in/hovakimyanserg"'}

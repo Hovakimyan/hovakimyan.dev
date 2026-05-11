@@ -37,12 +37,28 @@ EXPERIENCE
 ================================================================
 
 BuildOps                                              Apr 2025 - Present
-IC5 Software Engineer                       Los Angeles, California, US
-  - Individual-contributor frontend engineering on BuildOps, a
-    vertical SaaS platform for service contractors in the trades.
-  - Feature development, performance optimisation, and code quality
-    across the platform's web surfaces.
-  - Stack: TypeScript, React, Node.js.
+IC5 Software Engineer · AI-Augmented Practice
+                                            Los Angeles, California, US
+  - AI-Orchestrated Engineering: operating frontend work on a vertical
+    SaaS platform almost entirely through AI-augmented workflows for
+    the past ~6 months. Orchestrate agents, custom skills, and slash
+    commands instead of writing implementation by hand.
+  - Agents, Skills & Commands: designed and shipped reusable Claude
+    Code agents, skills, and slash commands for the team — code review,
+    a11y audits, architecture analysis, design-to-code translation,
+    repo conventions. Team practice captured as durable tooling.
+  - AI-Driven Architecture & Research: deep-research and design-review
+    agents evaluate options and pressure-test trade-offs before any
+    implementation lands. Less wasted refactor work; decisions stay
+    auditable.
+  - AI-Paired Testing & Code Review: tests, refactors, and PR reviews
+    are agent-paired by default — agent proposes, human owns the merge.
+  - Accessibility (WCAG 2.1 AA) at CI quality: AI-led audit workflows
+    surface issues before they ship.
+  - Design-to-Code via MCP: Figma + design-system integrations turn
+    hand-offs into production components without boilerplate.
+  - Stack: TypeScript, React, Node.js, Claude Code, MCP, custom
+    agents/skills/commands.
 
 EPAM Systems                                                4y 8mo total
 

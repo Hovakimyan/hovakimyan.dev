@@ -19,7 +19,7 @@ export default function ReadmeFile() {
           <code>work.md</code> — four selected case studies, each with metrics + a snippet of architectural decisions as a git-log.
         </li>
         <li>
-          <code>ventures.json</code> — personal projects. The URLs are real links.
+          <code>ventures.md</code> — personal projects. The URLs are real links.
         </li>
         <li>
           <code>about.md</code> — story, leadership philosophy, AI engineering, career git log.
@@ -44,7 +44,7 @@ export default function ReadmeFile() {
           {"\n"}
           <Tok type="prop">open about</Tok>
           {"\n"}
-          <Tok type="prop">cat ventures.json</Tok>
+          <Tok type="prop">cat ventures.md</Tok>
           {"\n\n"}
           <Tok type="comment">{"# Actions"}</Tok>
           {"\n"}

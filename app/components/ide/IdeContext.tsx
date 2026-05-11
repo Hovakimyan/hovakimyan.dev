@@ -30,11 +30,19 @@ export function IdeProvider({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const activeFile = fileForPath(pathname);
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [terminalOpen, setTerminalOpen] = useState(true);
+  // Terminal defaults to open on desktop, closed on phones — it eats
+  // ~40% of a 375px-tall viewport otherwise. Users can still toggle
+  // with backtick, ⌘K, or the title-bar terminal button.
+  const [terminalOpen, setTerminalOpen] = useState(() => {
+    if (typeof window === "undefined") return true;
+    return window.matchMedia("(min-width: 768px)").matches;
+  });
   const [bookingOpen, setBookingOpen] = useState(false);
   const [trackedPath, setTrackedPath] = useState(pathname);
 
-  // Close mobile sidebar on navigation (derive-during-render).
+  // Close mobile sidebar on navigation. React 19's recommended pattern
+  // for state derived from a prop/route change — explicitly preferred
+  // over useEffect (which lint flags as cascading renders).
   if (trackedPath !== pathname) {
     setTrackedPath(pathname);
     if (sidebarOpen) setSidebarOpen(false);

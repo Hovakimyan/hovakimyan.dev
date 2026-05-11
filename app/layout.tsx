@@ -27,21 +27,35 @@ const firaCode = Fira_Code({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://hovakimyan.dev"),
   title: {
     default: `${SITE.name} — ${SITE.role}`,
     template: `%s · ${SITE.name}`,
   },
   description: SITE.lead,
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: `${SITE.name} — ${SITE.role}`,
     description: SITE.lead,
     type: "profile",
     siteName: SITE.name,
+    url: "https://hovakimyan.dev",
+    images: [
+      {
+        url: "/images/sergey-portrait.jpg",
+        width: 800,
+        height: 1067,
+        alt: `${SITE.name} — ${SITE.role}`,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: `${SITE.name} — ${SITE.role}`,
     description: SITE.lead,
+    images: ["/images/sergey-portrait.jpg"],
   },
 };
 

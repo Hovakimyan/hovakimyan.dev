@@ -33,10 +33,12 @@ export default function CodeTyping({ code, speed = 14, className }: Props) {
     if (initiallyInView) return;
 
     let started = false;
+    let alive = true;
     let timeoutId: number | undefined;
     const animate = () => {
       let i = 0;
       const tick = () => {
+        if (!alive) return;
         i += 1;
         setDisplay(code.slice(0, i));
         if (i < code.length) timeoutId = window.setTimeout(tick, speed);
@@ -60,6 +62,7 @@ export default function CodeTyping({ code, speed = 14, className }: Props) {
     observer.observe(el);
 
     return () => {
+      alive = false;
       observer.disconnect();
       if (timeoutId) window.clearTimeout(timeoutId);
     };

@@ -79,7 +79,7 @@ export default function ContactFile() {
         <a
           href={SITE.linkedin}
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           className="sh-bash-line is-runnable"
         >
           <span className="prompt">$</span>
