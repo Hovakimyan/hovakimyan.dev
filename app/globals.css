@@ -1778,97 +1778,165 @@ body {
   .sh-main {
     overflow: visible !important;
   }
+  /* 3-page compact CV preset. Aggressive but readable. */
   .sh-resume {
     max-width: 100%;
     padding: 0;
     background: #fff;
     color: #000;
-    font-size: 11pt;
-    line-height: 1.45;
+    font-size: 9.5pt;
+    line-height: 1.32;
   }
   .sh-resume-toolbar {
     display: none !important;
   }
-  /* Compact header for print */
+  /* Header */
   .sh-resume-header {
-    padding-bottom: 12px;
-    margin-bottom: 14px;
-    gap: 18px;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+    gap: 16px;
+    border-bottom-width: 1.5px;
   }
   .sh-resume-id h1 {
-    font-size: 24pt;
-    line-height: 1.1;
+    font-size: 20pt;
+    line-height: 1.05;
+    margin: 0;
   }
   .sh-resume-title {
     color: #0c6e8a;
-    font-size: 12pt;
-    margin: 4px 0 6px;
+    font-size: 11pt;
+    margin: 3px 0 4px;
+    font-weight: 600;
   }
   .sh-resume-meta {
-    font-size: 9.5pt;
+    font-size: 9pt;
+    line-height: 1.35;
   }
   .sh-resume-portrait {
-    width: 110px !important;
-    height: 110px !important;
+    width: 96px !important;
+    height: 96px !important;
     filter: grayscale(1);
     border-radius: 8px;
   }
-  /* Tighten contact strip and section spacing */
+  /* Contact strip — tight grid */
   .sh-resume-contact {
-    gap: 6px 16px;
-    margin-bottom: 14px;
-    font-size: 9.5pt;
+    gap: 4px 12px;
+    margin-bottom: 10px;
+    font-size: 9pt;
+    padding: 6px 0;
   }
+  .sh-resume-contact strong {
+    font-size: 7.5pt;
+    letter-spacing: 0.05em;
+  }
+  /* Sections — let them flow tightly across page breaks. */
   .sh-resume-section {
-    margin: 12px 0;
+    margin: 6px 0;
+    page-break-before: auto;
+    break-before: auto;
+    page-break-inside: auto;
+    break-inside: auto;
+  }
+  .sh-resume-section + .sh-resume-section {
+    page-break-before: avoid;
+    break-before: avoid;
   }
   .sh-resume-section h2 {
-    font-size: 13pt;
-    margin: 0 0 6px;
-    padding-bottom: 4px;
+    font-size: 11pt;
+    margin: 0 0 3px;
+    padding-bottom: 2px;
+    letter-spacing: 0.04em;
+    border-bottom-width: 1px;
   }
   .sh-resume-section p,
   .sh-resume-section li {
-    font-size: 10pt;
-    line-height: 1.4;
+    font-size: 9pt;
+    line-height: 1.3;
+    margin: 0;
+  }
+  .sh-resume-section > p {
+    margin: 3px 0;
   }
   .sh-resume-section ul {
-    margin: 4px 0;
-    padding-left: 16px;
+    margin: 2px 0;
+    padding-left: 12px;
   }
   .sh-resume-section li {
-    margin: 2px 0;
+    margin: 1px 0;
   }
-  /* Keep individual jobs and the highlights list together; allow
-     section blocks themselves to break across pages so we don't
-     waste half a page when a long section won't fit. */
+  /* Jobs — allow splitting across pages so the layout flows densely.
+     Keep the title with at least the first bullet via break-after on h3
+     and a minimum orphan count on the bullet list. */
   .sh-resume-job {
-    page-break-inside: avoid;
-    margin: 8px 0;
+    page-break-inside: auto;
+    break-inside: auto;
+    margin: 5px 0;
+    orphans: 1;
+    widows: 1;
+  }
+  .sh-resume-job header {
+    margin-bottom: 1px;
+    page-break-after: avoid;
+    break-after: avoid;
   }
   .sh-resume-job h3 {
-    font-size: 11.5pt;
+    font-size: 9.5pt;
+    margin: 0;
+    font-weight: 700;
+    page-break-after: avoid;
+    break-after: avoid;
   }
   .sh-resume-loc {
-    font-size: 9pt;
+    page-break-after: avoid;
+    break-after: avoid;
   }
+  .sh-resume-loc {
+    font-size: 8pt;
+    margin: 0;
+    color: #4d5d72;
+  }
+  /* Cap bullets per role for print — top 4 carry the impact. */
+  .sh-resume-job ul li:nth-child(n+5) {
+    display: none;
+  }
+  /* Hide the four earliest / least-impactful roles in print:
+     EventGeek, Cyclop, Freelance, Instigate. Full history still
+     lives on the live /resume HTML. */
+  .sh-resume-section .sh-resume-job:nth-of-type(7),
+  .sh-resume-section .sh-resume-job:nth-of-type(n+10) {
+    display: none;
+  }
+  /* Skills compact two-column-ish */
   .sh-resume-skills {
-    gap: 6px;
-    font-size: 9.5pt;
+    gap: 1px;
+    font-size: 8.5pt;
   }
   .sh-resume-skills > div {
-    padding: 4px 0;
+    padding: 1.5px 0;
+    grid-template-columns: 120px 1fr;
   }
   .sh-resume-skills dt {
-    font-size: 9.5pt;
+    font-size: 8pt;
+    letter-spacing: 0.04em;
   }
   .sh-resume-skills dd {
-    font-size: 9.5pt;
-    line-height: 1.4;
-  }
-  .sh-resume-footer {
     font-size: 8.5pt;
-    margin-top: 18px;
+    line-height: 1.3;
+    margin: 0;
+  }
+  /* Drop the standalone Languages section in print (the contact strip
+     at the top already shows the same languages). Keeps the PDF at 3
+     pages without losing information that's elsewhere on the page. */
+  .sh-resume-section:last-of-type {
+    display: none;
+  }
+  /* Footer hidden in print — meta-links belong on the live site,
+     not the printable CV. */
+  .sh-resume-footer {
+    display: none;
+  }
+  .sh-resume-footer .print-hint {
+    display: none;
   }
   a {
     color: #000 !important;
