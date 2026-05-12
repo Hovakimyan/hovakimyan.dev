@@ -736,8 +736,11 @@ export default function ResumePage() {
           <a href="/resume.txt">/resume.txt</a>.
         </p>
         <p className="print-hint">
-          Tip: press <kbd>⌘P</kbd> / <kbd>Ctrl+P</kbd> to save this as a
-          PDF.
+          Tip: the <strong>Download PDF</strong> button above gives you the
+          cleanest file — no browser headers or footers. If you prefer{" "}
+          <kbd>⌘P</kbd> / <kbd>Ctrl+P</kbd>, uncheck{" "}
+          <em>&ldquo;Headers and footers&rdquo;</em> in the print
+          dialog&rsquo;s <em>More settings</em>.
         </p>
       </footer>
     </div>

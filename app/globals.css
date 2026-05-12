@@ -1751,7 +1751,14 @@ body {
 }
 
 /* Print stylesheet — strips chrome, ensures clean B&W output, sane
-   page breaks. */
+   page breaks. The @page rule sets explicit print margins so the
+   layout is consistent across browsers; users can additionally hide
+   the browser's URL/date/page-number header & footer by unchecking
+   "Headers and footers" in the Chrome print dialog. */
+@page {
+  size: Letter;
+  margin: 0.5in 0.45in;
+}
 @media print {
   html,
   body {
@@ -1790,33 +1797,34 @@ body {
   .sh-resume-toolbar {
     display: none !important;
   }
-  /* Header */
+  /* Header — photo intentionally hidden in print; content uses full width. */
   .sh-resume-header {
+    display: block;
     padding-bottom: 8px;
     margin-bottom: 10px;
-    gap: 16px;
     border-bottom-width: 1.5px;
   }
+  .sh-resume-id {
+    max-width: 100%;
+  }
   .sh-resume-id h1 {
-    font-size: 20pt;
+    font-size: 22pt;
     line-height: 1.05;
     margin: 0;
   }
   .sh-resume-title {
     color: #0c6e8a;
-    font-size: 11pt;
+    font-size: 12pt;
     margin: 3px 0 4px;
     font-weight: 600;
   }
   .sh-resume-meta {
-    font-size: 9pt;
-    line-height: 1.35;
+    font-size: 9.5pt;
+    line-height: 1.4;
+    max-width: 100%;
   }
   .sh-resume-portrait {
-    width: 96px !important;
-    height: 96px !important;
-    filter: grayscale(1);
-    border-radius: 8px;
+    display: none !important;
   }
   /* Contact strip — tight grid */
   .sh-resume-contact {
