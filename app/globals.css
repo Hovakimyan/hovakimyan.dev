@@ -1785,14 +1785,16 @@ body {
   .sh-main {
     overflow: visible !important;
   }
-  /* 3-page compact CV preset. Aggressive but readable. */
+  /* 3-page balanced CV preset. Comfortable spacing, fills full
+     printable area. */
   .sh-resume {
     max-width: 100%;
     padding: 0;
     background: #fff;
     color: #000;
-    font-size: 9.5pt;
-    line-height: 1.32;
+    font-size: 10pt;
+    line-height: 1.5;
+    letter-spacing: 0.005em;
   }
   .sh-resume-toolbar {
     display: none !important;
@@ -1800,46 +1802,48 @@ body {
   /* Header — photo intentionally hidden in print; content uses full width. */
   .sh-resume-header {
     display: block;
-    padding-bottom: 8px;
-    margin-bottom: 10px;
+    padding-bottom: 14px;
+    margin-bottom: 18px;
     border-bottom-width: 1.5px;
   }
   .sh-resume-id {
     max-width: 100%;
   }
   .sh-resume-id h1 {
-    font-size: 22pt;
-    line-height: 1.05;
+    font-size: 24pt;
+    line-height: 1.1;
     margin: 0;
+    letter-spacing: -0.01em;
   }
   .sh-resume-title {
     color: #0c6e8a;
-    font-size: 12pt;
-    margin: 3px 0 4px;
+    font-size: 13pt;
+    margin: 5px 0 8px;
     font-weight: 600;
   }
   .sh-resume-meta {
-    font-size: 9.5pt;
-    line-height: 1.4;
+    font-size: 10pt;
+    line-height: 1.55;
     max-width: 100%;
   }
   .sh-resume-portrait {
     display: none !important;
   }
-  /* Contact strip — tight grid */
+  /* Contact strip — comfortable two-column grid */
   .sh-resume-contact {
-    gap: 4px 12px;
-    margin-bottom: 10px;
-    font-size: 9pt;
-    padding: 6px 0;
+    gap: 8px 24px;
+    margin-bottom: 18px;
+    font-size: 9.5pt;
+    padding: 10px 0;
   }
   .sh-resume-contact strong {
-    font-size: 7.5pt;
-    letter-spacing: 0.05em;
+    font-size: 8pt;
+    letter-spacing: 0.06em;
   }
-  /* Sections — let them flow tightly across page breaks. */
+  /* Sections — let them flow across page breaks with comfortable
+     vertical rhythm. */
   .sh-resume-section {
-    margin: 6px 0;
+    margin: 10px 0;
     page-break-before: auto;
     break-before: auto;
     page-break-inside: auto;
@@ -1850,28 +1854,28 @@ body {
     break-before: avoid;
   }
   .sh-resume-section h2 {
-    font-size: 11pt;
-    margin: 0 0 3px;
-    padding-bottom: 2px;
-    letter-spacing: 0.04em;
+    font-size: 12pt;
+    margin: 0 0 8px;
+    padding-bottom: 5px;
+    letter-spacing: 0.08em;
     border-bottom-width: 1px;
   }
   .sh-resume-section p,
   .sh-resume-section li {
-    font-size: 9pt;
-    line-height: 1.3;
+    font-size: 9.5pt;
+    line-height: 1.5;
     margin: 0;
     max-width: none;
   }
   .sh-resume-section > p {
-    margin: 3px 0;
+    margin: 6px 0;
   }
   .sh-resume-section ul {
-    margin: 2px 0;
-    padding-left: 12px;
+    margin: 4px 0;
+    padding-left: 14px;
   }
   .sh-resume-section li {
-    margin: 1px 0;
+    margin: 3px 0;
   }
   /* Jobs — allow splitting across pages so the layout flows densely.
      Keep the title with at least the first bullet via break-after on h3
@@ -1879,17 +1883,17 @@ body {
   .sh-resume-job {
     page-break-inside: auto;
     break-inside: auto;
-    margin: 5px 0;
+    margin: 9px 0;
     orphans: 1;
     widows: 1;
   }
   .sh-resume-job header {
-    margin-bottom: 1px;
+    margin-bottom: 4px;
     page-break-after: avoid;
     break-after: avoid;
   }
   .sh-resume-job h3 {
-    font-size: 9.5pt;
+    font-size: 10.5pt;
     margin: 0;
     font-weight: 700;
     page-break-after: avoid;
@@ -1900,9 +1904,10 @@ body {
     break-after: avoid;
   }
   .sh-resume-loc {
-    font-size: 8pt;
-    margin: 0;
+    font-size: 9pt;
+    margin: 2px 0 0;
     color: #4d5d72;
+    letter-spacing: 0.01em;
   }
   /* Cap bullets per role for print — top 4 carry the impact. */
   .sh-resume-job ul li:nth-child(n+5) {
@@ -1915,22 +1920,22 @@ body {
   .sh-resume-section .sh-resume-job:nth-of-type(n+10) {
     display: none;
   }
-  /* Skills compact two-column-ish */
+  /* Skills two-column grid with comfortable row padding */
   .sh-resume-skills {
-    gap: 1px;
-    font-size: 8.5pt;
+    gap: 2px;
+    font-size: 9.5pt;
   }
   .sh-resume-skills > div {
-    padding: 1.5px 0;
-    grid-template-columns: 120px 1fr;
+    padding: 5px 0;
+    grid-template-columns: 160px 1fr;
   }
   .sh-resume-skills dt {
-    font-size: 8pt;
-    letter-spacing: 0.04em;
+    font-size: 8.5pt;
+    letter-spacing: 0.08em;
   }
   .sh-resume-skills dd {
-    font-size: 8.5pt;
-    line-height: 1.3;
+    font-size: 9.5pt;
+    line-height: 1.5;
     margin: 0;
   }
   /* Drop the standalone Languages section in print (the contact strip
