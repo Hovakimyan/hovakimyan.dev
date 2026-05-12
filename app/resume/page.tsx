@@ -50,13 +50,6 @@ export default function ResumePage() {
           ← Back to hovakimyan.dev
         </Link>
         <div className="sh-resume-actions">
-          <a
-            className="sh-resume-action sh-resume-action--primary"
-            href="/sergey-hovakimyan-resume.pdf"
-            download="Sergey_Hovakimyan_Resume.pdf"
-          >
-            Download PDF
-          </a>
           <PrintButton />
           <a className="sh-resume-action" href="/resume.txt">
             View .txt

@@ -4,7 +4,7 @@ export default function PrintButton() {
   return (
     <button
       type="button"
-      className="sh-resume-action sh-resume-action--primary"
+      className="sh-resume-action"
       onClick={() => window.print()}
     >
       Print / Save as PDF
