@@ -46,9 +46,10 @@ to remote engagements.
 - /package               package.json (Sergey-as-a-package, themed)
 - /tsconfig              tsconfig.json (operating rules, themed)
 - /gitignore             .gitignore (anti-patterns, themed)
-- /resume                **Plain resume — recruiter-friendly, no chrome**
-- /resume.txt            Plain-text resume (the same content, raw)
-- /llms.txt              This file
+- /resume                            **Plain resume — recruiter-friendly, no chrome**
+- /sergey-hovakimyan-resume.pdf      **Printable PDF resume (US Letter)**
+- /resume.txt                        Plain-text resume (the same content, raw)
+- /llms.txt                          This file
 
 ## Resume — plain text
 

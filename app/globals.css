@@ -1780,24 +1780,95 @@ body {
   }
   .sh-resume {
     max-width: 100%;
-    padding: 24px 32px;
+    padding: 0;
     background: #fff;
     color: #000;
+    font-size: 11pt;
+    line-height: 1.45;
   }
   .sh-resume-toolbar {
     display: none !important;
   }
-  .sh-resume-section {
-    page-break-inside: avoid;
+  /* Compact header for print */
+  .sh-resume-header {
+    padding-bottom: 12px;
+    margin-bottom: 14px;
+    gap: 18px;
   }
-  .sh-resume-job {
-    page-break-inside: avoid;
-  }
-  .sh-resume-portrait {
-    filter: grayscale(1);
+  .sh-resume-id h1 {
+    font-size: 24pt;
+    line-height: 1.1;
   }
   .sh-resume-title {
     color: #0c6e8a;
+    font-size: 12pt;
+    margin: 4px 0 6px;
+  }
+  .sh-resume-meta {
+    font-size: 9.5pt;
+  }
+  .sh-resume-portrait {
+    width: 110px !important;
+    height: 110px !important;
+    filter: grayscale(1);
+    border-radius: 8px;
+  }
+  /* Tighten contact strip and section spacing */
+  .sh-resume-contact {
+    gap: 6px 16px;
+    margin-bottom: 14px;
+    font-size: 9.5pt;
+  }
+  .sh-resume-section {
+    margin: 12px 0;
+  }
+  .sh-resume-section h2 {
+    font-size: 13pt;
+    margin: 0 0 6px;
+    padding-bottom: 4px;
+  }
+  .sh-resume-section p,
+  .sh-resume-section li {
+    font-size: 10pt;
+    line-height: 1.4;
+  }
+  .sh-resume-section ul {
+    margin: 4px 0;
+    padding-left: 16px;
+  }
+  .sh-resume-section li {
+    margin: 2px 0;
+  }
+  /* Keep individual jobs and the highlights list together; allow
+     section blocks themselves to break across pages so we don't
+     waste half a page when a long section won't fit. */
+  .sh-resume-job {
+    page-break-inside: avoid;
+    margin: 8px 0;
+  }
+  .sh-resume-job h3 {
+    font-size: 11.5pt;
+  }
+  .sh-resume-loc {
+    font-size: 9pt;
+  }
+  .sh-resume-skills {
+    gap: 6px;
+    font-size: 9.5pt;
+  }
+  .sh-resume-skills > div {
+    padding: 4px 0;
+  }
+  .sh-resume-skills dt {
+    font-size: 9.5pt;
+  }
+  .sh-resume-skills dd {
+    font-size: 9.5pt;
+    line-height: 1.4;
+  }
+  .sh-resume-footer {
+    font-size: 8.5pt;
+    margin-top: 18px;
   }
   a {
     color: #000 !important;
