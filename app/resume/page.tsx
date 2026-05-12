@@ -21,8 +21,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/images/sergey-portrait.jpg",
-        width: 800,
-        height: 1067,
+        width: 1200,
+        height: 1200,
         alt: `${SITE.name} — ${SITE.role}`,
       },
     ],
@@ -70,8 +70,8 @@ export default function ResumePage() {
         <Image
           src="/images/sergey-portrait.jpg"
           alt={`Portrait of ${SITE.name}`}
-          width={210}
-          height={280}
+          width={240}
+          height={240}
           className="sh-resume-portrait"
           priority
         />
@@ -666,7 +666,7 @@ export default function ResumePage() {
       <section className="sh-resume-section">
         <h2>Education</h2>
         <p>
-          <strong>National Polytechnical University of Armenia</strong>{" "}
+          <strong>National Polytechnic University of Armenia</strong>{" "}
           · 2013 – 2017
           <br />
           Bachelor&rsquo;s degree, Computer Science and Information

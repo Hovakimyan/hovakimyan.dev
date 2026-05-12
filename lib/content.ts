@@ -138,16 +138,18 @@ export const PRINCIPLES = [
 
 export const TECH_STACK = {
   Languages: ["TypeScript", "JavaScript", "Hack"],
-  Frameworks: ["React", "Next.js", "Node.js", "Redux", "GraphQL", "Nest.js", "Lit"],
+  Frameworks: ["React", "Next.js", "Node.js", "Redux", "GraphQL", "Nest.js"],
   Practices: [
+    "Micro-Frontend",
     "TDD",
     "BDD",
-    "Micro-Frontend",
+    "Unit Testing",
+    "Code Reviews",
     "CI/CD",
     "WCAG",
     "Performance",
   ],
-  Tools: ["Git", "Webpack", "Jest", "Tailwind", "PostgreSQL", "MongoDB"],
+  Tools: ["Git", "Webpack", "Babel", "Jest", "Tailwind", "PostgreSQL", "MongoDB"],
 } as const;
 
 export const WORK = [

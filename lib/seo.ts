@@ -54,7 +54,7 @@ export function personJsonLd() {
     ],
     alumniOf: {
       "@type": "CollegeOrUniversity",
-      name: "National Polytechnical University of Armenia",
+      name: "National Polytechnic University of Armenia",
       description:
         "Bachelor's degree, Computer Science and Information Technology — Cyber Security, 2013–2017",
     },

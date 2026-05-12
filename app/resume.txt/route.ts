@@ -163,7 +163,7 @@ Junior Web Developer                                              4mo
 ================================================================
 EDUCATION
 ================================================================
-National Polytechnical University of Armenia              2013 - 2017
+National Polytechnic University of Armenia               2013 - 2017
 Bachelor's degree, Computer Science and Information Technology —
 Cyber Security
 
@@ -171,17 +171,19 @@ Cyber Security
 TECHNICAL SKILLS
 ================================================================
 LANGUAGES        JavaScript, TypeScript, Hack
-FRAMEWORKS       React.js, Next.js, Node.js, Lit, Redux, GraphQL,
-                 Nest.js, React-Router, SASS, Styled-components,
-                 Tailwind CSS
+WEB TECH         React, Node.js, Redux, React Router, GraphQL,
+                 Next.js, NestJS
 STATE / MIDDLEWARE  Redux Thunk, Reselect
-PRACTICES        Micro-Frontend Architecture, TDD, BDD, CI/CD, Unit
-                 Testing, Code Reviews, Scrum, Performance
-                 Optimisation, WCAG 2.1 AA, i18n
-TOOLS            Git, Webpack, Gulp, Babel, Jest, Tailwind CSS,
-                 PostgreSQL, MongoDB
-AI / AGENTS      Agent-Based Development, LLM-paired workflows,
-                 AI-augmented accessibility audits
+PRACTICES        Micro-Frontend Architecture, TDD, BDD, Unit Testing,
+                 CI/CD, Code Reviews
+UI / STYLING     Tailwind CSS, SASS, Styled Components
+TOOLS / DBs      PostgreSQL, MongoDB, Git, Webpack, Babel, Jest
+OTHER            WCAG Accessibility, Internationalization,
+                 Performance Optimization
+AI / AGENTS      Claude Code agents, custom skills + slash commands,
+                 MCP, AI-paired testing & code review, AI-augmented
+                 accessibility audits
+TOP SKILLS       Lit, Leadership, JavaScript (per LinkedIn)
 
 ================================================================
 HIGHLIGHTS

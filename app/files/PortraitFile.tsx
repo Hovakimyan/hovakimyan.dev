@@ -15,7 +15,7 @@ export default function PortraitFile() {
           </li>
           <li>
             <span className="k">dimensions</span>
-            <span className="v">1066 × 1600</span>
+            <span className="v">4000 × 4000</span>
           </li>
           <li>
             <span className="k">treatment</span>
@@ -31,9 +31,9 @@ export default function PortraitFile() {
         <Image
           src="/images/sergey-portrait.jpg"
           alt="Sergey Hovakimyan — black-and-white studio portrait"
-          width={1066}
-          height={1600}
-          sizes="(max-width: 760px) 90vw, min(640px, 60vw)"
+          width={1200}
+          height={1200}
+          sizes="(max-width: 760px) 90vw, min(560px, 55vw)"
           priority
         />
       </figure>

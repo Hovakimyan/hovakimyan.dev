@@ -59,7 +59,7 @@ export default function Inspector() {
             <Image
               src="/images/sergey-portrait.jpg"
               alt="Sergey Hovakimyan portrait"
-              width={44}
+              width={56}
               height={56}
               className="sh-inspector-portrait"
             />

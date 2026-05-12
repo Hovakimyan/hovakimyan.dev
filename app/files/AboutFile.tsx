@@ -77,7 +77,7 @@ export default function AboutFile() {
       <h2>Credentials</h2>
       <ul>
         <li>
-          <strong>Education:</strong> Bachelor&rsquo;s, Computer Science · Cyber Security · National Polytechnical University of Armenia · 2013–2017
+          <strong>Education:</strong> Bachelor&rsquo;s, Computer Science · Cyber Security · National Polytechnic University of Armenia · 2013–2017
         </li>
         <li>
           <strong>Languages:</strong> English (Full Pro) · Armenian (Native) · Russian (Full Pro)

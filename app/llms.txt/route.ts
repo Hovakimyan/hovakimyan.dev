@@ -147,22 +147,24 @@ EXPERIENCE
 
 EDUCATION
   Bachelor's degree, Computer Science and Information Technology —
-  Cyber Security · National Polytechnical University of Armenia ·
+  Cyber Security · National Polytechnic University of Armenia ·
   2013–2017
 
 TECHNICAL SKILLS
   Languages         JavaScript, TypeScript, Hack
-  Frameworks        React.js, Next.js, Node.js, Lit, Redux, GraphQL,
-                    Nest.js, React-Router, SASS, Styled-components,
-                    Tailwind CSS
+  Web Technologies  React, Node.js, Redux, React Router, GraphQL,
+                    Next.js, NestJS
   State Management  Redux Thunk, Reselect
-  Practices         Micro-Frontend Architecture, TDD, BDD, CI/CD,
-                    Unit Testing, Code Reviews, Scrum, Performance
-                    Optimization, WCAG 2.1 AA Accessibility, i18n
-  Tools             Git, Webpack, Gulp, Babel, Jest, Tailwind CSS,
-                    PostgreSQL, MongoDB
-  AI                Agent-Based Development, LLM-paired workflows,
-                    AI-augmented accessibility audits
+  Practices         Micro-Frontend Architecture, TDD, BDD, Unit
+                    Testing, CI/CD, Code Reviews
+  UI & Styling      Tailwind CSS, SASS, Styled Components
+  Tools & Databases PostgreSQL, MongoDB, Git, Webpack, Babel, Jest
+  Other             WCAG Accessibility, Internationalization,
+                    Performance Optimization
+  AI                Agent-Based Development, Claude Code agents/
+                    skills/commands, MCP, AI-augmented accessibility
+                    audits, AI-paired testing & code review
+  Top Skills        Lit, Leadership, JavaScript (per LinkedIn)
 
 ENGAGEMENT AREAS (currently open to)
   - Engineering leadership
