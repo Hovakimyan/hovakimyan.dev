@@ -29,6 +29,7 @@ export function personJsonLd() {
     sameAs: [
       SITE.linkedin,
       "https://github.com/Hovakimyan",
+      "https://ashoon.com",
       "https://ashoon.online",
     ].filter(Boolean),
     knowsAbout: [

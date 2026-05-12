@@ -236,19 +236,39 @@ export const WORK = [
 export const VENTURES = [
   {
     name: "Ashoon",
-    tagline: "A studio building web systems for product-led teams.",
-    body: "Ashoon is the studio I run alongside my engineering work. We build production websites for founders, accessibility-audited and AI-augmented from day one. The /websites portfolio you see across the agency is shipped through this practice.",
+    tagline:
+      "AI that instantly replies to your Instagram, Facebook & WhatsApp DMs — so you never miss a sale.",
+    body:
+      "Ashoon is an AI customer-messaging platform that automates conversations across Instagram, Facebook Messenger, WhatsApp, and website chat. It learns each business — products, prices, FAQs, policies — and replies like the smartest teammate, 24/7, in 30 languages. It doesn't just chat: it takes orders, books appointments, and registers customers right from a DM, with full team handover when humans need to step in.",
+    services: null,
+    stack: [
+      "Next.js 16",
+      "React 19",
+      "NestJS 11",
+      "Prisma + PostgreSQL",
+      "pgvector (RAG)",
+      "Redis + BullMQ",
+      "Stripe",
+      "Socket.io",
+    ],
+    urls: [{ label: "ashoon.com", href: "https://ashoon.com" }],
+    primaryHref: "https://ashoon.com",
+  },
+  {
+    name: "Ashoon Studio",
+    tagline:
+      "Professionally-designed websites for U.S. small service businesses.",
+    body:
+      "Ashoon Studio is the web-design studio I run alongside my engineering work. We ship clean brochure sites (3–5 pages) for salons, beauty pros, trainers, photographers, dentists, and consultants. Every site is mobile-responsive from 375px, integrates the client's existing booking tool (Fresha · Square · Acuity · Calendly · etc.), and ships static on Cloudflare Pages so it stays fast and cheap to host.",
     services: [
-      "Web systems for product-led teams",
-      "Accessibility audits & remediation",
-      "AI-augmented builds",
+      "Brochure websites (3–5 pages)",
+      "Custom domain + SSL + mobile-responsive design",
+      "Booking-widget integration with the client's existing tool",
+      "Basic SEO, Google Maps, contact form, reviews feed",
     ],
-    urls: [
-      { label: "ashoon.online", href: "https://ashoon.online" },
-      { label: "ashoon.com", href: "https://ashoon.com" },
-    ],
+    stack: ["Astro", "Tailwind v4", "TypeScript", "Cloudflare Pages"],
+    urls: [{ label: "ashoon.online", href: "https://ashoon.online" }],
     primaryHref: "https://ashoon.online",
-    stack: null,
   },
   {
     name: "hovakimyan.dev",

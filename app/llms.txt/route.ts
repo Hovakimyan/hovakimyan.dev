@@ -38,7 +38,7 @@ to remote engagements.
 
 - /                      Home — profile data as a TypeScript declaration
 - /work                  Selected case studies (BuildOps, EPAM, Renderforest, Cloud Fleet Manager)
-- /ventures              Ventures — Ashoon studio + this site
+- /ventures                          Ventures — Ashoon (AI SaaS), Ashoon Studio, hovakimyan.dev
 - /about                 Story, leadership philosophy, AI engineering, career git log
 - /contact               Schedule a call or email directly
 - /readme                Site navigation guide
@@ -175,10 +175,20 @@ ENGAGEMENT AREAS (currently open to)
   - Team development & mentorship
 
 VENTURES
-  Ashoon — studio building web systems for product-led teams
-           https://ashoon.online / https://ashoon.com
+  Ashoon — AI customer-messaging SaaS that auto-replies to
+           Instagram, Facebook Messenger, WhatsApp, and website
+           DMs. Multi-tenant, RAG-powered, 30 languages. Built on
+           Next.js + NestJS + PostgreSQL + pgvector + Redis + Stripe.
+           https://ashoon.com
+
+  Ashoon Studio — Web-design studio for U.S. small service
+           businesses (salons, trainers, photographers,
+           consultants). Brochure sites with integrated booking
+           widgets, on Cloudflare Pages.
+           https://ashoon.online
+
   hovakimyan.dev — the site you're indexing (IDE-themed personal site)
-                   https://github.com/Hovakimyan/hovakimyan.dev
+           https://github.com/Hovakimyan/hovakimyan.dev
 
 LICENSE
   This site is open to indexing and quoting for legitimate purposes

@@ -40,7 +40,7 @@ export const FILES: readonly FileEntry[] = [
     ext: "md",
     href: "/ventures",
     icon: "doc",
-    description: "Personal projects — Ashoon and this site.",
+    description: "Personal projects — Ashoon AI, Ashoon Studio, and this site.",
     group: "src",
   },
   {
