@@ -1,3 +1,4 @@
+import DeliveryChart from "@/app/components/DeliveryChart";
 import { Tok } from "@/app/components/syntax/Code";
 import { WORK } from "@/lib/content";
 
@@ -32,6 +33,13 @@ export default function WorkFile() {
       <p>
         Four case studies from a 13-year career. Architecture, leadership, and accessibility consistently treated as first-class engineering work.
       </p>
+      <p>
+        <em>
+          Commit logs below are illustrative summaries of real work — the
+          repositories themselves are private. Delivery figures under BuildOps
+          are measured from merge history.
+        </em>
+      </p>
       <hr />
 
       {WORK.map((w) => (
@@ -52,6 +60,8 @@ export default function WorkFile() {
               </span>
             ))}
           </p>
+
+          {w.slug === "buildops" ? <DeliveryChart /> : null}
 
           {COMMITS[w.slug] ? (
             <pre>

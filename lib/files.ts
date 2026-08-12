@@ -44,6 +44,14 @@ export const FILES: readonly FileEntry[] = [
     group: "src",
   },
   {
+    name: "writing",
+    ext: "md",
+    href: "/writing",
+    icon: "doc",
+    description: "Published articles and engineering notes.",
+    group: "src",
+  },
+  {
     name: "about",
     ext: "md",
     href: "/about",

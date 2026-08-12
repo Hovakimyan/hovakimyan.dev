@@ -11,7 +11,7 @@ export const SITE = {
     "Thirteen-plus years of engineering across product-led companies. I lead cross-functional teams, ship micro-frontend platforms, and pair with AI agents to deliver accessible web systems that perform.",
   email: "hovakimyan.serg@gmail.com",
   location: "Glendale, California",
-  github: "",
+  github: "https://github.com/Hovakimyan",
   linkedin: "https://www.linkedin.com/in/hovakimyanserg/",
 } as const;
 
@@ -19,6 +19,7 @@ export const NAV_ITEMS = [
   { label: "Home", href: "/" },
   { label: "Work", href: "/work" },
   { label: "Ventures", href: "/ventures" },
+  { label: "Writing", href: "/writing" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ] as const;
@@ -69,7 +70,7 @@ export const VERBS = [
 
 // Leadership numbers register.
 export const LEADERSHIP_STATS = [
-  { value: 12, prefix: "", suffix: "", label: "Engineers led" },
+  { value: 8, prefix: "", suffix: "", label: "Largest team led" },
   { value: 30, prefix: "", suffix: "+", label: "Mentored" },
   { value: 20, prefix: "+", suffix: "%", label: "Productivity" },
   { value: 30, prefix: "−", suffix: "%", label: "Onboarding time" },
@@ -86,10 +87,10 @@ export const HEADLINE_STATS = [
     display: null,
   },
   {
-    value: 12,
+    value: 8,
     prefix: "",
     suffix: "",
-    label: "Engineers led",
+    label: "Largest team led",
     display: null,
   },
   {
@@ -161,12 +162,13 @@ export const WORK = [
     period: "April 2025 — Present",
     location: "Los Angeles, California",
     pitch:
-      "Engineering a vertical SaaS platform through an AI-orchestrated workflow — agents and skills as the primary tool, no manual code for ~6 months.",
-    body: "Joined BuildOps as IC5 on a vertical SaaS platform for the trades industry. Since mid-2025 I've operated almost entirely through AI-augmented workflows — orchestrating coding agents, custom skills, and slash commands instead of typing implementation by hand. Day-to-day spans agent design (Claude Code skills/commands/hooks for the team), AI-driven research and architecture (deep-research agents to evaluate trade-offs before writing a line), AI-paired testing and code review, AI-led accessibility audits aligned to WCAG 2.1 AA, and design-to-code translation via Figma/MCP integrations. The result: higher throughput, more consistent architectural choices, and audit-grade quality on accessibility and tests by default.",
+      "Engineering a vertical SaaS platform through an AI-orchestrated workflow — agents write nearly all the implementation; my work is specification, review, and verification. 160+ merged pull requests across 9 repositories in 16 months.",
+    body: "Joined BuildOps as IC5 on a vertical SaaS platform for the trades industry, working across the stack in the financial-operations domain. Since mid-2025 I've operated almost entirely through AI-augmented workflows — orchestrating coding agents, custom skills, and slash commands instead of typing implementation by hand. Day-to-day spans agent design (Claude Code skills/commands/hooks for the team), AI-driven research and architecture (deep-research agents to evaluate trade-offs before writing a line), AI-paired testing and code review, AI-led accessibility audits aligned to WCAG 2.1 AA, and design-to-code translation via Figma/MCP integrations. The measurable result: sustained monthly merge throughput up roughly 7× over my own first-year baseline, while every change stayed human-reviewed before merge — 268 pull requests reviewed for other engineers over the same period. What it cost is worth naming: the hard part moved from writing code to reviewing structural decisions fast enough to keep pace, which forced explicit verification gates I never needed when I typed everything myself.",
     metrics: [
-      { label: "Practice", value: "AI-Orchestrated" },
-      { label: "Hand-written code", value: "≈ 0 in 6mo" },
-      { label: "Domain", value: "Field Service SaaS" },
+      { label: "Merged PRs", value: "160+ / 9 repos" },
+      { label: "Throughput", value: "≈ 7× / month" },
+      { label: "Reviews given", value: "268" },
+      { label: "Hand-written code", value: "≈ 0 — spec, review, verify" },
       { label: "Stack", value: "Agents · MCP · TS · React" },
     ],
     tags: [
@@ -230,6 +232,56 @@ export const WORK = [
       { label: "Team size", value: "5" },
     ],
     tags: ["React", "Migration", "Maritime", "Architecture", "Node.js"],
+  },
+] as const;
+
+// Delivery record at BuildOps. Sourced from merged-PR history in the BuildOps
+// GitHub org (author + reviewer queries), April 2025 — August 2026.
+export const DELIVERY = {
+  caption:
+    "Merged pull requests I authored in the BuildOps org, by month — April 2025 to July 2026.",
+  totals: [
+    { value: "160+", label: "Merged PRs" },
+    { value: "9", label: "Repositories" },
+    { value: "268", label: "PRs reviewed for others" },
+    { value: "≈ 7×", label: "Throughput vs. first-year baseline" },
+  ],
+  monthly: [
+    { month: "Apr", year: "25", count: 2 },
+    { month: "May", year: "", count: 6 },
+    { month: "Jun", year: "", count: 10 },
+    { month: "Jul", year: "", count: 3 },
+    { month: "Aug", year: "", count: 6 },
+    { month: "Sep", year: "", count: 14 },
+    { month: "Oct", year: "", count: 9 },
+    { month: "Nov", year: "", count: 2 },
+    { month: "Dec", year: "", count: 6 },
+    { month: "Jan", year: "26", count: 4 },
+    { month: "Feb", year: "", count: 5 },
+    { month: "Mar", year: "", count: 0 },
+    { month: "Apr", year: "", count: 11 },
+    { month: "May", year: "", count: 8 },
+    { month: "Jun", year: "", count: 30 },
+    { month: "Jul", year: "", count: 44 },
+  ],
+} as const;
+
+export const WRITING = [
+  {
+    title: "Coding Pattern — Two Pointer",
+    publisher: "Medium",
+    date: "July 2024",
+    href: "https://medium.com/@hovakimyan.serg/coding-pattern-two-pointer-cb490fedeec1",
+    blurb:
+      "The two-pointer technique for arrays and linked lists — when it applies, why it beats the nested loop, and how to recognise the shape of the problem.",
+  },
+  {
+    title: "Coding Pattern — Sliding Window",
+    publisher: "Medium",
+    date: "August 2021",
+    href: "https://medium.com/@hovakimyan.serg/coding-pattern-sliding-window-e085c433f598",
+    blurb:
+      "Sliding window as a general-purpose pattern: the fixed and variable variants, and the class of problems it collapses from quadratic to linear.",
   },
 ] as const;
 

@@ -86,6 +86,16 @@ export default function ContactFile() {
           <span className="tok-fn">open_linkedin</span>
           <span className="arrow">↳ opens LinkedIn profile</span>
         </a>
+        <a
+          href={SITE.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="sh-bash-line is-runnable"
+        >
+          <span className="prompt">$</span>
+          <span className="tok-fn">open_github</span>
+          <span className="arrow">↳ opens GitHub profile</span>
+        </a>
       </div>
 
       <pre className="sh-code" style={{ marginTop: 24 }}>
