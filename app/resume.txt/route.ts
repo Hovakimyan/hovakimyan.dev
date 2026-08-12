@@ -26,9 +26,9 @@ SUMMARY
 Senior software engineer, 13+ years across JavaScript, TypeScript,
 React, Next.js, Node.js, NestJS, Redux, GraphQL and PostgreSQL.
 Currently at BuildOps (Santa Monica) on financial operations —
-accounting periods, close, ledger integrity, reporting — a domain
-learned from scratch after arriving from front-end, and now owned:
-specs and reviews changes there, coordinates the area's releases.
+accounting periods, close, ledger integrity, reporting. New domain,
+learned properly and now owned: specs and reviews changes there,
+coordinates the area's releases.
 
 Works through agent-assisted development: 160+ merged pull requests
 across 9 repositories in 16 months, 268 pull requests reviewed for
@@ -49,11 +49,11 @@ EXPERIENCE
 BuildOps                                              Apr 2025 - Present
 IC5 Software Engineer · AI-Augmented Practice
                                             Santa Monica, California, US
-  - New domain, owned: came in from a front-end background and learned
-    financial-operations engineering from scratch — accounting periods
-    and close semantics, enforcement rules that hold across object
-    types and fiscal years, ledger integrity, and the reporting layer
-    above them. Now spec and review changes there, and coordinate the
+  - New domain, owned: financial-operations engineering was new
+    territory — accounting periods and close semantics, enforcement
+    rules that hold across object types and fiscal years, ledger
+    integrity, and the reporting layer above them. Learned it
+    properly; now spec and review changes there, and coordinate the
     area's releases.
   - AI-Orchestrated Engineering: operating frontend work on a vertical
     SaaS platform almost entirely through AI-augmented workflows since
@@ -77,8 +77,13 @@ IC5 Software Engineer · AI-Augmented Practice
     months; 268 PRs reviewed for other engineers. Sustained monthly
     merge throughput up ~7x vs. my own first-year baseline, with every
     change human-reviewed before merge.
-  - Stack: TypeScript, React, Node.js, Claude Code, MCP, custom
-    agents/skills/commands.
+  - Across the stack: work spans 9 repositories — the React/TypeScript
+    web app, the financial core service, backend services, database
+    migrations and end-to-end test suites. AWS SDK migration verified
+    against a local emulator; cross-repo full-stack changes shipped as
+    single units of work.
+  - Stack: TypeScript, React, Node.js, PostgreSQL, Playwright, Claude
+    Code, MCP, custom agents/skills/commands.
 
 Independent                                       Apr 2021 - Present
 

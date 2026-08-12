@@ -22,9 +22,9 @@ Sergey Hovakimyan is a senior software engineer based in Glendale,
 California with 13+ years of professional experience. Currently at
 BuildOps in Santa Monica (IC5 Software Engineer), working on
 financial operations for commercial contractors — accounting
-periods, close, ledger integrity, reporting — a domain learned from
-scratch after arriving from front-end, and now owned: he specs and
-reviews changes there and coordinates the area's releases.
+periods, close, ledger integrity, reporting. The domain was new to
+him; the engineering wasn't. He learned it properly and now specs
+and reviews changes there and coordinates the area's releases.
 
 Works through agent-assisted development: 160+ merged pull requests
 across 9 repositories in 16 months, 268 pull requests reviewed for
@@ -78,9 +78,9 @@ SUMMARY
   Senior software engineer, 13+ years across JavaScript, TypeScript,
   React, Next.js, Node.js, NestJS, Redux, GraphQL and PostgreSQL.
   Currently at BuildOps (Santa Monica) on financial operations —
-  accounting periods, close, ledger integrity, reporting — a domain
-  learned from scratch after arriving from front-end, and now owned:
-  specs and reviews changes there, coordinates the area's releases.
+  accounting periods, close, ledger integrity, reporting. New domain,
+  learned properly and now owned: specs and reviews changes there,
+  coordinates the area's releases.
   Works through agent-assisted development: 160+ merged pull requests
   across 9 repositories in 16 months, 268 PRs reviewed for other
   engineers, monthly merge throughput up ~7x vs. a first-year
@@ -94,12 +94,11 @@ EXPERIENCE
 
   BuildOps · IC5 Software Engineer · AI-Augmented Practice
                 · April 2025 — Present · Santa Monica, CA
-    Vertical SaaS platform for the trades industry. Learned the
-    financial-operations domain from scratch after arriving from a
-    front-end background — accounting periods and close semantics,
-    enforcement rules across object types and fiscal years, ledger
-    integrity, reporting — and now specs/reviews changes there and
-    coordinates the area's releases. Operating an
+    Vertical SaaS platform for the trades industry. Financial
+    operations was new territory — accounting periods and close
+    semantics, enforcement rules across object types and fiscal
+    years, ledger integrity, reporting. Learned it properly and now
+    specs/reviews changes there and coordinates the area's releases. Operating an
     AI-orchestrated engineering practice — agents, custom Claude Code
     skills, and slash commands as the primary interface; manual code
     writing has been near-zero since mid-2025. Activities span:
@@ -111,7 +110,12 @@ EXPERIENCE
       * AI-paired testing and PR review (agent proposes, human owns)
       * AI-led WCAG 2.1 AA accessibility audits surfaced in CI
       * design-to-code via Figma + MCP integrations
-    Stack: TypeScript, React, Node.js, Claude Code, MCP.
+    Across the stack: 9 repositories — React/TypeScript web app,
+      financial core service, backend services, database migrations,
+      end-to-end test suites. AWS SDK migration verified against a
+      local emulator; cross-repo full-stack changes.
+    Stack: TypeScript, React, Node.js, PostgreSQL, Playwright,
+      Claude Code, MCP.
     Measured delivery: 160+ merged PRs across 9 repositories in 16
       months; 268 PRs reviewed for other engineers; sustained monthly
       merge throughput up ~7x vs. first-year baseline.

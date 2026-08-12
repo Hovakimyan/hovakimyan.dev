@@ -105,9 +105,9 @@ export default function ResumePage() {
         <p>
           Senior software engineer, thirteen years in. I&rsquo;m at
           BuildOps working on financial operations for commercial
-          contractors — accounting periods, close, ledger integrity — a
-          domain I knew nothing about when I arrived from front-end, and
-          learning it properly turned out to be the job.
+          contractors — accounting periods, close, ledger integrity. The
+          domain was new to me; the engineering wasn&rsquo;t. Learning it
+          properly turned out to be the job.
         </p>
         <p>
           For the past year most of my code has been written by agents.
@@ -131,10 +131,10 @@ export default function ResumePage() {
             human-reviewed before merge.
           </li>
           <li>
-            <strong>A domain learned and owned —</strong> Came from
-            front-end into financial operations: accounting periods,
-            close, ledger integrity, reporting. Now specs and reviews
-            changes in that area and coordinates its releases.
+            <strong>A domain learned and owned —</strong> Financial
+            operations from a standing start: accounting periods, close,
+            ledger integrity, reporting. Now specs and reviews changes in
+            that area and coordinates its releases.
           </li>
           <li>
             <strong>Two products shipped —</strong> Founded Ashoon, an AI
@@ -165,13 +165,12 @@ export default function ResumePage() {
           </header>
           <ul>
             <li>
-              <strong>New domain, owned:</strong> Came in from a
-              front-end background and learned financial-operations
-              engineering from scratch — accounting periods and close
-              semantics, enforcement rules that hold across object types
-              and fiscal years, ledger integrity, and the reporting layer
-              above them. Now spec and review changes in that area and
-              coordinate its releases.
+              <strong>New domain, owned:</strong> Financial-operations
+              engineering was new territory — accounting periods and
+              close semantics, enforcement rules that hold across object
+              types and fiscal years, ledger integrity, and the reporting
+              layer above them. Learned it properly; now spec and review
+              changes in that area and coordinate its releases.
             </li>
             <li>
               <strong>AI-Orchestrated Engineering:</strong> Operating
@@ -221,8 +220,17 @@ export default function ResumePage() {
               first-year baseline, every change human-reviewed before merge.
             </li>
             <li>
+              <strong>Across the stack:</strong> Work spans 9
+              repositories — the React/TypeScript web app, the financial
+              core service, backend services, database migrations and
+              end-to-end test suites. AWS SDK migration verified against
+              a local emulator; cross-repo full-stack changes shipped as
+              single units of work.
+            </li>
+            <li>
               <strong>Stack:</strong> TypeScript · React · Node.js ·
-              Claude Code · MCP · custom agents/skills/commands.
+              PostgreSQL · Playwright · Claude Code · MCP · custom
+              agents/skills/commands.
             </li>
           </ul>
         </article>
