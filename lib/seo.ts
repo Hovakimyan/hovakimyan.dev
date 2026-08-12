@@ -72,7 +72,7 @@ export function personJsonLd() {
         name: "IC5 Software Engineer · AI-Augmented Practice",
         occupationLocation: {
           "@type": "City",
-          name: "Los Angeles, California",
+          name: "Santa Monica, California",
         },
         skills:
           "AI Agent Orchestration, Claude Code, Custom Agents/Skills/Commands, MCP, TypeScript, React, Next.js, Node.js, Micro-Frontend Architecture, WCAG 2.1 AA Accessibility, AI-Led Accessibility Audits, Design-to-Code via Figma + MCP, AI-Paired Testing and Code Review",

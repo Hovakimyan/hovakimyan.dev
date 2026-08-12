@@ -6,7 +6,7 @@ import PrintButton from "./PrintButton";
 
 const RESUME_TITLE = `Resume · ${SITE.name} — ${SITE.role}`;
 const RESUME_DESCRIPTION =
-  "13+ years of software engineering. Plain, print-friendly resume — JavaScript, TypeScript, React, Next.js, Node.js, micro-frontend architecture, WCAG 2.1 AA, AI-augmented workflows. Currently IC5 Software Engineer at BuildOps in Los Angeles.";
+  "13+ years of software engineering. Plain, print-friendly resume — JavaScript, TypeScript, React, Next.js, Node.js, micro-frontend architecture, WCAG 2.1 AA, AI-augmented workflows. Currently IC5 Software Engineer at BuildOps in Santa Monica.";
 
 export const metadata: Metadata = {
   title: RESUME_TITLE,
@@ -154,7 +154,7 @@ export default function ResumePage() {
             <div>
               <h3>BuildOps — IC5 Software Engineer · AI-Augmented Practice</h3>
               <p className="sh-resume-loc">
-                Los Angeles, California · April 2025 — Present
+                Santa Monica, California · April 2025 — Present
               </p>
             </div>
           </header>
@@ -162,9 +162,9 @@ export default function ResumePage() {
             <li>
               <strong>AI-Orchestrated Engineering:</strong> Operating
               full-stack frontend work on BuildOps&rsquo; vertical SaaS
-              platform through AI-augmented workflows for the past ~6
-              months. Orchestrating coding agents, custom skills, and
-              slash commands rather than writing implementation by hand.
+              platform through AI-augmented workflows since mid-2025.
+              Orchestrating coding agents, custom skills, and slash
+              commands rather than writing implementation by hand.
             </li>
             <li>
               <strong>Agents, Skills &amp; Commands:</strong> Designed

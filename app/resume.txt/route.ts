@@ -38,11 +38,11 @@ EXPERIENCE
 
 BuildOps                                              Apr 2025 - Present
 IC5 Software Engineer · AI-Augmented Practice
-                                            Los Angeles, California, US
+                                            Santa Monica, California, US
   - AI-Orchestrated Engineering: operating frontend work on a vertical
-    SaaS platform almost entirely through AI-augmented workflows for
-    the past ~6 months. Orchestrate agents, custom skills, and slash
-    commands instead of writing implementation by hand.
+    SaaS platform almost entirely through AI-augmented workflows since
+    mid-2025. Orchestrate agents, custom skills, and slash commands
+    instead of writing implementation by hand.
   - Agents, Skills & Commands: designed and shipped reusable Claude
     Code agents, skills, and slash commands for the team — code review,
     a11y audits, architecture analysis, design-to-code translation,

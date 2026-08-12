@@ -23,7 +23,7 @@ Glendale, California with 13+ years of professional experience.
 Strengths: TypeScript / React / Next.js / Node.js, micro-frontend
 architecture, accessibility (WCAG 2.1 AA), engineering leadership,
 team mentorship, AI-augmented development workflows. Currently
-working at BuildOps in Los Angeles (IC5 Software Engineer). Open
+working at BuildOps in Santa Monica (IC5 Software Engineer). Open
 to remote engagements.
 
 ## Contact
@@ -75,11 +75,11 @@ SUMMARY
 EXPERIENCE
 
   BuildOps · IC5 Software Engineer · AI-Augmented Practice
-                · April 2025 — Present · Los Angeles, CA
+                · April 2025 — Present · Santa Monica, CA
     Vertical SaaS platform for the trades industry. Operating an
     AI-orchestrated engineering practice — agents, custom Claude Code
     skills, and slash commands as the primary interface; manual code
-    writing has been near-zero for ~6 months. Activities span:
+    writing has been near-zero since mid-2025. Activities span:
       * designing reusable agents/skills/commands for the team
         (code review, a11y audits, architecture, design-to-code)
       * AI-driven research and architecture: deep-research agents
