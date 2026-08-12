@@ -160,6 +160,15 @@ export default function ResumePage() {
           </header>
           <ul>
             <li>
+              <strong>New domain, owned:</strong> Came in from a
+              front-end background and learned financial-operations
+              engineering from scratch — accounting periods and close
+              semantics, enforcement rules that hold across object types
+              and fiscal years, ledger integrity, and the reporting layer
+              above them. Now spec and review changes in that area and
+              coordinate its releases.
+            </li>
+            <li>
               <strong>AI-Orchestrated Engineering:</strong> Operating
               full-stack frontend work on BuildOps&rsquo; vertical SaaS
               platform through AI-augmented workflows since mid-2025.

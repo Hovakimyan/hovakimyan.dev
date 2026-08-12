@@ -49,6 +49,10 @@ export function personJsonLd() {
       "Engineering Leadership",
       "Team Management",
       "Mentorship",
+      "Financial Systems",
+      "Accounting Periods and Close",
+      "Ledger Integrity",
+      "Vertical SaaS",
     ],
     knowsLanguage: [
       { "@type": "Language", name: "English", alternateName: "en" },

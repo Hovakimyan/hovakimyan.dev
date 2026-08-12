@@ -163,11 +163,12 @@ export const WORK = [
     location: "Santa Monica, California",
     pitch:
       "Engineering a vertical SaaS platform through an AI-orchestrated workflow — agents write nearly all the implementation; my work is specification, review, and verification. 160+ merged pull requests across 9 repositories in 16 months.",
-    body: "Joined BuildOps as IC5 on a vertical SaaS platform for the trades industry, working across the stack in the financial-operations domain. Since mid-2025 I've operated almost entirely through AI-augmented workflows — orchestrating coding agents, custom skills, and slash commands instead of typing implementation by hand. Day-to-day spans agent design (Claude Code skills/commands/hooks for the team), AI-driven research and architecture (deep-research agents to evaluate trade-offs before writing a line), AI-paired testing and code review, AI-led accessibility audits aligned to WCAG 2.1 AA, and design-to-code translation via Figma/MCP integrations. The measurable result: sustained monthly merge throughput up roughly 7× over my own first-year baseline, while every change stayed human-reviewed before merge — 268 pull requests reviewed for other engineers over the same period. What it cost is worth naming: the hard part moved from writing code to reviewing structural decisions fast enough to keep pace, which forced explicit verification gates I never needed when I typed everything myself.",
+    body: "Joined BuildOps as IC5 on a vertical SaaS platform for the trades industry, working across the stack in the financial-operations domain. I came in from a front-end background and had to learn the domain from scratch — accounting periods and close semantics, enforcement rules that hold across object types and fiscal years, ledger integrity, and the reporting layer on top — before I could be trusted to change any of it. I now spec and review changes in that area and coordinate its releases. That turned out to be the part agents can't do for you: the judgment about what should happen lives in understanding the domain, not in writing the code. Since mid-2025 I've operated almost entirely through AI-augmented workflows — orchestrating coding agents, custom skills, and slash commands instead of typing implementation by hand. Day-to-day spans agent design (Claude Code skills/commands/hooks for the team), AI-driven research and architecture (deep-research agents to evaluate trade-offs before writing a line), AI-paired testing and code review, AI-led accessibility audits aligned to WCAG 2.1 AA, and design-to-code translation via Figma/MCP integrations. The measurable result: sustained monthly merge throughput up roughly 7× over my own first-year baseline, while every change stayed human-reviewed before merge — 268 pull requests reviewed for other engineers over the same period. What it cost is worth naming: the hard part moved from writing code to reviewing structural decisions fast enough to keep pace, which forced explicit verification gates I never needed when I typed everything myself.",
     metrics: [
       { label: "Merged PRs", value: "160+ / 9 repos" },
       { label: "Throughput", value: "≈ 7× / month" },
       { label: "Reviews given", value: "268" },
+      { label: "Domain", value: "Financial operations" },
       { label: "Hand-written code", value: "≈ 0 — spec, review, verify" },
       { label: "Stack", value: "Agents · MCP · TS · React" },
     ],
@@ -178,6 +179,7 @@ export const WORK = [
       "MCP",
       "TypeScript",
       "React",
+      "Financial Systems",
       "WCAG 2.1 AA",
     ],
   },

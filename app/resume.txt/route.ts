@@ -39,6 +39,12 @@ EXPERIENCE
 BuildOps                                              Apr 2025 - Present
 IC5 Software Engineer · AI-Augmented Practice
                                             Santa Monica, California, US
+  - New domain, owned: came in from a front-end background and learned
+    financial-operations engineering from scratch — accounting periods
+    and close semantics, enforcement rules that hold across object
+    types and fiscal years, ledger integrity, and the reporting layer
+    above them. Now spec and review changes there, and coordinate the
+    area's releases.
   - AI-Orchestrated Engineering: operating frontend work on a vertical
     SaaS platform almost entirely through AI-augmented workflows since
     mid-2025. Orchestrate agents, custom skills, and slash commands

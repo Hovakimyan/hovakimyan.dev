@@ -20,6 +20,9 @@ export default function AboutFile() {
       <p>
         In April 2025 I joined BuildOps in Santa Monica as IC5. Same engineering rigor, new domain (vertical SaaS for the trades), and an AI-augmented practice that&rsquo;s been quietly compounding the leverage on every line of code I touch.
       </p>
+      <p>
+        The domain was genuinely new. I arrived from front-end and had to learn how accounting periods, close semantics, enforcement across fiscal years and ledger integrity actually work before I could be trusted to change any of it. I now spec and review changes in that area and coordinate its releases. That turned out to be the part the agents can&rsquo;t do for you — the judgment about what <em>should</em> happen lives in understanding the domain, not in typing the code.
+      </p>
 
       <h2 id="leadership">Leadership philosophy</h2>
       <p>

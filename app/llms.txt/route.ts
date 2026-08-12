@@ -76,7 +76,12 @@ EXPERIENCE
 
   BuildOps · IC5 Software Engineer · AI-Augmented Practice
                 · April 2025 — Present · Santa Monica, CA
-    Vertical SaaS platform for the trades industry. Operating an
+    Vertical SaaS platform for the trades industry. Learned the
+    financial-operations domain from scratch after arriving from a
+    front-end background — accounting periods and close semantics,
+    enforcement rules across object types and fiscal years, ledger
+    integrity, reporting — and now specs/reviews changes there and
+    coordinates the area's releases. Operating an
     AI-orchestrated engineering practice — agents, custom Claude Code
     skills, and slash commands as the primary interface; manual code
     writing has been near-zero since mid-2025. Activities span:
