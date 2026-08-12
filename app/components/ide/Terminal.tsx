@@ -195,7 +195,8 @@ export default function Terminal() {
         push("stdout", "languages:  TypeScript · JavaScript");
         push("stdout", "frameworks: React · Next.js · Node.js · GraphQL");
         push("stdout", "practices:  Micro-Frontend · TDD · BDD · CI/CD · WCAG");
-        push("stdout", "tools:      Git · Jest · Webpack · Tailwind v4");
+        push("stdout", "tools:      Git · Jest · Playwright · Tailwind v4");
+        push("stdout", "agents:     Claude Code · MCP · custom skills");
         return;
       case "ai":
         push("stdout", "agent-paired coding for boilerplate + refactors");

@@ -196,7 +196,10 @@ TECHNICAL SKILLS
   Practices         Micro-Frontend Architecture, TDD, BDD, Unit
                     Testing, CI/CD, Code Reviews
   UI & Styling      Tailwind CSS, SASS, Styled Components
-  Tools & Databases PostgreSQL, MongoDB, Git, Webpack, Babel, Jest
+  Tools & Databases PostgreSQL, MongoDB, Git, Jest, Playwright,
+                    Webpack, Babel
+  Agents            Claude Code, MCP, custom skills/commands, agent
+                    orchestration
   Other             WCAG Accessibility, Internationalization,
                     Performance Optimization
   AI                Agent-Based Development, Claude Code agents/

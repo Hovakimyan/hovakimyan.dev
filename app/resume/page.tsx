@@ -6,7 +6,7 @@ import PrintButton from "./PrintButton";
 
 const RESUME_TITLE = `Resume · ${SITE.name} — ${SITE.role}`;
 const RESUME_DESCRIPTION =
-  "13+ years of software engineering. Plain, print-friendly resume — JavaScript, TypeScript, React, Next.js, Node.js, micro-frontend architecture, WCAG 2.1 AA, AI-augmented workflows. Currently IC5 Software Engineer at BuildOps in Santa Monica.";
+  "Senior software engineer, 13+ years. Plain, print-friendly resume — TypeScript, React, Next.js, Node.js, financial systems, micro-frontend architecture, WCAG 2.1 AA, agent-orchestrated delivery. Currently at BuildOps in Santa Monica; founder of Ashoon and co-founder of Kamui.";
 
 export const metadata: Metadata = {
   title: RESUME_TITLE,
@@ -770,7 +770,7 @@ export default function ResumePage() {
           <div>
             <dt>Tools &amp; Databases</dt>
             <dd>
-              PostgreSQL · MongoDB · Git · Webpack · Gulp · Babel · Jest
+              PostgreSQL · MongoDB · Git · Jest · Playwright · Webpack · Babel
             </dd>
           </div>
           <div>

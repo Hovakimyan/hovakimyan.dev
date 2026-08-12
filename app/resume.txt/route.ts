@@ -217,7 +217,10 @@ STATE / MIDDLEWARE  Redux Thunk, Reselect
 PRACTICES        Micro-Frontend Architecture, TDD, BDD, Unit Testing,
                  CI/CD, Code Reviews
 UI / STYLING     Tailwind CSS, SASS, Styled Components
-TOOLS / DBs      PostgreSQL, MongoDB, Git, Webpack, Babel, Jest
+TOOLS / DBs      PostgreSQL, MongoDB, Git, Jest, Playwright, Webpack,
+                 Babel
+AGENTS           Claude Code, MCP, custom skills/commands, agent
+                 orchestration
 OTHER            WCAG Accessibility, Internationalization,
                  Performance Optimization
 AI / AGENTS      Claude Code agents, custom skills + slash commands,
