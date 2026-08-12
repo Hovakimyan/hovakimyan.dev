@@ -31,6 +31,10 @@ const OUTLINES: Record<string, OutlineEntry[]> = {
     { level: 2, label: "schedule_call()" },
     { level: 2, label: "send_email()" },
   ],
+  "/writing": [
+    { level: 2, label: "01 Coding Pattern — Two Pointer", href: "#two-pointer" },
+    { level: 2, label: "02 Coding Pattern — Sliding Window", href: "#sliding-window" },
+  ],
   "/ventures": [
     { level: 2, label: "01 Ashoon" },
     { level: 2, label: "02 Ashoon Studio" },

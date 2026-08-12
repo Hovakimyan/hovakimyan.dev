@@ -39,6 +39,7 @@ to remote engagements.
 - /                      Home — profile data as a TypeScript declaration
 - /work                  Selected case studies (BuildOps, EPAM, Renderforest, Cloud Fleet Manager)
 - /ventures                          Ventures — Ashoon (AI SaaS), Ashoon Studio, hovakimyan.dev
+- /writing               Published articles (Medium)
 - /about                 Story, leadership philosophy, AI engineering, career git log
 - /contact               Schedule a call or email directly
 - /readme                Site navigation guide
@@ -92,7 +93,7 @@ EXPERIENCE
   EPAM Systems · Software Engineering Team Leader · Nov 2023 — April 2025 · Glendale, CA
     - Designed a Micro-Frontend Architecture in React/Redux/TypeScript;
       improved modularity and cut code dependencies by 30%.
-    - Led an 8-person front-end team across multiple accounts;
+    - Led a 12-person front-end team across multiple accounts;
       improved delivery times by 20%.
     - Ensured WCAG 2.1 AA compliance; extended reach to 15+ countries,
       boosted international engagement by 30%.

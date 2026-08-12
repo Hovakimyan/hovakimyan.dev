@@ -17,7 +17,7 @@ export default function WritingFile() {
       <hr />
 
       {WRITING.map((piece, i) => (
-        <section key={piece.href}>
+        <section key={piece.href} id={piece.slug}>
           <h2>
             <span className="num">{String(i + 1).padStart(2, "0")}</span>
             {piece.title}

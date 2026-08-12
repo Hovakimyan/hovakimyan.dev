@@ -224,7 +224,7 @@ export default function ResumePage() {
             </li>
             <li>
               <strong>Led a Cross-Functional Team:</strong> Managed an
-              8-person front-end team across EPAM Systems projects.
+              12-person front-end team across EPAM Systems projects.
               Improved delivery times by 20% through streamlined
               workflows and close collaboration with other teams.
             </li>

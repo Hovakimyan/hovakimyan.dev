@@ -15,7 +15,7 @@ export default function AboutFile() {
         I started building for the web in 2013 in Yerevan, Armenia. jQuery first, then React early — I was rewriting Silverlight modules to React in 2017, the same year Hooks were a year out. By 2019 I was leading a 5-person team rewriting Renderforest&rsquo;s Video Maker, a product that has since served 10M+ users and produced 30M+ projects.
       </p>
       <p>
-        In 2020 I joined EPAM. Over four-and-a-half years there I went from Senior to Team Leader, architecting micro-frontend systems, running an 8-engineer front-end team, and shipping streaming features for a major client 15% ahead of schedule. WCAG 2.1 AA was a constant theme — I cared about accessibility long before it was a punch-list item for AI tools.
+        In 2020 I joined EPAM. Over four-and-a-half years there I went from Senior to Team Leader, architecting micro-frontend systems, running a 12-engineer front-end team, and shipping streaming features for a major client 15% ahead of schedule. WCAG 2.1 AA was a constant theme — I cared about accessibility long before it was a punch-list item for AI tools.
       </p>
       <p>
         In April 2025 I joined BuildOps in Los Angeles as IC5. Same engineering rigor, new domain (vertical SaaS for the trades), and an AI-augmented practice that&rsquo;s been quietly compounding the leverage on every line of code I touch.

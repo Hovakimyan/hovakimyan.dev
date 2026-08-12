@@ -22,7 +22,7 @@ const HELP_LINES = [
   "  cat <file>          Print a file (try: cat about.md)",
   "  cd <route>          Navigate to a route (try: cd /work)",
   "  open <route>        Same as cd",
-  "  work | about | ventures | contact | readme | portrait",
+  "  work | ventures | writing | about | contact | readme | portrait",
   "  schedule            Open the Calendly modal",
   "  email               Compose an email",
   "  linkedin            Open LinkedIn in a new tab",
@@ -37,6 +37,7 @@ const FILE_ROUTES: Record<string, string> = {
   "about.md": "/about",
   "work.md": "/work",
   "ventures.md": "/ventures",
+  "writing.md": "/writing",
   "contact.sh": "/contact",
   "index.tsx": "/",
   "readme.md": "/readme",
@@ -49,6 +50,7 @@ const NAV_ALIASES: Record<string, string> = {
   work: "/work",
   about: "/about",
   ventures: "/ventures",
+  writing: "/writing",
   contact: "/contact",
   readme: "/readme",
   portrait: "/portrait",
@@ -112,7 +114,7 @@ export default function Terminal() {
         push("stdout", "src/");
         push(
           "stdout",
-          "  index.tsx  work.md  ventures.md  about.md  contact.sh",
+          "  index.tsx  work.md  ventures.md  writing.md  about.md  contact.sh",
         );
         push("stdout", "public/");
         push("stdout", "  portrait.jpg");
@@ -154,6 +156,7 @@ export default function Terminal() {
       case "work":
       case "about":
       case "ventures":
+      case "writing":
       case "contact":
       case "readme":
       case "portrait": {

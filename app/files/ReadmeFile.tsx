@@ -22,10 +22,13 @@ export default function ReadmeFile() {
           <code>ventures.md</code> — personal projects. The URLs are real links.
         </li>
         <li>
+          <code>writing.md</code> — published articles, newest first.
+        </li>
+        <li>
           <code>about.md</code> — story, leadership philosophy, AI engineering, career git log.
         </li>
         <li>
-          <code>contact.sh</code> — runnable lines: <code>$ schedule_call</code>, <code>$ send_email</code>, <code>$ open_linkedin</code>.
+          <code>contact.sh</code> — runnable lines: <code>$ schedule_call</code>, <code>$ send_email</code>, <code>$ open_github</code>, <code>$ open_linkedin</code>.
         </li>
         <li>
           <code>portrait.jpg</code> — image preview.

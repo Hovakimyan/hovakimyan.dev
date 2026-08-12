@@ -70,7 +70,7 @@ export const VERBS = [
 
 // Leadership numbers register.
 export const LEADERSHIP_STATS = [
-  { value: 8, prefix: "", suffix: "", label: "Largest team led" },
+  { value: 12, prefix: "", suffix: "", label: "Engineers led" },
   { value: 30, prefix: "", suffix: "+", label: "Mentored" },
   { value: 20, prefix: "+", suffix: "%", label: "Productivity" },
   { value: 30, prefix: "−", suffix: "%", label: "Onboarding time" },
@@ -87,10 +87,10 @@ export const HEADLINE_STATS = [
     display: null,
   },
   {
-    value: 8,
+    value: 12,
     prefix: "",
     suffix: "",
-    label: "Largest team led",
+    label: "Engineers led",
     display: null,
   },
   {
@@ -189,10 +189,10 @@ export const WORK = [
     period: "September 2020 — April 2025",
     location: "Yerevan → Glendale, California",
     pitch:
-      "Designed micro-frontend architecture and led an 8-engineer team across global accounts.",
-    body: "Across nearly five years at EPAM I went from Senior to Team Leader. I architected a micro-frontend system in React/Redux/TypeScript that cut code dependencies by 30%, led an 8-person front-end team across multiple accounts, and shipped streaming features for a major client 15% ahead of schedule. Drove WCAG 2.1 AA compliance across the projects, extending reach to 15+ countries and lifting international engagement by 30%.",
+      "Designed micro-frontend architecture and led a 12-engineer team across global accounts.",
+    body: "Across nearly five years at EPAM I went from Senior to Team Leader. I architected a micro-frontend system in React/Redux/TypeScript that cut code dependencies by 30%, led a 12-person front-end team across multiple accounts, and shipped streaming features for a major client 15% ahead of schedule. Drove WCAG 2.1 AA compliance across the projects, extending reach to 15+ countries and lifting international engagement by 30%.",
     metrics: [
-      { label: "Team size", value: "8" },
+      { label: "Team size", value: "12" },
       { label: "Code deps cut", value: "−30%" },
       { label: "Reach", value: "15+ countries" },
       { label: "Standards", value: "WCAG 2.1 AA" },
@@ -268,6 +268,7 @@ export const DELIVERY = {
 
 export const WRITING = [
   {
+    slug: "two-pointer",
     title: "Coding Pattern — Two Pointer",
     publisher: "Medium",
     date: "July 2024",
@@ -276,6 +277,7 @@ export const WRITING = [
       "The two-pointer technique for arrays and linked lists — when it applies, why it beats the nested loop, and how to recognise the shape of the problem.",
   },
   {
+    slug: "sliding-window",
     title: "Coding Pattern — Sliding Window",
     publisher: "Medium",
     date: "August 2021",
@@ -354,7 +356,7 @@ export const ABOUT_TIMELINE = [
   {
     date: "2023-11",
     branch: "epam/team-leader",
-    label: "Team Leader · 8-engineer front-end team · Glendale",
+    label: "Team Leader · 12-engineer front-end team · Glendale",
   },
   {
     date: "2022-03",
