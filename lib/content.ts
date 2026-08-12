@@ -5,10 +5,10 @@ export const SITE = {
   role: "AI-Augmented Software Engineer",
   pretitle: "AI-Augmented Engineer",
   subline:
-    "JavaScript & TypeScript · Agent-Based Development · Accessibility Advocate",
-  tagline: "Building scalable, accessible web systems with AI.",
+    "TypeScript & React · Agent-Orchestrated Delivery · Financial Systems",
+  tagline: "I spec it and review it. The agents write it.",
   lead:
-    "Thirteen-plus years of engineering across product-led companies. I lead cross-functional teams, ship micro-frontend platforms, and pair with AI agents to deliver accessible web systems that perform.",
+    "Thirteen years building for the web. These days I write less of the code than I used to — agents handle most of the implementation, and my job moved to deciding what should happen, reviewing what comes back, and proving it holds. Senior engineer at BuildOps on financial systems; founder of two products built the same way.",
   email: "hovakimyan.serg@gmail.com",
   location: "Glendale, California",
   github: "https://github.com/Hovakimyan",
@@ -150,7 +150,8 @@ export const TECH_STACK = {
     "WCAG",
     "Performance",
   ],
-  Tools: ["Git", "Webpack", "Babel", "Jest", "Tailwind", "PostgreSQL", "MongoDB"],
+  Tools: ["Git", "Jest", "Playwright", "Tailwind", "PostgreSQL", "MongoDB"],
+  Agents: ["Claude Code", "MCP", "Custom skills & commands", "Agent orchestration"],
 } as const;
 
 export const WORK = [

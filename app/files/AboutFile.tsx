@@ -18,7 +18,7 @@ export default function AboutFile() {
         In 2020 I joined EPAM. Over four-and-a-half years there I went from Senior to Team Leader, architecting micro-frontend systems, running a 12-engineer front-end team, and shipping streaming features for a major client 15% ahead of schedule. WCAG 2.1 AA was a constant theme — I cared about accessibility long before it was a punch-list item for AI tools.
       </p>
       <p>
-        In April 2025 I joined BuildOps in Santa Monica as IC5. Same engineering rigor, new domain (vertical SaaS for the trades), and an AI-augmented practice that&rsquo;s been quietly compounding the leverage on every line of code I touch.
+        In April 2025 I joined BuildOps in Santa Monica as IC5. Same engineering rigor, new domain (vertical SaaS for the trades), and a way of working that changed underneath me: for the past year most of the code has been written by agents, and my job moved to deciding what should happen and proving it did.
       </p>
       <p>
         The domain was genuinely new. I arrived from front-end and had to learn how accounting periods, close semantics, enforcement across fiscal years and ledger integrity actually work before I could be trusted to change any of it. I now spec and review changes in that area and coordinate its releases. That turned out to be the part the agents can&rsquo;t do for you — the judgment about what <em>should</em> happen lives in understanding the domain, not in typing the code.

@@ -1745,6 +1745,9 @@ body {
   color: #1f2c40;
   max-width: 74ch;
 }
+.sh-resume-section p + p {
+  margin-top: 10px;
+}
 .sh-resume-section ul {
   margin: 0;
   padding-left: 20px;

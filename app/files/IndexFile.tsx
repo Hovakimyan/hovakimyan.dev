@@ -143,9 +143,19 @@ export default function IndexFile() {
         <Tok type="punct">, </Tok>
         <Tok type="string">{'"Jest"'}</Tok>
         <Tok type="punct">, </Tok>
-        <Tok type="string">{'"Webpack"'}</Tok>
+        <Tok type="string">{'"Playwright"'}</Tok>
         <Tok type="punct">, </Tok>
         <Tok type="string">{'"Tailwind"'}</Tok>
+        <Tok type="punct">],</Tok>
+        {"\n    "}
+        <Tok type="prop">agents</Tok>
+        <Tok type="op">:</Tok>{"     "}
+        <Tok type="punct">[</Tok>
+        <Tok type="string">{'"Claude Code"'}</Tok>
+        <Tok type="punct">, </Tok>
+        <Tok type="string">{'"MCP"'}</Tok>
+        <Tok type="punct">, </Tok>
+        <Tok type="string">{'"custom skills"'}</Tok>
         <Tok type="punct">],</Tok>
         {"\n  "}
         <Tok type="punct">{"},"}</Tok>

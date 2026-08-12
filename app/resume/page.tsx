@@ -63,8 +63,8 @@ export default function ResumePage() {
             AI-Augmented Software Engineer
           </p>
           <p className="sh-resume-meta">
-            {SITE.location} · 13+ years · JavaScript &amp; TypeScript ·
-            Agent-Based Development · Accessibility (WCAG) Advocate
+            {SITE.location}
+            {" · 13+ years · TypeScript & React · Agent-Orchestrated Delivery · Financial Systems"}
           </p>
         </div>
         <Image
@@ -103,15 +103,20 @@ export default function ResumePage() {
       <section className="sh-resume-section">
         <h2>Summary</h2>
         <p>
-          13+ years of experience in software engineering. I specialise
-          in building scalable, high-performance applications that meet
-          global standards. My expertise spans JavaScript, React, Redux,
-          Node, and TypeScript, where I&rsquo;ve consistently delivered
-          cutting-edge solutions in both entrepreneurial and corporate
-          settings. I have a proven track record of leading diverse,
-          cross-functional teams, with a focus on Micro-Frontend
-          Architecture, accessibility, and internationalisation — ensuring
-          that the products I develop are both robust and user-centric.
+          Senior software engineer, thirteen years in. I&rsquo;m at
+          BuildOps working on financial operations for commercial
+          contractors — accounting periods, close, ledger integrity — a
+          domain I knew nothing about when I arrived from front-end, and
+          learning it properly turned out to be the job.
+        </p>
+        <p>
+          For the past year most of my code has been written by agents.
+          The work moved to specifying what should happen, reviewing what
+          comes back, and proving it holds: 160+ merged pull requests
+          across 9 repositories in 16 months, and 268 more reviewed for
+          other engineers. Before this, five years at EPAM ending as a
+          team leader with 12 engineers. Outside work I&rsquo;ve founded
+          and shipped two products the same way.
         </p>
       </section>
 
@@ -119,29 +124,29 @@ export default function ResumePage() {
         <h2>Key Highlights</h2>
         <ul>
           <li>
-            <strong>Architect &amp; Innovator —</strong> Spearheaded the
-            design and implementation of Micro-Frontend Architectures,
-            enhancing scalability and modularity across various projects
-            for leading tech companies.
+            <strong>Delivery, measured —</strong> 160+ merged pull
+            requests across 9 repositories in 16 months, 268 more
+            reviewed for other engineers, monthly throughput up roughly
+            7x against my own first-year baseline. Every change
+            human-reviewed before merge.
           </li>
           <li>
-            <strong>Team Leadership &amp; Development —</strong> Led teams
-            of up to 12 engineers, fostering a culture of collaboration,
-            continuous improvement, and high-quality deliverables.
-            Mentored numerous junior developers who have since advanced
-            to key roles in the industry.
+            <strong>A domain learned and owned —</strong> Came from
+            front-end into financial operations: accounting periods,
+            close, ledger integrity, reporting. Now specs and reviews
+            changes in that area and coordinates its releases.
           </li>
           <li>
-            <strong>Strategic Project Management —</strong> Coordinated
-            with Client Management, Design, and Marketing teams to ensure
-            seamless integration and project success, from concept to
-            deployment.
+            <strong>Two products shipped —</strong> Founded Ashoon, an AI
+            customer-messaging platform answering DMs in 30 languages,
+            and co-founded Kamui, a point-of-sale platform for
+            independent retail. Both built end to end with agents.
           </li>
           <li>
-            <strong>Continuous Improvement Advocate —</strong> Implemented
-            best practices such as TDD, BDD, and CI/CD, ensuring
-            high-quality, maintainable code that meets user requirements
-            and business goals.
+            <strong>Teams, not just code —</strong> Led a 12-engineer
+            front-end team at EPAM, ran the hiring loop, and mentored
+            engineers who have since moved into senior and lead roles.
+            Micro-frontend architecture, WCAG 2.1 AA, 15+ countries.
           </li>
         </ul>
       </section>

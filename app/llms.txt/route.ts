@@ -9,7 +9,7 @@
 
 import { NextResponse } from "next/server";
 
-const BODY = `# Sergey Hovakimyan — AI-Augmented Software Engineer
+const BODY = `# Sergey Hovakimyan — Senior Software Engineer (AI-Augmented Practice)
 
 > Personal site at hovakimyan.dev. Built as an IDE-themed portfolio
 > (pages are files, sidebar is the file explorer, terminal is real).
@@ -18,13 +18,25 @@ const BODY = `# Sergey Hovakimyan — AI-Augmented Software Engineer
 
 ## About
 
-Sergey Hovakimyan is an AI-Augmented Software Engineer based in
-Glendale, California with 13+ years of professional experience.
-Strengths: TypeScript / React / Next.js / Node.js, micro-frontend
-architecture, accessibility (WCAG 2.1 AA), engineering leadership,
-team mentorship, AI-augmented development workflows. Currently
-working at BuildOps in Santa Monica (IC5 Software Engineer). Open
-to remote engagements.
+Sergey Hovakimyan is a senior software engineer based in Glendale,
+California with 13+ years of professional experience. Currently at
+BuildOps in Santa Monica (IC5 Software Engineer), working on
+financial operations for commercial contractors — accounting
+periods, close, ledger integrity, reporting — a domain learned from
+scratch after arriving from front-end, and now owned: he specs and
+reviews changes there and coordinates the area's releases.
+
+Works through agent-assisted development: 160+ merged pull requests
+across 9 repositories in 16 months, 268 pull requests reviewed for
+other engineers, monthly merge throughput up roughly 7x against his
+own first-year baseline, every change human-reviewed before merge.
+
+Strengths: TypeScript / React / Next.js / Node.js / NestJS,
+micro-frontend architecture, financial systems, accessibility
+(WCAG 2.1 AA), agent orchestration and MCP, engineering leadership,
+team mentorship. Founder of Ashoon (AI customer-messaging platform)
+and co-founder of Kamui (retail point-of-sale platform). Open to
+remote engagements.
 
 ## Contact
 
@@ -38,7 +50,7 @@ to remote engagements.
 
 - /                      Home — profile data as a TypeScript declaration
 - /work                  Selected case studies (BuildOps, EPAM, Renderforest, Cloud Fleet Manager)
-- /ventures                          Ventures — Ashoon (AI SaaS), Ashoon Studio, hovakimyan.dev
+- /ventures              Ventures — Ashoon (AI SaaS), Kamui (retail POS), Ashoon Studio, hovakimyan.dev
 - /writing               Published articles (Medium)
 - /about                 Story, leadership philosophy, AI engineering, career git log
 - /contact               Schedule a call or email directly
@@ -55,7 +67,7 @@ to remote engagements.
 ## Resume — plain text
 
 NAME            Sergey Hovakimyan
-TITLE           AI-Augmented Software Engineer
+TITLE           Senior Software Engineer (AI-Augmented Practice)
 LOCATION        Glendale, California, USA
 EMAIL           hovakimyan.serg@gmail.com
 LINKEDIN        https://www.linkedin.com/in/hovakimyanserg/
@@ -63,14 +75,20 @@ EXPERIENCE      13+ years
 LANGUAGES       English (Full Professional), Armenian (Native), Russian (Full Professional)
 
 SUMMARY
-  AI-Augmented Software Engineer with 13+ years across JavaScript,
-  TypeScript, React, Next.js, Node.js, Redux, and GraphQL. Specializes
-  in micro-frontend architectures, accessibility (WCAG 2.1 AA), and
-  AI-augmented engineering workflows. Has led cross-functional teams
-  of up to 12 engineers; mentored numerous engineers into senior
-  roles. Track record of strategic product management coordination
-  across Client Management, Design, and Marketing teams. Continuous
-  improvement advocate (TDD, BDD, CI/CD).
+  Senior software engineer, 13+ years across JavaScript, TypeScript,
+  React, Next.js, Node.js, NestJS, Redux, GraphQL and PostgreSQL.
+  Currently at BuildOps (Santa Monica) on financial operations —
+  accounting periods, close, ledger integrity, reporting — a domain
+  learned from scratch after arriving from front-end, and now owned:
+  specs and reviews changes there, coordinates the area's releases.
+  Works through agent-assisted development: 160+ merged pull requests
+  across 9 repositories in 16 months, 268 PRs reviewed for other
+  engineers, monthly merge throughput up ~7x vs. a first-year
+  baseline, every change human-reviewed before merge. Also
+  micro-frontend architecture, accessibility (WCAG 2.1 AA),
+  internationalization, TDD/BDD, CI/CD, Playwright, release
+  management. Led a 12-engineer front-end team at EPAM. Founder of
+  Ashoon and co-founder of Kamui, both built end to end with agents.
 
 EXPERIENCE
 

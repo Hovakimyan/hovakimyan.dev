@@ -7,7 +7,7 @@
 import { NextResponse } from "next/server";
 
 const BODY = `SERGEY HOVAKIMYAN
-AI-Augmented Software Engineer · 13+ years
+Senior Software Engineer · AI-Augmented Practice · 13+ years
 Glendale, California · Open to remote
 
 CONTACT
@@ -23,14 +23,24 @@ LANGUAGES
 ================================================================
 SUMMARY
 ================================================================
-AI-Augmented Software Engineer with 13+ years across JavaScript,
-TypeScript, React, Next.js, Node.js, Redux, and GraphQL. Specialises
-in micro-frontend architectures, accessibility (WCAG 2.1 AA), and
-AI-augmented engineering workflows. Has led cross-functional teams
-of up to 12 engineers; mentored numerous engineers into senior
-roles. Track record of strategic project management across Client
-Management, Design, and Marketing teams. Continuous improvement
-advocate (TDD, BDD, CI/CD).
+Senior software engineer, 13+ years across JavaScript, TypeScript,
+React, Next.js, Node.js, NestJS, Redux, GraphQL and PostgreSQL.
+Currently at BuildOps (Santa Monica) on financial operations —
+accounting periods, close, ledger integrity, reporting — a domain
+learned from scratch after arriving from front-end, and now owned:
+specs and reviews changes there, coordinates the area's releases.
+
+Works through agent-assisted development: 160+ merged pull requests
+across 9 repositories in 16 months, 268 pull requests reviewed for
+other engineers, monthly merge throughput up roughly 7x against a
+first-year baseline, every change human-reviewed before merge.
+
+Also: micro-frontend architecture, accessibility (WCAG 2.1 AA),
+internationalisation, TDD/BDD, CI/CD, Playwright end-to-end testing,
+release management. Led a 12-engineer front-end team at EPAM.
+Founder of Ashoon (AI customer-messaging platform) and co-founder of
+Kamui (retail point-of-sale platform), both built end to end with
+agents.
 
 ================================================================
 EXPERIENCE
