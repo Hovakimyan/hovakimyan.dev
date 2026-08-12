@@ -57,8 +57,32 @@ IC5 Software Engineer · AI-Augmented Practice
     surface issues before they ship.
   - Design-to-Code via MCP: Figma + design-system integrations turn
     hand-offs into production components without boilerplate.
+  - Measured delivery: 160+ merged PRs across 9 repositories in 16
+    months; 268 PRs reviewed for other engineers. Sustained monthly
+    merge throughput up ~7x vs. my own first-year baseline, with every
+    change human-reviewed before merge.
   - Stack: TypeScript, React, Node.js, Claude Code, MCP, custom
     agents/skills/commands.
+
+Independent                                       Apr 2021 - Present
+
+Founder & Freelance Engineer (part-time)                       Remote
+  - Ashoon (founder): AI customer-messaging platform replying across
+    Instagram, Messenger, WhatsApp and web chat in 30 languages;
+    takes orders and books appointments from a DM. Next.js, NestJS,
+    Prisma/PostgreSQL, pgvector (RAG), Redis/BullMQ, Stripe.
+    https://ashoon.com
+  - Kamui (co-founder): POS platform for independent retail — orders
+    across in-store/pickup/delivery, dispatch with live tracking, QR
+    inventory, local printer agents, AI assistant. Multi-tenant
+    isolation via Postgres row-level security. https://kamui.digital
+  - Ashoon Studio: web-design studio shipping brochure sites with
+    booking integration and local SEO. Astro, Tailwind, Cloudflare
+    Pages. https://ashoon.online
+  - Toptal Network: member since 2021; intermittent part-time client
+    engagements alongside full-time work.
+  - Both products were built end-to-end through agent-assisted
+    development.
 
 EPAM Systems                                                4y 8mo total
 

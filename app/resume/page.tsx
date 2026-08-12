@@ -200,8 +200,61 @@ export default function ResumePage() {
               boilerplate.
             </li>
             <li>
+              <strong>Measured delivery:</strong> 160+ merged pull requests
+              across 9 repositories in 16 months, with 268 pull requests
+              reviewed for other engineers over the same period. Sustained
+              monthly merge throughput up roughly 7× against my own
+              first-year baseline, every change human-reviewed before merge.
+            </li>
+            <li>
               <strong>Stack:</strong> TypeScript · React · Node.js ·
               Claude Code · MCP · custom agents/skills/commands.
+            </li>
+          </ul>
+        </article>
+
+        <article className="sh-resume-job">
+          <header>
+            <div>
+              <h3>Independent — Founder &amp; Freelance Engineer (part-time)</h3>
+              <p className="sh-resume-loc">
+                Remote · April 2021 — Present
+              </p>
+            </div>
+          </header>
+          <ul>
+            <li>
+              <strong>Ashoon (founder) —</strong> AI customer-messaging
+              platform that auto-replies across Instagram, Facebook
+              Messenger, WhatsApp and website chat in 30 languages, taking
+              orders and booking appointments from a DM. Next.js, NestJS,
+              Prisma/PostgreSQL, pgvector for RAG, Redis/BullMQ, Stripe.{" "}
+              <a href="https://ashoon.com">ashoon.com</a>
+            </li>
+            <li>
+              <strong>Kamui (co-founder) —</strong> Point-of-sale platform
+              for independent retail: orders across in-store, pickup and
+              delivery, dispatch with live driver tracking, QR inventory,
+              local printer agents, and an AI assistant. Multi-tenant
+              isolation enforced with Postgres row-level security.{" "}
+              <a href="https://kamui.digital">kamui.digital</a>
+            </li>
+            <li>
+              <strong>Ashoon Studio —</strong> Web-design studio shipping
+              brochure sites with booking integration and local SEO for U.S.
+              small service businesses. Astro, Tailwind, Cloudflare Pages.{" "}
+              <a href="https://ashoon.online">ashoon.online</a>
+            </li>
+            <li>
+              <strong>Toptal Network —</strong> Member of the vetted talent
+              network since 2021; intermittent part-time client engagements
+              alongside full-time work.
+            </li>
+            <li>
+              <strong>Why it matters:</strong> both products were built
+              end-to-end through agent-assisted development — the same
+              practice applied to my day job, on problems I owned from
+              scratch.
             </li>
           </ul>
         </article>

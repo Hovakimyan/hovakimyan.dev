@@ -309,6 +309,22 @@ export const VENTURES = [
     primaryHref: "https://ashoon.com",
   },
   {
+    name: "Kamui",
+    tagline: "One POS to run your whole shop.",
+    body:
+      "Kamui is a point-of-sale platform for independent retail, built with a co-founder and shipped in 2026. It replaces the stack of disconnected tools most shops run: POS and order management across in-store, pickup and delivery; delivery dispatch with live driver tracking; QR-based inventory; receipt and ticket printing through local printer agents; SMS and call tracking; and an AI assistant that answers questions about the business. Multi-tenant isolation is enforced at the database layer with Postgres row-level security rather than in application code, alongside role-based staff access, optional 2FA, audit trails, and age-restriction compliance for regulated retail. Built end-to-end through agent-assisted development.",
+    services: null,
+    stack: [
+      "Next.js",
+      "React",
+      "PostgreSQL (row-level security)",
+      "Multi-tenant",
+      "Railway",
+    ],
+    urls: [{ label: "kamui.digital", href: "https://kamui.digital" }],
+    primaryHref: "https://kamui.digital",
+  },
+  {
     name: "Ashoon Studio",
     tagline:
       "Professionally-designed websites for U.S. small service businesses.",

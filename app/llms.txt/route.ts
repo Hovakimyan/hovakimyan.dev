@@ -89,6 +89,19 @@ EXPERIENCE
       * AI-led WCAG 2.1 AA accessibility audits surfaced in CI
       * design-to-code via Figma + MCP integrations
     Stack: TypeScript, React, Node.js, Claude Code, MCP.
+    Measured delivery: 160+ merged PRs across 9 repositories in 16
+      months; 268 PRs reviewed for other engineers; sustained monthly
+      merge throughput up ~7x vs. first-year baseline.
+
+  Independent · Founder & Freelance Engineer (part-time) · April 2021 — Present · Remote
+    - Ashoon (founder) — AI customer-messaging SaaS. https://ashoon.com
+    - Kamui (co-founder) — POS platform for independent retail.
+      https://kamui.digital
+    - Ashoon Studio — web-design studio. https://ashoon.online
+    - Toptal Network — member since 2021; intermittent part-time
+      client engagements alongside full-time work.
+    Both products were built end-to-end through agent-assisted
+      development.
 
   EPAM Systems · Software Engineering Team Leader · Nov 2023 — April 2025 · Glendale, CA
     - Designed a Micro-Frontend Architecture in React/Redux/TypeScript;
@@ -181,6 +194,13 @@ VENTURES
            DMs. Multi-tenant, RAG-powered, 30 languages. Built on
            Next.js + NestJS + PostgreSQL + pgvector + Redis + Stripe.
            https://ashoon.com
+
+  Kamui — Point-of-sale platform for independent retail; co-founder.
+           POS, delivery dispatch with live tracking, QR inventory,
+           local printer agents, SMS/call tracking, AI assistant.
+           Multi-tenant isolation via Postgres row-level security.
+           Built on Next.js + PostgreSQL, hosted on Railway.
+           https://kamui.digital
 
   Ashoon Studio — Web-design studio for U.S. small service
            businesses (salons, trainers, photographers,

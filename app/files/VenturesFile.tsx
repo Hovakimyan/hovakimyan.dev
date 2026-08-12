@@ -57,6 +57,49 @@ export default function VenturesFile() {
 
       <h2>
         <span className="num">02</span>
+        Kamui
+      </h2>
+      <blockquote>One POS to run your whole shop.</blockquote>
+      <p>
+        Kamui is a point-of-sale platform for independent retail, built with a
+        co-founder and shipped in 2026. It replaces the stack of disconnected
+        tools most shops run — POS and order management (in-store, pickup,
+        delivery), delivery dispatch with live driver tracking, QR-based
+        inventory, receipt and ticket printing through local printer agents,
+        SMS and call tracking, and an AI assistant that answers questions
+        about the business. Sold as a subscription per location.
+      </p>
+      <p>
+        The engineering constraint that shaped it: multi-tenant isolation
+        enforced at the database layer with Postgres row-level security rather
+        than in application code, plus role-based staff access, optional 2FA,
+        audit trails, and age-restriction compliance for regulated retail.
+        Like Ashoon, it was built end-to-end through agent-assisted
+        development.
+      </p>
+
+      <h3>Stack</h3>
+      <p>
+        <code>Next.js</code> · <code>React</code> ·{" "}
+        <code>PostgreSQL</code> (row-level security) ·{" "}
+        <code>Multi-tenant</code> · <code>Railway</code>
+      </p>
+
+      <h3>Visit</h3>
+      <p>
+        <a
+          href="https://kamui.digital"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          kamui.digital
+        </a>
+      </p>
+
+      <hr />
+
+      <h2>
+        <span className="num">03</span>
         Ashoon Studio
       </h2>
       <blockquote>
@@ -108,7 +151,7 @@ export default function VenturesFile() {
       <hr />
 
       <h2>
-        <span className="num">03</span>
+        <span className="num">04</span>
         hovakimyan.dev
       </h2>
       <blockquote>The site you&rsquo;re reading.</blockquote>
@@ -143,7 +186,7 @@ export default function VenturesFile() {
       <hr />
 
       <h2>
-        <span className="num">04</span>
+        <span className="num">05</span>
         cryptoeye.eu <span style={{ opacity: 0.5 }}>· archived</span>
       </h2>
       <blockquote>Cryptocurrency candles for traders.</blockquote>

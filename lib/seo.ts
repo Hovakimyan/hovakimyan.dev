@@ -31,6 +31,8 @@ export function personJsonLd() {
       "https://github.com/Hovakimyan",
       "https://ashoon.com",
       "https://ashoon.online",
+      "https://kamui.digital",
+      "https://medium.com/@hovakimyan.serg",
     ].filter(Boolean),
     knowsAbout: [
       "Software Engineering",
