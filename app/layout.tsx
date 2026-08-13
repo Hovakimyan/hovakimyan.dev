@@ -32,13 +32,13 @@ export const metadata: Metadata = {
     default: `${SITE.name} — ${SITE.role}`,
     template: `%s · ${SITE.name}`,
   },
-  description: SITE.lead,
+  description: SITE.metaDescription,
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: `${SITE.name} — ${SITE.role}`,
-    description: SITE.lead,
+    description: SITE.metaDescription,
     type: "profile",
     siteName: SITE.name,
     url: "https://hovakimyan.dev",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: `${SITE.name} — ${SITE.role}`,
-    description: SITE.lead,
+    description: SITE.metaDescription,
     images: ["/images/sergey-portrait.jpg"],
   },
 };

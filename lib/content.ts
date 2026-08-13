@@ -9,6 +9,10 @@ export const SITE = {
   tagline: "I spec it and review it. The agents write it.",
   lead:
     "Thirteen years building for the web. These days I write less of the code than I used to — agents handle most of the implementation, and my job moved to deciding what should happen, reviewing what comes back, and proving it holds. Senior engineer at BuildOps on financial systems; founder of two products built the same way.",
+  // Search-result copy. Kept under ~155 chars so Google doesn't truncate it;
+  // `lead` above is the on-page hero and is deliberately longer.
+  metaDescription:
+    "Senior software engineer, 13+ years. Financial systems at BuildOps, agent-orchestrated delivery, TypeScript and React. Founder of Ashoon and Kamui.",
   email: "hovakimyan.serg@gmail.com",
   location: "Glendale, California",
   github: "https://github.com/Hovakimyan",

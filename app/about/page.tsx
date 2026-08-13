@@ -4,7 +4,7 @@ import AboutFile from "@/app/files/AboutFile";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "Story, leadership philosophy, AI engineering, and the git log of a 13-year career.",
+  description: "The story, how I lead, how I work with agents, and a git log of a 13-year career from Yerevan to Santa Monica.",
 };
 
 export default function AboutPage() {

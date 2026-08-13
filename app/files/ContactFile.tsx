@@ -8,6 +8,7 @@ export default function ContactFile() {
   const { openBooking } = useIde();
   return (
     <article className="sh-content sh-bash">
+      <h1 className="sh-sr-only">Contact Sergey Hovakimyan</h1>
       <pre className="sh-code">
         <Tok type="comment">{"#!/usr/bin/env bash"}</Tok>
         {"\n"}

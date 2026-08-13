@@ -4,12 +4,13 @@ import Image from "next/image";
 import { SITE } from "@/lib/content";
 import PrintButton from "./PrintButton";
 
-const RESUME_TITLE = `Resume · ${SITE.name} — ${SITE.role}`;
+const RESUME_TITLE = `${SITE.name} — Senior Software Engineer · Resume`;
 const RESUME_DESCRIPTION =
-  "Senior software engineer, 13+ years. Plain, print-friendly resume — TypeScript, React, Next.js, Node.js, financial systems, micro-frontend architecture, WCAG 2.1 AA, agent-orchestrated delivery. Currently at BuildOps in Santa Monica; founder of Ashoon and co-founder of Kamui.";
+  "Print-friendly resume. Senior software engineer, 13+ years: financial systems at BuildOps, TypeScript, React, Node, agent-orchestrated delivery.";
 
 export const metadata: Metadata = {
-  title: RESUME_TITLE,
+  // Absolute so the layout template doesn't append the name a second time.
+  title: { absolute: RESUME_TITLE },
   description: RESUME_DESCRIPTION,
   alternates: { canonical: "/resume" },
   robots: { index: true, follow: true },
