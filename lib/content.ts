@@ -168,11 +168,11 @@ export const WORK = [
     location: "Santa Monica, California",
     pitch:
       "Engineering a vertical SaaS platform through an AI-orchestrated workflow — agents write nearly all the implementation; my work is specification, review, and verification, and I own the release train for financial operations.",
-    body: "I joined as an IC5 on a vertical SaaS platform for the trades and ended up owning financial operations — accounting periods, close semantics, enforcement rules that have to hold across object types and fiscal years, ledger integrity, and the reporting layer above it. I knew none of that when I arrived. Learning it properly turned out to be the entire job, because an agent will hand you a beautifully clean function that does exactly the wrong thing to a ledger and never hesitate before doing it. I now spec and review changes in that area and coordinate its releases. Since mid-2025 almost none of the implementation has been typed by hand: I design the agents, skills and slash commands the team uses, run deep-research agents to pressure-test trade-offs before anything is written, pair with them on tests and review, and wire Figma into production components through MCP. What actually changed is the unit of work: smaller changes, more of them, every one still read by a human before it merges. Alongside that I've reviewed 268 pull requests for other engineers and taken over release coordination for the area. The part worth naming is the cost: the hard work moved from writing code to reviewing structural decisions fast enough to keep pace, and I finish most days more tired than when I typed everything myself.",
+    body: "I work across BuildOps' vertical SaaS platform for the trades — most of my time in the React/TypeScript web app, and more recently on the team behind financial operations: accounting periods, close semantics, enforcement rules that have to hold across object types and fiscal years, ledger integrity, and the reporting layer above it. I knew none of that domain when I arrived. Learning it properly turned out to be the entire job, because an agent will hand you a beautifully clean function that does exactly the wrong thing to a ledger and never hesitate before doing it. I now spec and review changes in that area and coordinate its releases, alongside the broader product work. Since mid-2025 almost none of the implementation has been typed by hand: I design the agents, skills and slash commands the team uses, run deep-research agents to pressure-test trade-offs before anything is written, pair with them on tests and review, and wire Figma into production components through MCP. What actually changed is the unit of work: smaller changes, more of them, every one still read by a human before it merges. Alongside that I've reviewed 268 pull requests for other engineers and taken over release coordination for the area. The part worth naming is the cost: the hard work moved from writing code to reviewing structural decisions fast enough to keep pace, and I finish most days more tired than when I typed everything myself.",
     metrics: [
       { label: "Reviews given", value: "268" },
       { label: "Repositories", value: "9" },
-      { label: "Release train", value: "Owned" },
+      { label: "Releases", value: "Coordinated" },
       { label: "Domain", value: "Financial operations" },
       { label: "Hand-written code", value: "≈ 0 — spec, review, verify" },
       { label: "Stack", value: "Agents · MCP · TS · React" },
@@ -250,7 +250,7 @@ export const DELIVERY = {
   totals: [
     { value: "268", label: "PRs reviewed for other engineers" },
     { value: "9", label: "Repositories touched" },
-    { value: "Owned", label: "Release train, financial ops" },
+    { value: "Coordinated", label: "Releases, financial ops" },
     { value: "16", label: "Months at BuildOps" },
   ],
   monthly: [

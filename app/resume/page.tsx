@@ -142,8 +142,8 @@ export default function ResumePage() {
             <strong>A domain learned from nothing —</strong> Financial
             operations: accounting periods, close, ledger integrity,
             reporting. I couldn&rsquo;t have told you what a close was
-            when I joined. Now I spec and review the changes and
-            coordinate the releases.
+            when I joined. Now I spec and review changes there and
+            coordinate the area&rsquo;s releases.
           </li>
           <li>
             <strong>Two products, evenings and weekends —</strong>{" "}
@@ -174,12 +174,14 @@ export default function ResumePage() {
           </header>
           <ul>
             <li>
-              <strong>New domain, owned:</strong> Financial-operations
-              engineering was new territory — accounting periods and
-              close semantics, enforcement rules that hold across object
-              types and fiscal years, ledger integrity, and the reporting
-              layer above them. Learned it properly; now spec and review
-              changes in that area and coordinate its releases.
+              <strong>Breadth, then depth:</strong> Most of my work is
+              in the React/TypeScript web app across the wider product;
+              more recently I joined the team behind financial
+              operations — accounting periods and close semantics,
+              enforcement across object types and fiscal years, ledger
+              integrity, reporting. New domain, learned properly: I now
+              spec and review changes there and coordinate its
+              releases.
             </li>
             <li>
               <strong>AI-Orchestrated Engineering:</strong> Operating

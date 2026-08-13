@@ -21,10 +21,11 @@ const BODY = `# Sergey Hovakimyan — Senior Software Engineer (AI-Augmented Pra
 Sergey Hovakimyan is a senior software engineer based in Glendale,
 California with 13+ years of professional experience. Currently at
 BuildOps in Santa Monica (IC5 Software Engineer), working on
-financial operations for commercial contractors — accounting
-periods, close, ledger integrity, reporting. The domain was new to
-him; the engineering wasn't. He learned it properly and now specs
-and reviews changes there and coordinates the area's releases.
+BuildOps' platform for commercial contractors — most of his work in
+the React/TypeScript web app, and more recently on the team behind
+financial operations: accounting periods, close, ledger integrity,
+reporting. That domain was new to him; the engineering wasn't. He
+specs and reviews changes there and coordinates the area's releases.
 
 Works through agent-assisted development: specifies and reviews
 rather than typing implementation, owns release coordination for the
@@ -96,11 +97,12 @@ EXPERIENCE
 
   BuildOps · IC5 Software Engineer · AI-Augmented Practice
                 · April 2025 — Present · Santa Monica, CA
-    Vertical SaaS platform for the trades industry. Financial
-    operations was new territory — accounting periods and close
-    semantics, enforcement rules across object types and fiscal
-    years, ledger integrity, reporting. Learned it properly and now
-    specs/reviews changes there and coordinates the area's releases. Operating an
+    Vertical SaaS platform for the trades industry. Most work in the
+    React/TypeScript web app across the wider product; more recently
+    on the team behind financial operations — accounting periods,
+    close semantics, enforcement across object types and fiscal
+    years, ledger integrity, reporting. Specs/reviews changes there
+    and coordinates the area's releases. Operating an
     AI-orchestrated engineering practice — agents, custom Claude Code
     skills, and slash commands as the primary interface; manual code
     writing has been near-zero since mid-2025. Activities span:

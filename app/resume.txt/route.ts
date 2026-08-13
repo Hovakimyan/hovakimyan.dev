@@ -50,12 +50,12 @@ EXPERIENCE
 BuildOps                                              Apr 2025 - Present
 IC5 Software Engineer · AI-Augmented Practice
                                             Santa Monica, California, US
-  - New domain, owned: financial-operations engineering was new
-    territory — accounting periods and close semantics, enforcement
-    rules that hold across object types and fiscal years, ledger
-    integrity, and the reporting layer above them. Learned it
-    properly; now spec and review changes there, and coordinate the
-    area's releases.
+  - Breadth, then depth: most of my work is in the React/TypeScript
+    web app across the wider product; more recently joined the team
+    behind financial operations — accounting periods and close
+    semantics, enforcement across object types and fiscal years,
+    ledger integrity, reporting. New domain, learned properly; now
+    spec and review changes there and coordinate the area's releases.
   - AI-Orchestrated Engineering: operating frontend work on a vertical
     SaaS platform almost entirely through AI-augmented workflows since
     mid-2025. Orchestrate agents, custom skills, and slash commands
