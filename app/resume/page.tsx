@@ -115,9 +115,10 @@ export default function ResumePage() {
           reporting. I knew none of that domain when I joined, and
           learning it properly turned out to be the job — an agent will
           write a perfectly clean function that does exactly the wrong
-          thing to a ledger. The record so far: 160+ merged pull requests
-          across 9 repositories in 16 months, another 268 reviewed for
-          other engineers, roughly 7x my own first-year throughput.
+          thing to a ledger. The shift is measurable: 44 merged pull
+          requests in my best month this year against a first-year
+          average of six, another 268 reviewed for other engineers, and
+          160+ merged across 9 repositories in total.
         </p>
         <p>
           Before BuildOps: five years at EPAM ending as a team leader
@@ -131,11 +132,11 @@ export default function ResumePage() {
         <h2>Key Highlights</h2>
         <ul>
           <li>
-            <strong>Delivery, measured —</strong> 160+ merged pull
-            requests across 9 repositories in 16 months, 268 more
-            reviewed for other engineers, roughly seven times my own
-            first-year output. Nothing merges that a human hasn&rsquo;t
-            read.
+            <strong>Delivery, measured —</strong> Merge rate went from
+            six a month in my first year to 44 in my best month this
+            year, across 9 repositories — 160+ in total, plus 268 more
+            reviewed for other engineers. Nothing merges that a human
+            hasn&rsquo;t read.
           </li>
           <li>
             <strong>A domain learned from nothing —</strong> Financial
@@ -221,11 +222,11 @@ export default function ResumePage() {
               boilerplate.
             </li>
             <li>
-              <strong>Measured delivery:</strong> 160+ merged pull requests
-              across 9 repositories in 16 months, with 268 pull requests
-              reviewed for other engineers over the same period. Sustained
-              monthly merge throughput up roughly 7× against my own
-              first-year baseline, every change human-reviewed before merge.
+              <strong>Measured delivery:</strong> Merge rate went from
+              about six a month in my first year to 44 in my best month
+              this year — 160+ merged across 9 repositories in total,
+              plus 268 reviewed for other engineers. Every change
+              human-reviewed before merge.
             </li>
             <li>
               <strong>Across the stack:</strong> Work spans 9

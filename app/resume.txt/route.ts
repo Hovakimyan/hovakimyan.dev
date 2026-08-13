@@ -30,10 +30,10 @@ accounting periods, close, ledger integrity, reporting. New domain,
 learned properly and now owned: specs and reviews changes there,
 coordinates the area's releases.
 
-Works through agent-assisted development: 160+ merged pull requests
-across 9 repositories in 16 months, 268 pull requests reviewed for
-other engineers, monthly merge throughput up roughly 7x against a
-first-year baseline, every change human-reviewed before merge.
+Works through agent-assisted development: monthly merge rate went
+from ~6 in the first year to 44 in the best month this year; 160+
+merged across 9 repositories in total, plus 268 reviewed for other
+engineers. Every change human-reviewed before merge.
 
 Also: micro-frontend architecture, accessibility (WCAG 2.1 AA),
 internationalisation, TDD/BDD, CI/CD, Playwright end-to-end testing,
@@ -73,10 +73,10 @@ IC5 Software Engineer · AI-Augmented Practice
     surface issues before they ship.
   - Design-to-Code via MCP: Figma + design-system integrations turn
     hand-offs into production components without boilerplate.
-  - Measured delivery: 160+ merged PRs across 9 repositories in 16
-    months; 268 PRs reviewed for other engineers. Sustained monthly
-    merge throughput up ~7x vs. my own first-year baseline, with every
-    change human-reviewed before merge.
+  - Measured delivery: merge rate went from ~6/month in my first year
+    to 44 in my best month this year; 160+ merged across 9 repositories
+    in total, plus 268 reviewed for other engineers. Every change
+    human-reviewed before merge.
   - Across the stack: work spans 9 repositories — the React/TypeScript
     web app, the financial core service, backend services, database
     migrations and end-to-end test suites. AWS SDK migration verified

@@ -167,11 +167,11 @@ export const WORK = [
     period: "April 2025 — Present",
     location: "Santa Monica, California",
     pitch:
-      "Engineering a vertical SaaS platform through an AI-orchestrated workflow — agents write nearly all the implementation; my work is specification, review, and verification. 160+ merged pull requests across 9 repositories in 16 months.",
-    body: "I joined as an IC5 on a vertical SaaS platform for the trades and ended up owning financial operations — accounting periods, close semantics, enforcement rules that have to hold across object types and fiscal years, ledger integrity, and the reporting layer above it. I knew none of that when I arrived. Learning it properly turned out to be the entire job, because an agent will hand you a beautifully clean function that does exactly the wrong thing to a ledger and never hesitate before doing it. I now spec and review changes in that area and coordinate its releases. Since mid-2025 almost none of the implementation has been typed by hand: I design the agents, skills and slash commands the team uses, run deep-research agents to pressure-test trade-offs before anything is written, pair with them on tests and review, and wire Figma into production components through MCP. The measurable result is roughly 7× my own first-year merge throughput, with every change still read by a human before it merges and another 268 pull requests reviewed for other engineers in the same period. The part worth naming is the cost: the hard work moved from writing code to reviewing structural decisions fast enough to keep pace, and I finish most days more tired than when I typed everything myself.",
+      "Engineering a vertical SaaS platform through an AI-orchestrated workflow — agents write nearly all the implementation; my work is specification, review, and verification. Merge rate went from six a month to 44 at peak.",
+    body: "I joined as an IC5 on a vertical SaaS platform for the trades and ended up owning financial operations — accounting periods, close semantics, enforcement rules that have to hold across object types and fiscal years, ledger integrity, and the reporting layer above it. I knew none of that when I arrived. Learning it properly turned out to be the entire job, because an agent will hand you a beautifully clean function that does exactly the wrong thing to a ledger and never hesitate before doing it. I now spec and review changes in that area and coordinate its releases. Since mid-2025 almost none of the implementation has been typed by hand: I design the agents, skills and slash commands the team uses, run deep-research agents to pressure-test trade-offs before anything is written, pair with them on tests and review, and wire Figma into production components through MCP. The measurable result: my merge rate went from about six a month in my first year here to 44 in my best month this year, with every change still read by a human before it merges, and another 268 pull requests reviewed for other engineers over the same stretch. The part worth naming is the cost: the hard work moved from writing code to reviewing structural decisions fast enough to keep pace, and I finish most days more tired than when I typed everything myself.",
     metrics: [
-      { label: "Merged PRs", value: "160+ / 9 repos" },
-      { label: "Throughput", value: "≈ 7× / month" },
+      { label: "Monthly merges", value: "6 → 44" },
+      { label: "Merged total", value: "160+ / 9 repos" },
       { label: "Reviews given", value: "268" },
       { label: "Domain", value: "Financial operations" },
       { label: "Hand-written code", value: "≈ 0 — spec, review, verify" },
@@ -248,10 +248,10 @@ export const DELIVERY = {
   caption:
     "Merged pull requests I authored in the BuildOps org, by month — April 2025 to July 2026.",
   totals: [
-    { value: "160+", label: "Merged PRs" },
-    { value: "9", label: "Repositories" },
+    { value: "6 → 44", label: "Monthly merges: first year → best month" },
     { value: "268", label: "PRs reviewed for others" },
-    { value: "≈ 7×", label: "Throughput vs. first-year baseline" },
+    { value: "9", label: "Repositories" },
+    { value: "160+", label: "Merged in 16 months" },
   ],
   monthly: [
     { month: "Apr", year: "25", count: 2 },
