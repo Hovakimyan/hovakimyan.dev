@@ -104,27 +104,26 @@ export default function ResumePage() {
       <section className="sh-resume-section">
         <h2>Summary</h2>
         <p>
-          Thirteen years ago I was writing jQuery in Yerevan. These days
-          I mostly don&rsquo;t write the code at all — agents do, and my
-          work is deciding what should happen, checking whether it
-          actually did, and catching the thing in a diff that would have
-          quietly broken production on a Friday.
+          Senior software engineer, 13 years in. For the past year most
+          of my code has been written by agents — my work is deciding
+          what should happen, reviewing what comes back, and proving it
+          holds.
         </p>
         <p>
-          I&rsquo;m at BuildOps on financial operations for commercial
-          contractors — accounting periods, close, ledger integrity. I
-          knew none of that domain when I joined, and learning it
-          properly turned out to be the entire job: an agent will write
-          you a beautifully clean function that does exactly the wrong
-          thing to a ledger. The record since: 160+ merged pull requests
+          At BuildOps I work on financial operations for commercial
+          contractors: accounting periods, close, ledger integrity,
+          reporting. I knew none of that domain when I joined, and
+          learning it properly turned out to be the job — an agent will
+          write a perfectly clean function that does exactly the wrong
+          thing to a ledger. The record so far: 160+ merged pull requests
           across 9 repositories in 16 months, another 268 reviewed for
-          other engineers, roughly seven times my own first-year output.
+          other engineers, roughly 7x my own first-year throughput.
         </p>
         <p>
-          Before this, five years at EPAM ending with a 12-engineer team,
-          and the Renderforest Video Maker rewrite that ten million
-          people ended up using. Outside work I&rsquo;ve founded two
-          products and built them the same way.
+          Before BuildOps: five years at EPAM ending as a team leader
+          running 12 engineers, and the Renderforest Video Maker rewrite
+          now used by 10M+ people. Outside work I founded Ashoon and
+          co-founded Kamui, both built the same way.
         </p>
       </section>
 
