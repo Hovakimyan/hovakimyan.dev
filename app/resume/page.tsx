@@ -104,20 +104,27 @@ export default function ResumePage() {
       <section className="sh-resume-section">
         <h2>Summary</h2>
         <p>
-          Senior software engineer, thirteen years in. I&rsquo;m at
-          BuildOps working on financial operations for commercial
-          contractors — accounting periods, close, ledger integrity. The
-          domain was new to me; the engineering wasn&rsquo;t. Learning it
-          properly turned out to be the job.
+          Thirteen years ago I was writing jQuery in Yerevan. These days
+          I mostly don&rsquo;t write the code at all — agents do, and my
+          work is deciding what should happen, checking whether it
+          actually did, and catching the thing in a diff that would have
+          quietly broken production on a Friday.
         </p>
         <p>
-          For the past year most of my code has been written by agents.
-          The work moved to specifying what should happen, reviewing what
-          comes back, and proving it holds: 160+ merged pull requests
-          across 9 repositories in 16 months, and 268 more reviewed for
-          other engineers. Before this, five years at EPAM ending as a
-          team leader with 12 engineers. Outside work I&rsquo;ve founded
-          and shipped two products the same way.
+          I&rsquo;m at BuildOps on financial operations for commercial
+          contractors — accounting periods, close, ledger integrity. I
+          knew none of that domain when I joined, and learning it
+          properly turned out to be the entire job: an agent will write
+          you a beautifully clean function that does exactly the wrong
+          thing to a ledger. The record since: 160+ merged pull requests
+          across 9 repositories in 16 months, another 268 reviewed for
+          other engineers, roughly seven times my own first-year output.
+        </p>
+        <p>
+          Before this, five years at EPAM ending with a 12-engineer team,
+          and the Renderforest Video Maker rewrite that ten million
+          people ended up using. Outside work I&rsquo;ve founded two
+          products and built them the same way.
         </p>
       </section>
 
@@ -127,21 +134,22 @@ export default function ResumePage() {
           <li>
             <strong>Delivery, measured —</strong> 160+ merged pull
             requests across 9 repositories in 16 months, 268 more
-            reviewed for other engineers, monthly throughput up roughly
-            7x against my own first-year baseline. Every change
-            human-reviewed before merge.
+            reviewed for other engineers, roughly seven times my own
+            first-year output. Nothing merges that a human hasn&rsquo;t
+            read.
           </li>
           <li>
-            <strong>A domain learned and owned —</strong> Financial
-            operations from a standing start: accounting periods, close,
-            ledger integrity, reporting. Now specs and reviews changes in
-            that area and coordinates its releases.
+            <strong>A domain learned from nothing —</strong> Financial
+            operations: accounting periods, close, ledger integrity,
+            reporting. I couldn&rsquo;t have told you what a close was
+            when I joined. Now I spec and review the changes and
+            coordinate the releases.
           </li>
           <li>
-            <strong>Two products shipped —</strong> Founded Ashoon, an AI
-            customer-messaging platform answering DMs in 30 languages,
-            and co-founded Kamui, a point-of-sale platform for
-            independent retail. Both built end to end with agents.
+            <strong>Two products, evenings and weekends —</strong>{" "}
+            Ashoon answers DMs for small businesses in 30 languages and
+            takes their orders. Kamui is a point-of-sale system for
+            independent shops my co-founder and I shipped this year.
           </li>
           <li>
             <strong>Teams, not just code —</strong> Led a 12-engineer
