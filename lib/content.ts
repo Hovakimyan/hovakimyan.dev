@@ -167,12 +167,12 @@ export const WORK = [
     period: "April 2025 — Present",
     location: "Santa Monica, California",
     pitch:
-      "Engineering a vertical SaaS platform through an AI-orchestrated workflow — agents write nearly all the implementation; my work is specification, review, and verification. Merge rate went from six a month to 44 at peak.",
-    body: "I joined as an IC5 on a vertical SaaS platform for the trades and ended up owning financial operations — accounting periods, close semantics, enforcement rules that have to hold across object types and fiscal years, ledger integrity, and the reporting layer above it. I knew none of that when I arrived. Learning it properly turned out to be the entire job, because an agent will hand you a beautifully clean function that does exactly the wrong thing to a ledger and never hesitate before doing it. I now spec and review changes in that area and coordinate its releases. Since mid-2025 almost none of the implementation has been typed by hand: I design the agents, skills and slash commands the team uses, run deep-research agents to pressure-test trade-offs before anything is written, pair with them on tests and review, and wire Figma into production components through MCP. The measurable result: my merge rate went from about six a month in my first year here to 44 in my best month this year, with every change still read by a human before it merges, and another 268 pull requests reviewed for other engineers over the same stretch. The part worth naming is the cost: the hard work moved from writing code to reviewing structural decisions fast enough to keep pace, and I finish most days more tired than when I typed everything myself.",
+      "Engineering a vertical SaaS platform through an AI-orchestrated workflow — agents write nearly all the implementation; my work is specification, review, and verification, and I own the release train for financial operations.",
+    body: "I joined as an IC5 on a vertical SaaS platform for the trades and ended up owning financial operations — accounting periods, close semantics, enforcement rules that have to hold across object types and fiscal years, ledger integrity, and the reporting layer above it. I knew none of that when I arrived. Learning it properly turned out to be the entire job, because an agent will hand you a beautifully clean function that does exactly the wrong thing to a ledger and never hesitate before doing it. I now spec and review changes in that area and coordinate its releases. Since mid-2025 almost none of the implementation has been typed by hand: I design the agents, skills and slash commands the team uses, run deep-research agents to pressure-test trade-offs before anything is written, pair with them on tests and review, and wire Figma into production components through MCP. What actually changed is the unit of work: smaller changes, more of them, every one still read by a human before it merges. Alongside that I've reviewed 268 pull requests for other engineers and taken over release coordination for the area. The part worth naming is the cost: the hard work moved from writing code to reviewing structural decisions fast enough to keep pace, and I finish most days more tired than when I typed everything myself.",
     metrics: [
-      { label: "Monthly merges", value: "6 → 44" },
-      { label: "Merged total", value: "160+ / 9 repos" },
       { label: "Reviews given", value: "268" },
+      { label: "Repositories", value: "9" },
+      { label: "Release train", value: "Owned" },
       { label: "Domain", value: "Financial operations" },
       { label: "Hand-written code", value: "≈ 0 — spec, review, verify" },
       { label: "Stack", value: "Agents · MCP · TS · React" },
@@ -246,12 +246,12 @@ export const WORK = [
 // GitHub org (author + reviewer queries), April 2025 — August 2026.
 export const DELIVERY = {
   caption:
-    "Merged pull requests I authored in the BuildOps org, by month — April 2025 to July 2026.",
+    "Merged pull requests I authored in the BuildOps org, by month — April 2025 to July 2026. Pull-request count is a vanity metric and I'd argue against anyone using it to measure an engineer, including me: the changes got smaller, so there are more of them. The shape isn't a claim that I got seven times better. It's the clearest picture I have of the unit of work changing, and I'd rather show the data than make the claim without it.",
   totals: [
-    { value: "6 → 44", label: "Monthly merges: first year → best month" },
-    { value: "268", label: "PRs reviewed for others" },
-    { value: "9", label: "Repositories" },
-    { value: "160+", label: "Merged in 16 months" },
+    { value: "268", label: "PRs reviewed for other engineers" },
+    { value: "9", label: "Repositories touched" },
+    { value: "Owned", label: "Release train, financial ops" },
+    { value: "16", label: "Months at BuildOps" },
   ],
   monthly: [
     { month: "Apr", year: "25", count: 2 },

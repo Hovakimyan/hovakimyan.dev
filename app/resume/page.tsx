@@ -115,10 +115,10 @@ export default function ResumePage() {
           reporting. I knew none of that domain when I joined, and
           learning it properly turned out to be the job — an agent will
           write a perfectly clean function that does exactly the wrong
-          thing to a ledger. The shift is measurable: 44 merged pull
-          requests in my best month this year against a first-year
-          average of six, another 268 reviewed for other engineers, and
-          160+ merged across 9 repositories in total.
+          thing to a ledger. In practice I own the release train for that
+          area and do a lot of the reviewing: 268 pull requests for other
+          engineers so far, across nine repositories that run from the
+          React front end down to the financial core service.
         </p>
         <p>
           Before BuildOps: five years at EPAM ending as a team leader
@@ -132,11 +132,11 @@ export default function ResumePage() {
         <h2>Key Highlights</h2>
         <ul>
           <li>
-            <strong>Delivery, measured —</strong> Merge rate went from
-            six a month in my first year to 44 in my best month this
-            year, across 9 repositories — 160+ in total, plus 268 more
-            reviewed for other engineers. Nothing merges that a human
-            hasn&rsquo;t read.
+            <strong>Trusted with the review load —</strong> 268 pull
+            requests reviewed for other engineers, and release
+            coordination for financial operations: cutting releases,
+            verifying candidates, watching them in production. Nothing
+            merges that a human hasn&rsquo;t read.
           </li>
           <li>
             <strong>A domain learned from nothing —</strong> Financial
@@ -222,11 +222,11 @@ export default function ResumePage() {
               boilerplate.
             </li>
             <li>
-              <strong>Measured delivery:</strong> Merge rate went from
-              about six a month in my first year to 44 in my best month
-              this year — 160+ merged across 9 repositories in total,
-              plus 268 reviewed for other engineers. Every change
-              human-reviewed before merge.
+              <strong>Review and release ownership:</strong> Reviewed
+              268 pull requests for other engineers, and own release
+              coordination for financial operations — cutting releases,
+              verifying candidates, and tracking behaviour through to
+              production. Every change human-reviewed before merge.
             </li>
             <li>
               <strong>Across the stack:</strong> Work spans 9
