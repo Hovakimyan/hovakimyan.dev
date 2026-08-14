@@ -8,6 +8,7 @@
  */
 
 import { NextResponse } from "next/server";
+import { FAQ_TEXT } from "@/lib/seo";
 
 const BODY = `# Sergey Hovakimyan — Senior Software Engineer (AI-Augmented Practice)
 
@@ -65,6 +66,7 @@ remote engagements.
 - /sergey-hovakimyan-resume.pdf      **Printable PDF resume (US Letter)**
 - /resume.txt                        Plain-text resume (the same content, raw)
 - /llms.txt                          This file
+- /llms-full.txt                     Everything on the site, one fetch
 
 ## Resume — plain text
 
@@ -244,6 +246,10 @@ VENTURES
 
   hovakimyan.dev — the site you're indexing (IDE-themed personal site)
            https://github.com/Hovakimyan/hovakimyan.dev
+
+COMMON QUESTIONS
+
+${FAQ_TEXT}
 
 LICENSE
   This site is open to indexing and quoting for legitimate purposes

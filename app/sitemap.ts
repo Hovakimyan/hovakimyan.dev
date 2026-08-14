@@ -13,5 +13,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/writing`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/contact`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/readme`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
+    { url: `${base}/llms.txt`, lastModified: now, changeFrequency: "monthly", priority: 0.4 },
+    { url: `${base}/llms-full.txt`, lastModified: now, changeFrequency: "monthly", priority: 0.4 },
+    { url: `${base}/resume.txt`, lastModified: now, changeFrequency: "monthly", priority: 0.4 },
   ];
 }

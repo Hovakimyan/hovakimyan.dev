@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Sora, DM_Sans, Fira_Code } from "next/font/google";
 import IdeShell from "@/app/components/ide/IdeShell";
 import { SITE } from "@/lib/content";
-import { personJsonLd } from "@/lib/seo";
+import { siteJsonLd } from "@/lib/seo";
 import "./globals.css";
 
 const sora = Sora({
@@ -81,7 +81,7 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(personJsonLd()),
+            __html: JSON.stringify(siteJsonLd()),
           }}
         />
         <IdeShell>{children}</IdeShell>
