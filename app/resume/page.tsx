@@ -110,21 +110,23 @@ export default function ResumePage() {
           holds.
         </p>
         <p>
-          At BuildOps I work on financial operations for commercial
-          contractors: accounting periods, close, ledger integrity,
-          reporting. I knew none of that domain when I joined, and
-          learning it properly turned out to be the job — an agent will
-          write a perfectly clean function that does exactly the wrong
-          thing to a ledger. In practice I own the release train for that
-          area and do a lot of the reviewing: 268 pull requests for other
-          engineers so far, across nine repositories that run from the
-          React front end down to the financial core service.
+          What I&rsquo;m best at is landing in an unfamiliar domain and
+          getting genuinely useful in it, fast. Financial systems at
+          BuildOps is the latest — I knew nothing about accounting
+          periods, close or ledger integrity a year ago, and now I spec
+          and review changes in that area and coordinate its releases.
+          Before that, five years of consulting at EPAM put me in a new
+          industry every few months: streaming media, social platforms at
+          scale, healthcare, consumer finance software, EV infrastructure,
+          tolling and mobility.
         </p>
         <p>
-          Before BuildOps: five years at EPAM ending as a team leader
-          running 12 engineers, and the Renderforest Video Maker rewrite
-          now used by 10M+ people. Outside work I founded Ashoon and
-          co-founded Kamui, both built the same way.
+          I&rsquo;ve led as well as built — front-end teams of up to 12
+          engineers, 20+ technical interviews, and engineers I mentored
+          who are seniors and leads now. Earlier, the Renderforest Video
+          Maker rewrite, now used by 10M+ people. Outside work I founded
+          Ashoon and co-founded Kamui, both built end to end with the
+          same agent-driven workflow.
         </p>
       </section>
 
@@ -139,11 +141,12 @@ export default function ResumePage() {
             merges that a human hasn&rsquo;t read.
           </li>
           <li>
-            <strong>A domain learned from nothing —</strong> Financial
-            operations: accounting periods, close, ledger integrity,
-            reporting. I couldn&rsquo;t have told you what a close was
-            when I joined. Now I spec and review changes there and
-            coordinate the area&rsquo;s releases.
+            <strong>Range across domains —</strong> Streaming media,
+            social platforms at scale, healthcare, consumer finance
+            software, EV infrastructure, mobility, maritime fleet
+            software — and now financial systems. I couldn&rsquo;t have
+            told you what a close was when I joined BuildOps; now I spec
+            and review changes there.
           </li>
           <li>
             <strong>Two products, evenings and weekends —</strong>{" "}

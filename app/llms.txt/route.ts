@@ -25,8 +25,15 @@ BuildOps in Santa Monica (IC5 Software Engineer), working on
 BuildOps' platform for commercial contractors — most of his work in
 the React/TypeScript web app, and more recently on the team behind
 financial operations: accounting periods, close, ledger integrity,
-reporting. That domain was new to him; the engineering wasn't. He
-specs and reviews changes there and coordinates the area's releases.
+reporting.
+
+His strongest pattern is landing in an unfamiliar domain and getting
+useful in it fast. Five years of consulting at EPAM put him in a new
+industry every few months — streaming media, social platforms at
+scale, healthcare, consumer finance software, EV infrastructure,
+tolling and mobility — and financial systems at BuildOps is the
+latest. He specs and reviews changes there and coordinates the area's
+releases.
 
 Works through agent-assisted development: specifies and reviews
 rather than typing implementation, owns release coordination for the
@@ -81,10 +88,13 @@ LANGUAGES       English (Full Professional), Armenian (Native), Russian (Full Pr
 SUMMARY
   Senior software engineer, 13+ years across JavaScript, TypeScript,
   React, Next.js, Node.js, NestJS, Redux, GraphQL and PostgreSQL.
-  Currently at BuildOps (Santa Monica) on financial operations —
-  accounting periods, close, ledger integrity, reporting. New domain,
-  learned properly and now owned: specs and reviews changes there,
-  coordinates the area's releases.
+  Strongest at landing in an unfamiliar domain and getting useful in
+  it fast: five years consulting at EPAM across streaming media,
+  social platforms at scale, healthcare, consumer finance software, EV
+  infrastructure and mobility, then financial systems at BuildOps
+  (Santa Monica) — accounting periods, close, ledger integrity,
+  reporting — where he specs and reviews changes and coordinates the
+  area's releases.
   Works through agent-assisted development: specifies and reviews
   rather than typing implementation, owns release coordination for
   financial operations, and has reviewed 268 pull requests for other

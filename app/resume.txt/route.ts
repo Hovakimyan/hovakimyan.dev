@@ -25,10 +25,13 @@ SUMMARY
 ================================================================
 Senior software engineer, 13+ years across JavaScript, TypeScript,
 React, Next.js, Node.js, NestJS, Redux, GraphQL and PostgreSQL.
-Currently at BuildOps (Santa Monica) on financial operations —
-accounting periods, close, ledger integrity, reporting. New domain,
-learned properly and now owned: specs and reviews changes there,
-coordinates the area's releases.
+Strongest at landing in an unfamiliar domain and getting useful in it
+fast: five years of consulting at EPAM across streaming media, social
+platforms at scale, healthcare, consumer finance software, EV
+infrastructure and mobility, then financial systems at BuildOps
+(Santa Monica) — accounting periods, close, ledger integrity,
+reporting — where he specs and reviews changes and coordinates the
+area's releases.
 
 Works through agent-assisted development: specifies and reviews
 rather than typing implementation, owns release coordination for the
