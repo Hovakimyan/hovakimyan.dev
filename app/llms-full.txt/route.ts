@@ -33,6 +33,12 @@ Languages  Armenian (native) · English (full professional) · Russian (full pro
 
 ${SITE.lead}
 
+His strongest pattern is landing in an unfamiliar domain and getting
+useful in it fast. Five years of consulting at EPAM put him in a new
+industry every few months — streaming media, social platforms at
+scale, healthcare, consumer finance software, EV infrastructure,
+tolling and mobility. Financial systems at BuildOps is the latest.
+
 ${rule()}
 COMMON QUESTIONS
 ${rule()}
