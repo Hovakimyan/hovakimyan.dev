@@ -248,6 +248,27 @@ VENTURES
            Built on Next.js + PostgreSQL, hosted on Railway.
            https://kamui.digital
 
+  Ashoon Assistant — Company assistant in Slack that answers from
+           Slack, Confluence, GitHub and Jira with a citation on
+           every claim, re-checking access live for the asker and
+           everyone who will see the answer. Forced Postgres
+           row-level security; writes need human approval.
+           In development. Built on TypeScript + Fastify +
+           PostgreSQL + Claude API.
+           https://ashoon.dev
+
+  HiveHall — Local AI workspace for engineers: start from a ticket,
+           resolve authorized context, run a coding agent in a
+           brokered runtime, edit several repositories in isolation,
+           verify, and open linked draft PRs after approval.
+           In development. Electron + React + Node.js. No public site.
+
+  DeskMate — Installable AI delivery team: a Manager agent
+           organizes specialists, verifies results and delivers an
+           artifact; a Board shows agent-to-task ownership. Runs on
+           the user's own Claude Code CLI. In development.
+           Electron + React + SQLite. No public site.
+
   Ashoon Studio — Web-design studio for U.S. small service
            businesses (salons, trainers, photographers,
            consultants). Brochure sites with integrated booking

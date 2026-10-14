@@ -32,6 +32,7 @@ function person() {
       "https://ashoon.com",
       "https://ashoon.online",
       "https://kamui.digital",
+      "https://ashoon.dev",
       "https://medium.com/@hovakimyan.serg",
     ].filter(Boolean),
     knowsAbout: [
@@ -122,7 +123,7 @@ const FAQ: ReadonlyArray<{ q: string; a: string }> = [
   },
   {
     q: "What has Sergey Hovakimyan built independently?",
-    a: "He founded Ashoon (ashoon.com), an AI customer-messaging platform that answers Instagram, Messenger, WhatsApp and website chat in 30 languages and takes orders directly from a DM, and co-founded Kamui (kamui.digital), a point-of-sale platform for independent retail with multi-tenant isolation enforced through Postgres row-level security. He also runs Ashoon Studio (ashoon.online), a web-design studio for small service businesses.",
+    a: "He founded Ashoon (ashoon.com), an AI customer-messaging platform that answers Instagram, Messenger, WhatsApp and website chat in 30 languages and takes orders directly from a DM, and co-founded Kamui (kamui.digital), a point-of-sale platform for independent retail with multi-tenant isolation enforced through Postgres row-level security. He also runs Ashoon Studio (ashoon.online), a web-design studio for small service businesses, and is building three agent products still in development: Ashoon Assistant (ashoon.dev), a permission-aware company assistant in Slack; HiveHall, a local workspace that takes an engineer from a ticket to linked draft PRs across repositories; and DeskMate, a desktop app where a Manager agent runs a team of specialist agents.",
   },
   {
     q: "Where is Sergey Hovakimyan based, and is he available for remote work?",

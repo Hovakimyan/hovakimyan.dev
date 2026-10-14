@@ -75,8 +75,7 @@ ${rule()}
 ${VENTURES.map(
   (v) => `${v.name} — ${v.tagline}
    ${v.body}
-   Stack: ${v.stack.join(", ")}
-   ${v.urls.map((u) => u.href).join(" ")}`,
+   Stack: ${v.stack.join(", ")}${v.urls.length ? `\n   ${v.urls.map((u) => u.href).join(" ")}` : ""}`,
 ).join("\n\n")}
 
 ${rule()}

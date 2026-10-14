@@ -15,8 +15,9 @@ export default function VenturesFile() {
         Ventures <em>/</em> personal work
       </h1>
       <p>
-        Things I build outside of my engineering day-job. An AI platform, a
-        web-design studio, this site, and whatever lives next on the bench.
+        Things I build outside of my engineering day-job. Two shipped
+        products, three agent products in development, a web-design studio,
+        and this site.
       </p>
       <hr />
 
@@ -100,6 +101,114 @@ export default function VenturesFile() {
 
       <h2>
         <span className="num">03</span>
+        Ashoon Assistant <span style={{ opacity: 0.5 }}>· in development</span>
+      </h2>
+      <blockquote>
+        A company assistant in Slack that only answers with what everyone
+        reading is allowed to see.
+      </blockquote>
+      <p>
+        Employees ask in a DM or an approved channel, and it answers from
+        connected company sources — Slack, Confluence, GitHub, Jira, reviewed
+        docs — with a citation, version and checked time on every claim.
+      </p>
+      <p>
+        The hard part is permissions, not retrieval. Access is re-checked live
+        per item for the person asking <em>and</em> for everyone in the channel
+        the answer lands in, so a channel only gets audience-safe content and
+        the full answer goes to the asker&rsquo;s DM. Any write needs exact
+        human approval, and every tenant table has forced Postgres row-level
+        security. The whole flow runs against a simulated 40-person company
+        with private channels, a guest and restricted pages. Built and tested
+        on that simulation; not yet piloted on real accounts.
+      </p>
+
+      <h3>Stack</h3>
+      <p>
+        <code>TypeScript</code> · <code>Fastify</code> ·{" "}
+        <code>PostgreSQL</code> (row-level security) · <code>Slack API</code>{" "}
+        · <code>Claude API</code> (Bedrock, Vertex, Foundry, OpenAI as
+        alternatives) · <code>Zod</code>
+      </p>
+
+      <h3>Visit</h3>
+      <p>
+        <a href="https://ashoon.dev" target="_blank" rel="noopener noreferrer">
+          ashoon.dev
+        </a>
+      </p>
+
+      <hr />
+
+      <h2>
+        <span className="num">04</span>
+        HiveHall <span style={{ opacity: 0.5 }}>· in development</span>
+      </h2>
+      <blockquote>
+        From a ticket to linked, reviewable draft PRs across repositories.
+      </blockquote>
+      <p>
+        HiveHall is a local desktop workspace for company engineering work.
+        Enter a ticket key and it resolves the authorized context — issue
+        details, linked code, CI, the relevant Slack thread — before anything
+        is edited. A coding agent then works inside a brokered runtime with
+        bounded file, network, process and account access, each repository is
+        edited in its own isolated work area, checks run against the exact
+        revision, and linked draft PRs open only after approval.
+      </p>
+      <p>
+        It resumes after a crash by reconciling uncertain external actions
+        rather than guessing what happened. Merges, deploys and production
+        writes are out of scope by design. Every task goes through the full
+        test suite, end-to-end tests and an eval gate before it reaches review.
+      </p>
+
+      <h3>Stack</h3>
+      <p>
+        <code>TypeScript</code> · <code>Electron</code> ·{" "}
+        <code>React 19</code> · <code>Node.js</code> (
+        <code>node:sqlite</code>) · <code>Vitest</code> ·{" "}
+        <code>Playwright</code>
+      </p>
+
+      <hr />
+
+      <h2>
+        <span className="num">05</span>
+        DeskMate <span style={{ opacity: 0.5 }}>· in development</span>
+      </h2>
+      <blockquote>
+        An installable AI delivery team. Describe the outcome; a Manager gets
+        it built.
+      </blockquote>
+      <p>
+        DeskMate is a desktop app where you describe what you want in chat and
+        a Manager agent organizes specialists, makes routine decisions,
+        resolves internal problems and verifies the result before handing it
+        over. A Board shows which agent owns which task and what is blocked,
+        so progress is inspectable without you coordinating the team.
+      </p>
+      <p>
+        The rule the design rests on: the Manager proposes and coordinates;
+        deterministic application services authorize, persist, dispatch and
+        verify. Completion needs current evidence, not confident prose. It
+        runs on the user&rsquo;s own Claude Code CLI and subscription — no API
+        key required — and is being built against a 148-task,
+        dependency-ordered plan.
+      </p>
+
+      <h3>Stack</h3>
+      <p>
+        <code>TypeScript</code> · <code>Electron</code> ·{" "}
+        <code>React 19</code> · <code>SQLite</code> ·{" "}
+        <code>Claude Code CLI</code> · <code>Vitest</code> ·{" "}
+        <code>Playwright</code>
+      </p>
+
+      <hr />
+
+      <h2>
+        <span className="num">06</span>
         Ashoon Studio
       </h2>
       <blockquote>
@@ -151,7 +260,7 @@ export default function VenturesFile() {
       <hr />
 
       <h2>
-        <span className="num">04</span>
+        <span className="num">07</span>
         hovakimyan.dev
       </h2>
       <blockquote>The site you&rsquo;re reading.</blockquote>
@@ -186,7 +295,7 @@ export default function VenturesFile() {
       <hr />
 
       <h2>
-        <span className="num">05</span>
+        <span className="num">08</span>
         cryptoeye.eu <span style={{ opacity: 0.5 }}>· archived</span>
       </h2>
       <blockquote>Cryptocurrency candles for traders.</blockquote>

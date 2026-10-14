@@ -332,6 +332,61 @@ export const VENTURES = [
     primaryHref: "https://kamui.digital",
   },
   {
+    name: "Ashoon Assistant",
+    tagline:
+      "A company assistant in Slack that only answers with what everyone reading is allowed to see.",
+    body:
+      "Ashoon Assistant answers employees' questions in Slack from connected company sources — Slack, Confluence, GitHub, Jira, reviewed docs — with a citation, version and checked time on every claim. The hard part is permissions: access is re-checked live per item for the person asking and for everyone in the channel the answer lands in, so a channel only gets audience-safe content and the full answer goes to the asker's DM. Any write needs exact human approval, every tenant table has forced Postgres row-level security, and the whole flow is exercised against a simulated 40-person company with private channels, guests and restricted pages. Claude is the default model, with Bedrock, Vertex, Foundry and OpenAI as alternatives. In development: built and tested on the simulation, not yet piloted on real accounts.",
+    services: null,
+    stack: [
+      "TypeScript",
+      "Fastify",
+      "PostgreSQL (row-level security)",
+      "Slack API",
+      "Claude API",
+      "Zod",
+    ],
+    urls: [{ label: "ashoon.dev", href: "https://ashoon.dev" }],
+    primaryHref: "https://ashoon.dev",
+  },
+  {
+    name: "HiveHall",
+    tagline:
+      "A local AI workspace that takes an engineer from a ticket to linked, reviewable draft PRs across repositories.",
+    body:
+      "HiveHall is a desktop workspace for company engineering work. Enter a ticket key and it resolves the authorized context — issue details, linked code, CI, the relevant Slack thread — then runs a coding agent inside a brokered local runtime with bounded file, network, process and account access, edits each repository in an isolated work area, verifies against the exact revision, and opens linked draft PRs only after approval. It survives crashes by reconciling uncertain external actions instead of guessing. Merges, deploys and production writes are out of scope by design. In development, with a full test suite, end-to-end tests and an eval gate run before any task goes to review.",
+    services: null,
+    stack: [
+      "TypeScript",
+      "Electron",
+      "React 19",
+      "Node.js (node:sqlite)",
+      "Vitest",
+      "Playwright",
+    ],
+    urls: [],
+    primaryHref: null,
+  },
+  {
+    name: "DeskMate",
+    tagline:
+      "An installable AI delivery team: describe an outcome in chat, a Manager agent gets it built.",
+    body:
+      "DeskMate is a desktop app where you describe what you want and a Manager agent organizes specialists, makes routine decisions, resolves internal problems and verifies the result before handing it over. A Board shows which agent owns which task and what is blocked, so you can inspect progress without coordinating the team yourself. The structural rule: the Manager proposes and coordinates, while deterministic application services authorize, persist, dispatch and verify — completion needs current evidence, not confident prose. It runs on the user's own Claude Code CLI and subscription, with no API key required. In development against a 148-task, dependency-ordered plan.",
+    services: null,
+    stack: [
+      "TypeScript",
+      "Electron",
+      "React 19",
+      "SQLite",
+      "Claude Code CLI",
+      "Vitest",
+      "Playwright",
+    ],
+    urls: [],
+    primaryHref: null,
+  },
+  {
     name: "Ashoon Studio",
     tagline:
       "Professionally-designed websites for U.S. small service businesses.",

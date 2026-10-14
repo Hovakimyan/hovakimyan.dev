@@ -38,9 +38,12 @@ const OUTLINES: Record<string, OutlineEntry[]> = {
   "/ventures": [
     { level: 2, label: "01 Ashoon" },
     { level: 2, label: "02 Kamui" },
-    { level: 2, label: "03 Ashoon Studio" },
-    { level: 2, label: "04 hovakimyan.dev" },
-    { level: 2, label: "05 cryptoeye.eu" },
+    { level: 2, label: "03 Ashoon Assistant" },
+    { level: 2, label: "04 HiveHall" },
+    { level: 2, label: "05 DeskMate" },
+    { level: 2, label: "06 Ashoon Studio" },
+    { level: 2, label: "07 hovakimyan.dev" },
+    { level: 2, label: "08 cryptoeye.eu" },
     { level: 2, label: "In the bench" },
   ],
 };
