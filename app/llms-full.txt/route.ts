@@ -7,7 +7,7 @@
  */
 
 import { NextResponse } from "next/server";
-import { SITE, WORK, PROJECTS, DELIVERY, TECH_STACK } from "@/lib/content";
+import { SITE, WORK, PROJECTS, TECH_STACK } from "@/lib/content";
 import { FAQ_TEXT } from "@/lib/seo";
 
 const rule = (char = "=") => char.repeat(64);
@@ -58,16 +58,6 @@ ${WORK.map(
    Metrics: ${w.metrics.map((m) => `${m.label}: ${m.value}`).join(" · ")}
    Tags: ${w.tags.join(", ")}`,
 ).join("\n\n")}
-
-${rule()}
-DELIVERY RECORD (BuildOps)
-${rule()}
-${DELIVERY.caption}
-
-${DELIVERY.totals.map((t) => `  ${t.value} — ${t.label}`).join("\n")}
-
-Merged pull requests by month:
-${DELIVERY.monthly.map((m) => `  ${m.month}${m.year ? ` ${m.year}` : ""}: ${m.count}`).join("\n")}
 
 ${rule()}
 PROJECTS

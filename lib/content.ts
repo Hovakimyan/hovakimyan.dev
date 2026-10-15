@@ -241,6 +241,8 @@ export const WORK = [
   },
 ] as const;
 
+// NOT SHOWN ANYWHERE (Oct 2026): the monthly counts below include a zero
+// month that is known to be wrong. Recount before re-enabling DeliveryChart.
 // Delivery record at BuildOps. Sourced from merged-PR history in the BuildOps
 // GitHub org (author + reviewer queries), April 2025 — August 2026.
 export const DELIVERY = {

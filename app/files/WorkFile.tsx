@@ -1,4 +1,3 @@
-import DeliveryChart from "@/app/components/DeliveryChart";
 import { Tok } from "@/app/components/syntax/Code";
 import { WORK } from "@/lib/content";
 
@@ -61,7 +60,10 @@ export default function WorkFile() {
             ))}
           </p>
 
-          {w.slug === "buildops" ? <DeliveryChart /> : null}
+          {/* DeliveryChart is hidden until the monthly merged-PR counts in
+              DELIVERY (lib/content.ts) are recounted: they show a zero
+              month that is known to be wrong. Restore with
+              {w.slug === "buildops" ? <DeliveryChart /> : null} */}
 
           {COMMITS[w.slug] ? (
             <pre>
