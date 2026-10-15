@@ -116,11 +116,11 @@ export default function TsconfigFile() {
         </Link>
         <Tok type="punct">],</Tok>
         {"\n      "}
-        <Tok type="string">{'"@ventures/*"'}</Tok>
+        <Tok type="string">{'"@projects/*"'}</Tok>
         <Tok type="punct">:</Tok>{" "}
         <Tok type="punct">[</Tok>
-        <Link href="/ventures" className="tok-string sh-json-link">
-          {'"./ventures.md"'}
+        <Link href="/projects" className="tok-string sh-json-link">
+          {'"./projects.md"'}
         </Link>
         <Tok type="punct">]</Tok>
         {"\n    "}

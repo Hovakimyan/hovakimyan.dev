@@ -19,10 +19,7 @@ export default function ReadmeFile() {
           <code>work.md</code> — four selected case studies, each with metrics + a snippet of architectural decisions as a git-log.
         </li>
         <li>
-          <code>ventures.md</code> — personal projects. The URLs are real links.
-        </li>
-        <li>
-          <code>writing.md</code> — published articles, newest first.
+          <code>projects.md</code> — personal projects. The URLs are real links.
         </li>
         <li>
           <code>about.md</code> — story, leadership philosophy, AI engineering, career git log.
@@ -47,7 +44,7 @@ export default function ReadmeFile() {
           {"\n"}
           <Tok type="prop">open about</Tok>
           {"\n"}
-          <Tok type="prop">cat ventures.md</Tok>
+          <Tok type="prop">cat projects.md</Tok>
           {"\n\n"}
           <Tok type="comment">{"# Actions"}</Tok>
           {"\n"}
@@ -94,7 +91,7 @@ export default function ReadmeFile() {
 
       <h2>Built with</h2>
       <p>
-        Next.js 16 (App Router) · React 19 · Tailwind v4 · Three.js · OpenNext for Cloudflare Workers · react-calendly · hand-rolled syntax highlighter.
+        Next.js 16 (App Router) · React 19 · Tailwind v4 · OpenNext for Cloudflare Workers · react-calendly · hand-rolled syntax highlighter.
       </p>
     </article>
   );

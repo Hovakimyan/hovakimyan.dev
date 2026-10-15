@@ -19,7 +19,7 @@ function person() {
     description: SITE.lead,
     email: `mailto:${SITE.email}`,
     url: "https://hovakimyan.dev",
-    image: "https://hovakimyan.dev/images/sergey-portrait.jpg",
+    image: "https://hovakimyan.dev/images/sergey-portrait-1200.jpg",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Glendale",

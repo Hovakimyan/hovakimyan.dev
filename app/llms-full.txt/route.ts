@@ -1,13 +1,13 @@
 /**
  * /llms-full.txt — the companion to /llms.txt in the llmstxt.org
  * convention. Where llms.txt is the index, this is the whole thing in
- * one fetch: profile, Q&A, every case study, the ventures and the full
+ * one fetch: profile, Q&A, every case study, the projects and the full
  * resume. An agent that lands here needs no second request and no
  * JavaScript, which is the point.
  */
 
 import { NextResponse } from "next/server";
-import { SITE, WORK, VENTURES, WRITING, DELIVERY, TECH_STACK } from "@/lib/content";
+import { SITE, WORK, PROJECTS, DELIVERY, TECH_STACK } from "@/lib/content";
 import { FAQ_TEXT } from "@/lib/seo";
 
 const rule = (char = "=") => char.repeat(64);
@@ -70,18 +70,13 @@ Merged pull requests by month:
 ${DELIVERY.monthly.map((m) => `  ${m.month}${m.year ? ` ${m.year}` : ""}: ${m.count}`).join("\n")}
 
 ${rule()}
-VENTURES
+PROJECTS
 ${rule()}
-${VENTURES.map(
+${PROJECTS.map(
   (v) => `${v.name} — ${v.tagline}
    ${v.body}
    Stack: ${v.stack.join(", ")}${v.urls.length ? `\n   ${v.urls.map((u) => u.href).join(" ")}` : ""}`,
 ).join("\n\n")}
-
-${rule()}
-WRITING
-${rule()}
-${WRITING.map((w) => `${w.title} — ${w.publisher}, ${w.date}\n   ${w.blurb}\n   ${w.href}`).join("\n\n")}
 
 ${rule()}
 TECH STACK

@@ -36,19 +36,11 @@ export const FILES: readonly FileEntry[] = [
     group: "src",
   },
   {
-    name: "ventures",
+    name: "projects",
     ext: "md",
-    href: "/ventures",
+    href: "/projects",
     icon: "doc",
     description: "Personal projects — Ashoon, Kamui, Ashoon Assistant, HiveHall, DeskMate, and more.",
-    group: "src",
-  },
-  {
-    name: "writing",
-    ext: "md",
-    href: "/writing",
-    icon: "doc",
-    description: "Published articles and engineering notes.",
     group: "src",
   },
   {

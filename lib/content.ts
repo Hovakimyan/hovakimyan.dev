@@ -6,7 +6,7 @@ export const SITE = {
   pretitle: "AI-Augmented Engineer",
   subline:
     "TypeScript & React · Agent-Orchestrated Delivery · Financial Systems",
-  tagline: "I spec it and review it. The agents write it.",
+  tagline: "Agents write the code. I make sure it’s right.",
   lead:
     "Thirteen years building for the web, the last one mostly not by typing. Agents handle the implementation; I decide what should happen, check whether it did, and catch the thing that would have broken production on a Friday. Senior engineer at BuildOps on financial systems, and founder of two products built the same way.",
   // Search-result copy. Kept under ~155 chars so Google doesn't truncate it;
@@ -22,8 +22,7 @@ export const SITE = {
 export const NAV_ITEMS = [
   { label: "Home", href: "/" },
   { label: "Work", href: "/work" },
-  { label: "Ventures", href: "/ventures" },
-  { label: "Writing", href: "/writing" },
+  { label: "Projects", href: "/projects" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ] as const;
@@ -273,28 +272,7 @@ export const DELIVERY = {
   ],
 } as const;
 
-export const WRITING = [
-  {
-    slug: "two-pointer",
-    title: "Coding Pattern — Two Pointer",
-    publisher: "Medium",
-    date: "July 2024",
-    href: "https://medium.com/@hovakimyan.serg/coding-pattern-two-pointer-cb490fedeec1",
-    blurb:
-      "The two-pointer technique for arrays and linked lists — when it applies, why it beats the nested loop, and how to recognise the shape of the problem.",
-  },
-  {
-    slug: "sliding-window",
-    title: "Coding Pattern — Sliding Window",
-    publisher: "Medium",
-    date: "August 2021",
-    href: "https://medium.com/@hovakimyan.serg/coding-pattern-sliding-window-e085c433f598",
-    blurb:
-      "Sliding window as a general-purpose pattern: the fixed and variable variants, and the class of problems it collapses from quadratic to linear.",
-  },
-] as const;
-
-export const VENTURES = [
+export const PROJECTS = [
   {
     name: "Ashoon",
     tagline:
@@ -405,13 +383,12 @@ export const VENTURES = [
   {
     name: "hovakimyan.dev",
     tagline: "The site you're on.",
-    body: "Built from scratch as a showcase of the practice — Sora display + DM Sans body + Fira Code accents, Three.js hex prism in the hero, full WCAG-compliant interactive surfaces. Source is public on GitHub.",
+    body: "Built from scratch as a showcase of the practice — Sora display + DM Sans body + Fira Code accents, a code/preview home page, ⌘P command palette, full WCAG-compliant interactive surfaces. Source is public on GitHub.",
     services: null,
     stack: [
       "Next.js 16",
       "React 19",
       "Tailwind v4",
-      "Three.js",
       "OpenNext",
       "Cloudflare Workers",
     ],

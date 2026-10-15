@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     url: "https://hovakimyan.dev",
     images: [
       {
-        url: "/images/sergey-portrait.jpg",
+        url: "/images/sergey-portrait-1200.jpg",
         width: 1200,
         height: 1200,
         alt: `${SITE.name} — ${SITE.role}`,
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${SITE.name} — ${SITE.role}`,
     description: SITE.metaDescription,
-    images: ["/images/sergey-portrait.jpg"],
+    images: ["/images/sergey-portrait-1200.jpg"],
   },
 };
 

@@ -30,9 +30,9 @@ export default function NotFound() {
           <Tok type="punct">,</Tok>{" "}
           <Tok type="comment">{"// work.md"}</Tok>
           {"\n  "}
-          <Link href="/ventures" className="tok-string sh-json-link">{'"/ventures"'}</Link>
+          <Link href="/projects" className="tok-string sh-json-link">{'"/projects"'}</Link>
           <Tok type="punct">,</Tok>{" "}
-          <Tok type="comment">{"// ventures.json"}</Tok>
+          <Tok type="comment">{"// projects.json"}</Tok>
           {"\n  "}
           <Link href="/about" className="tok-string sh-json-link">{'"/about"'}</Link>
           <Tok type="punct">,</Tok>{" "}

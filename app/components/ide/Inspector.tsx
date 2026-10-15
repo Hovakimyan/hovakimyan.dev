@@ -1,9 +1,10 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import HexPrism from "@/app/components/HexPrism";
+import CareerSpark from "@/app/components/CareerSpark";
 import Icon from "@/app/components/Icon";
 
 interface OutlineEntry {
@@ -31,20 +32,15 @@ const OUTLINES: Record<string, OutlineEntry[]> = {
     { level: 2, label: "schedule_call()" },
     { level: 2, label: "send_email()" },
   ],
-  "/writing": [
-    { level: 2, label: "01 Coding Pattern — Two Pointer", href: "#two-pointer" },
-    { level: 2, label: "02 Coding Pattern — Sliding Window", href: "#sliding-window" },
-  ],
-  "/ventures": [
-    { level: 2, label: "01 Ashoon" },
-    { level: 2, label: "02 Kamui" },
-    { level: 2, label: "03 Ashoon Assistant" },
-    { level: 2, label: "04 HiveHall" },
-    { level: 2, label: "05 DeskMate" },
-    { level: 2, label: "06 Ashoon Studio" },
-    { level: 2, label: "07 hovakimyan.dev" },
-    { level: 2, label: "08 cryptoeye.eu" },
-    { level: 2, label: "In the bench" },
+  "/projects": [
+    { level: 2, label: "01 Ashoon", href: "#ashoon" },
+    { level: 2, label: "02 Kamui", href: "#kamui" },
+    { level: 2, label: "03 Ashoon Assistant", href: "#ashoon-assistant" },
+    { level: 2, label: "04 HiveHall", href: "#hivehall" },
+    { level: 2, label: "05 DeskMate", href: "#deskmate" },
+    { level: 2, label: "06 Ashoon Studio", href: "#ashoon-studio" },
+    { level: 2, label: "07 hovakimyan.dev", href: "#hovakimyan-dev" },
+    { level: 2, label: "In the bench", href: "#bench" },
   ],
 };
 
@@ -57,16 +53,13 @@ export default function Inspector() {
       <aside className="sh-inspector" aria-label="Preview pane">
         <div className="sh-inspector-head">
           <span className="dot" />
-          Preview · hexPrism()
+          Career · since 2013
         </div>
         <div className="sh-inspector-body">
-          <div className="sh-inspector-preview">
-            <span className="corner">@render</span>
-            <HexPrism />
-          </div>
+          <CareerSpark />
           <div className="sh-inspector-id">
             <Image
-              src="/images/sergey-portrait.jpg"
+              src="/images/sergey-portrait-160.jpg"
               alt="Sergey Hovakimyan portrait"
               width={56}
               height={56}
@@ -119,7 +112,45 @@ export default function Inspector() {
     );
   }
 
-  const outline = OUTLINES[pathname] || [];
+  return <Outline key={pathname} entries={OUTLINES[pathname] || []} />;
+}
+
+/**
+ * Outline with scroll-spy: the section currently at the top of the
+ * editor pane is highlighted, the way VS Code's outline follows the
+ * cursor. Keyed by route so the active entry resets on navigation.
+ */
+function Outline({ entries: outline }: { entries: OutlineEntry[] }) {
+  const [activeHref, setActiveHref] = useState<string | null>(null);
+
+  useEffect(() => {
+    const root = document.getElementById("main");
+    const ids = outline
+      .map((e) => e.href?.slice(1))
+      .filter((id): id is string => !!id);
+    const targets = ids
+      .map((id) => document.getElementById(id))
+      .filter((el): el is HTMLElement => !!el);
+    if (!root || targets.length === 0) return;
+
+    const onScroll = () => {
+      // Active = last heading that has crossed the top third of the pane.
+      const line = root.getBoundingClientRect().top + root.clientHeight / 3;
+      let current: string | null = null;
+      for (const el of targets) {
+        if (el.getBoundingClientRect().top <= line) current = el.id;
+      }
+      // At the very bottom, the last section wins even if it is short.
+      if (root.scrollTop + root.clientHeight >= root.scrollHeight - 4) {
+        current = targets[targets.length - 1].id;
+      }
+      setActiveHref(current ? `#${current}` : null);
+    };
+    onScroll();
+    root.addEventListener("scroll", onScroll, { passive: true });
+    return () => root.removeEventListener("scroll", onScroll);
+  }, [outline]);
+
   return (
     <aside className="sh-inspector" aria-label="Outline">
       <div className="sh-inspector-head">
@@ -133,7 +164,18 @@ export default function Inspector() {
               style={{ paddingLeft: (e.level - 1) * 12 }}
             >
               {e.href ? (
-                <a href={e.href}>
+                <a
+                  href={e.href}
+                  className={activeHref === e.href ? "is-active" : undefined}
+                  aria-current={activeHref === e.href ? "location" : undefined}
+                  onClick={(ev) => {
+                    const el = document.getElementById(e.href!.slice(1));
+                    if (!el) return;
+                    ev.preventDefault();
+                    el.scrollIntoView({ behavior: "smooth", block: "start" });
+                    history.replaceState(null, "", e.href);
+                  }}
+                >
                   <span className="hash">#</span>
                   {e.label}
                 </a>

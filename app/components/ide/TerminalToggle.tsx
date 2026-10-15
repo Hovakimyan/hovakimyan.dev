@@ -13,7 +13,7 @@ export default function TerminalToggle() {
   return (
     <button
       type="button"
-      className="sh-terminal-toggle"
+      className={`sh-terminal-toggle${terminalOpen === null ? " is-auto" : ""}`}
       aria-label="Open terminal"
       onClick={openTerminal}
     >

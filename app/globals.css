@@ -50,6 +50,8 @@
   --sidebar-w: 244px;
   --inspector-w: 280px;
   --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  /* Slight overshoot, for things that "land" (palette, tab marker). */
+  --ease-spring: cubic-bezier(0.34, 1.4, 0.64, 1);
 }
 
 * {
@@ -176,7 +178,7 @@ body {
   overflow: hidden;
 }
 /* Tablet + smaller desktop: keep the inspector but narrower so the
-   hex prism + identity card don't disappear on iPad-class screens. */
+   delivery chart + identity card don't disappear on iPad-class screens. */
 @media (max-width: 1200px) and (min-width: 921px) {
   .sh-ide {
     --inspector-w: 240px;
@@ -580,8 +582,15 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  height: 1px;
+  height: 2px;
   background: var(--color-accent);
+  transform-origin: center;
+  animation: sh-tab-marker 420ms var(--ease-spring) both;
+}
+@keyframes sh-tab-marker {
+  from {
+    transform: scaleX(0);
+  }
 }
 .sh-tab .icon {
   color: var(--color-ink-3);
@@ -674,25 +683,171 @@ body {
   overflow-y: auto;
   padding: 16px 18px;
 }
-.sh-inspector-preview {
-  position: relative;
-  aspect-ratio: 1 / 1;
+.sh-career {
+  margin: 0;
+  padding: 16px 14px 14px;
   background: var(--color-panel-2);
   border: 1px solid var(--color-border);
   border-radius: 12px;
-  overflow: hidden;
 }
-.sh-inspector-preview .corner {
+.sh-career-head {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.sh-career-total {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-ink);
+}
+.sh-career-label {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  color: var(--color-ink-3);
+}
+.sh-career-track {
+  position: relative;
+  height: 14px;
+  margin-top: 14px;
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--color-bg);
+}
+.sh-career-seg {
   position: absolute;
-  top: 8px;
-  left: 8px;
+  top: 0;
+  bottom: 0;
+  /* 1px seam between roles so promotions read as steps. */
+  box-shadow: inset -1px 0 0 var(--color-panel-2);
+  transform-origin: left;
+  animation: sh-career-grow 600ms var(--ease) both;
+  animation-delay: calc(var(--i) * 60ms + 150ms);
+}
+.lv-1 { background: color-mix(in srgb, var(--color-accent) 22%, var(--color-panel-2)); }
+.lv-2 { background: color-mix(in srgb, var(--color-accent) 42%, var(--color-panel-2)); }
+.lv-3 { background: color-mix(in srgb, var(--color-accent) 66%, var(--color-panel-2)); }
+.lv-4 { background: var(--color-accent); }
+.sh-career-seg.is-now {
+  box-shadow: 0 0 12px rgba(20, 184, 166, 0.6);
+}
+@keyframes sh-career-grow {
+  from {
+    opacity: 0;
+    transform: scaleX(0.4);
+  }
+}
+.sh-career-axis {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
   font-family: var(--font-mono);
   font-size: 10px;
-  letter-spacing: 0.12em;
+  color: var(--color-ink-3);
+}
+.sh-career-legend {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  margin: 10px 0 0;
+  padding: 0;
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  color: var(--color-ink-3);
+}
+.sh-career-legend li {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.sh-career-legend .sw {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+}
+.sh-career-facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 14px 0 0;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.sh-career-facts div {
+  padding: 8px 10px 7px;
+  min-width: 0;
+}
+.sh-career-facts div + div {
+  border-left: 1px solid var(--color-border);
+}
+.sh-career-facts dt {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color-ink-3);
 }
-/* Identity card under the hex preview — gives non-technical visitors
+.sh-career-facts dd {
+  margin: 3px 0 0;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.sh-career-list {
+  list-style: none;
+  margin: 14px 0 12px;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+.sh-career-list li {
+  display: grid;
+  grid-template-columns: 10px 1fr auto;
+  column-gap: 8px;
+  align-items: baseline;
+}
+.sh-career-list .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--color-accent) 40%, var(--color-panel-2));
+  transform: translateY(-1px);
+}
+.sh-career-list li.is-now .dot {
+  background: var(--color-accent);
+  box-shadow: 0 0 6px var(--color-accent);
+}
+.sh-career-list .name {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-ink);
+}
+.sh-career-list .len {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-ink-2);
+}
+.sh-career-list .role {
+  grid-column: 2 / -1;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--color-ink-3);
+}
+.sh-career-link {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-accent);
+  text-decoration: none;
+  border-bottom: 1px dashed var(--color-accent);
+}
+/* Identity card under the career timeline — gives non-technical visitors
    a human-readable name, role, and current employer in plain text. */
 .sh-inspector-id {
   display: grid;
@@ -820,6 +975,29 @@ body {
 }
 .sh-inspector-outline li a:hover {
   color: var(--color-accent);
+}
+.sh-inspector-outline li a {
+  position: relative;
+  transition: color 180ms var(--ease), transform 260ms var(--ease-spring);
+}
+.sh-inspector-outline li a.is-active {
+  color: var(--color-ink);
+  transform: translateX(4px);
+}
+.sh-inspector-outline li a.is-active .hash {
+  color: var(--color-accent);
+}
+.sh-inspector-outline li a.is-active::before {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 50%;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  box-shadow: 0 0 8px var(--color-accent);
+  transform: translateY(-50%);
 }
 .sh-inspector-outline .hash {
   color: var(--color-ink-3);
@@ -1213,11 +1391,14 @@ body {
 /* ─── Integrated terminal (bottom panel) ─────────────────────────── */
 .sh-terminal {
   grid-area: terminal;
+  position: relative;
   background: var(--color-panel);
   border-top: 1px solid var(--color-border);
   display: flex;
   flex-direction: column;
-  height: clamp(180px, 28vh, 280px);
+  /* Was clamp(180px, 28vh, 280px): a third of a laptop screen for a
+     prompt. Shorter by default; drag the sash to resize. */
+  height: var(--term-h, clamp(132px, 19vh, 200px));
   transition: height 280ms var(--ease), opacity 220ms var(--ease);
   overflow: hidden;
 }
@@ -1552,19 +1733,6 @@ body {
     max-height: 100vh;
     border-radius: 0;
   }
-}
-
-/* ─── Hex prism wrapper (preserved) ──────────────────────────────── */
-.sh-hex-canvas,
-.sh-hex-placeholder {
-  position: absolute;
-  inset: 0;
-  pointer-events: auto;
-}
-.sh-hex-canvas canvas {
-  display: block;
-  width: 100% !important;
-  height: 100% !important;
 }
 
 /* ─────────────────────────────────────────────────────────────────────────
@@ -2045,6 +2213,797 @@ body {
   /* Print all link URLs after the link text. */
   .sh-resume-contact a::after {
     content: "";
+  }
+}
+
+/* ─── File open — staggered reveal ───────────────────────────────── */
+/* Each file's top-level blocks rise in sequence when the route
+   changes, the grid-stagger idea from anime.js done in plain CSS.
+   Only opacity + transform, so it stays on the compositor. */
+.sh-content > * {
+  animation: sh-rise 520ms var(--ease) both;
+}
+.sh-content > :nth-child(2) { animation-delay: 40ms; }
+.sh-content > :nth-child(3) { animation-delay: 80ms; }
+.sh-content > :nth-child(4) { animation-delay: 120ms; }
+.sh-content > :nth-child(5) { animation-delay: 160ms; }
+.sh-content > :nth-child(6) { animation-delay: 200ms; }
+.sh-content > :nth-child(7) { animation-delay: 240ms; }
+.sh-content > :nth-child(n + 8) { animation-delay: 280ms; }
+@keyframes sh-rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+/* ─── Titlebar quick-open button ─────────────────────────────────── */
+.sh-titlebar-search {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 32px;
+  padding: 0 8px 0 10px;
+  background: var(--color-panel-2);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  color: var(--color-ink-3);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  cursor: pointer;
+  transition: border-color 220ms var(--ease), color 220ms var(--ease);
+}
+.sh-titlebar-search:hover {
+  border-color: var(--color-accent);
+  color: var(--color-ink);
+}
+.sh-titlebar-search kbd,
+.sh-palette kbd {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  line-height: 1;
+  padding: 3px 5px;
+  border-radius: 4px;
+  border: 1px solid var(--color-border-strong);
+  background: var(--color-bg);
+  color: var(--color-ink-2);
+}
+@media (max-width: 1100px) {
+  .sh-titlebar-search .label,
+  .sh-titlebar-search kbd {
+    display: none;
+  }
+  .sh-titlebar-search {
+    width: 32px;
+    padding: 0;
+    justify-content: center;
+  }
+}
+
+/* ─── Command palette (⌘P) ───────────────────────────────────────── */
+.sh-palette-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: min(14vh, 120px) 16px 16px;
+  background: rgba(6, 15, 28, 0.6);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 180ms var(--ease), visibility 0s linear 180ms;
+}
+.sh-palette-backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 180ms var(--ease);
+}
+.sh-palette {
+  width: min(600px, 100%);
+  max-height: min(460px, 70vh);
+  display: flex;
+  flex-direction: column;
+  background: var(--color-panel);
+  border: 1px solid var(--color-border-strong);
+  border-radius: 10px;
+  box-shadow:
+    0 0 0 1px rgba(20, 184, 166, 0.08),
+    0 24px 64px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transform: translateY(-6px) scale(0.97);
+  transition: transform 320ms var(--ease-spring);
+}
+.sh-palette-backdrop.is-open .sh-palette {
+  transform: none;
+}
+.sh-palette-input-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 14px;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-ink-3);
+}
+.sh-palette-input {
+  flex: 1;
+  min-width: 0;
+  height: 48px;
+  background: transparent;
+  border: 0;
+  outline: none;
+  color: var(--color-ink);
+  font-family: var(--font-mono);
+  font-size: 16px; /* 16px stops iOS zooming on focus */
+}
+.sh-palette-input::placeholder {
+  color: var(--color-ink-3);
+}
+.sh-palette-list {
+  list-style: none;
+  margin: 0;
+  padding: 6px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.sh-palette-group {
+  padding: 10px 10px 6px;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-ink-3);
+}
+.sh-palette-item {
+  display: grid;
+  grid-template-columns: 18px auto 1fr;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  color: var(--color-ink-2);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  cursor: pointer;
+}
+.sh-palette-item .icon {
+  display: inline-flex;
+  color: var(--color-ink-3);
+}
+.sh-palette-item .label {
+  color: var(--color-ink);
+  white-space: nowrap;
+}
+.sh-palette-item .hint {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12px;
+  color: var(--color-ink-3);
+}
+.sh-palette-item.is-active {
+  background: var(--color-accent-soft);
+  box-shadow: inset 2px 0 0 var(--color-accent);
+}
+.sh-palette-item.is-active .icon {
+  color: var(--color-accent);
+}
+.sh-palette-empty {
+  padding: 18px 12px;
+  color: var(--color-ink-3);
+  font-size: 13px;
+}
+.sh-palette-foot {
+  display: flex;
+  gap: 16px;
+  padding: 8px 14px;
+  border-top: 1px solid var(--color-border);
+  font-size: 11px;
+  color: var(--color-ink-3);
+}
+.sh-palette-foot span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+@media (max-width: 600px) {
+  .sh-palette-foot {
+    display: none;
+  }
+  .sh-palette-item {
+    grid-template-columns: 18px 1fr;
+  }
+  .sh-palette-item .hint {
+    display: none;
+  }
+}
+
+/* ─── Terminal "auto" state (before the visitor toggles it) ───────── */
+@media (max-width: 767px) {
+  .sh-terminal.is-auto {
+    height: 0;
+    border-top: 0;
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+@media (min-width: 768px) {
+  .sh-terminal-toggle.is-auto {
+    display: none;
+  }
+}
+
+/* ─── Terminal sash (drag to resize) ─────────────────────────────── */
+.sh-terminal.is-dragging {
+  transition: none;
+  user-select: none;
+}
+.sh-terminal-sash {
+  position: absolute;
+  top: -3px;
+  left: 0;
+  right: 0;
+  height: 6px;
+  cursor: row-resize;
+  z-index: 2;
+  touch-action: none;
+}
+.sh-terminal-sash::after {
+  content: "";
+  position: absolute;
+  inset: 2px 0;
+  background: var(--color-accent);
+  opacity: 0;
+  transition: opacity 160ms var(--ease) 120ms;
+}
+.sh-terminal-sash:hover::after,
+.sh-terminal.is-dragging .sh-terminal-sash::after {
+  opacity: 1;
+}
+@media (pointer: coarse) {
+  .sh-terminal-sash {
+    display: none;
+  }
+}
+
+/* ─── Reading progress (editor pane) ─────────────────────────────── */
+.sh-progress {
+  position: sticky;
+  top: 0;
+  height: 2px;
+  margin-bottom: -2px;
+  z-index: 5;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-ocean));
+  transform: scaleX(0);
+  transform-origin: left;
+  opacity: 0;
+  transition: opacity 200ms var(--ease);
+  pointer-events: none;
+}
+
+/* ─── Badges (venture status) ────────────────────────────────────── */
+.sh-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  vertical-align: middle;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid currentColor;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+.sh-badge::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+}
+.sh-badge.is-live { color: var(--color-accent); }
+.sh-badge.is-dev { color: var(--syn-number); }
+.sh-badge.is-archived { color: var(--color-ink-3); }
+.sh-badge.is-live::before {
+  animation: sh-pulse 2.4s ease-in-out infinite;
+}
+.sh-md h2 .sh-badge {
+  margin-left: 6px;
+}
+
+/* ─── Ventures overview grid (spotlight cards) ───────────────────── */
+.sh-vgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+  margin: 28px 0 8px;
+}
+.sh-vcard {
+  /* Parked off-card so only the hovered card lights up. */
+  --mx: -400px;
+  --my: -400px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px 16px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--color-border);
+  background: var(--color-panel);
+  text-decoration: none !important;
+  overflow: hidden;
+  isolation: isolate;
+  transition:
+    transform 320ms var(--ease-spring),
+    border-color 220ms var(--ease);
+}
+/* Border that lights up under the cursor: a masked second gradient. */
+.sh-vcard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: radial-gradient(180px circle at var(--mx) var(--my), var(--color-accent), transparent 70%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 220ms var(--ease);
+  pointer-events: none;
+}
+.sh-vcard:hover,
+.sh-vcard:focus-visible {
+  transform: translateY(-2px);
+}
+.sh-vcard:hover::before,
+.sh-vcard:focus-visible::before {
+  opacity: 1;
+}
+.sh-md a.sh-vcard {
+  color: var(--color-ink-2);
+  border-bottom: 1px solid var(--color-border);
+}
+.sh-md a.sh-vcard:hover {
+  background:
+    radial-gradient(260px circle at var(--mx) var(--my), rgba(20, 184, 166, 0.13), transparent 70%),
+    var(--color-panel);
+}
+.sh-vcard-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.sh-vcard-num {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-accent);
+}
+.sh-vcard-name {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--color-ink);
+}
+.sh-vcard-kind {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-ink-3);
+}
+.sh-vcard-line {
+  margin-top: 6px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.5;
+}
+.sh-vcard-go {
+  margin-top: auto;
+  padding-top: 10px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-ink-3);
+  transition: color 200ms var(--ease), transform 260ms var(--ease-spring);
+}
+.sh-vcard:hover .sh-vcard-go {
+  color: var(--color-accent);
+  transform: translateX(3px);
+}
+.sh-md h2[id] {
+  scroll-margin-top: 24px;
+}
+/* Phones: a compact two-up index; the long-form sections carry the detail. */
+@media (max-width: 600px) {
+  .sh-vgrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .sh-vcard {
+    padding: 12px;
+  }
+  .sh-vcard-top {
+    margin-bottom: 4px;
+  }
+  .sh-vcard-top .sh-badge {
+    padding: 0;
+    border: 0;
+    font-size: 0;
+    gap: 0;
+  }
+  .sh-vcard-name {
+    font-size: 15px;
+  }
+  .sh-vcard-line,
+  .sh-vcard-go {
+    display: none;
+  }
+}
+
+/* ─── Home: Code ⇄ Preview switch ────────────────────────────────── */
+.sh-homeview {
+  position: relative;
+  min-width: 0;
+}
+.sh-viewswitch {
+  position: sticky;
+  top: 14px;
+  float: right;
+  z-index: 6;
+  margin: 14px 18px -46px 0;
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 3px;
+  border-radius: 8px;
+  border: 1px solid var(--color-border-strong);
+  background: rgba(10, 25, 41, 0.85);
+  backdrop-filter: blur(8px);
+}
+.sh-viewswitch button {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border: 0;
+  background: none;
+  color: var(--color-ink-3);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  cursor: pointer;
+  transition: color 200ms var(--ease);
+}
+.sh-viewswitch button[aria-pressed="true"] {
+  color: var(--color-bg);
+}
+.sh-viewswitch-pill {
+  position: absolute;
+  top: 3px;
+  bottom: 3px;
+  left: 3px;
+  width: calc(50% - 3px);
+  border-radius: 5px;
+  background: var(--color-accent);
+  transition: transform 380ms var(--ease-spring);
+}
+.sh-viewswitch-pill[data-mode="preview"] {
+  transform: translateX(100%);
+}
+
+/* ─── Home preview ───────────────────────────────────────────────── */
+.sh-preview {
+  font-family: var(--font-sans);
+  max-width: 820px;
+  padding-top: 56px;
+}
+.sh-preview-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 18px;
+  padding: 4px 12px 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--color-border-strong);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-ink-2);
+}
+.sh-preview-live {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  box-shadow: 0 0 0 0 rgba(20, 184, 166, 0.6);
+  animation: sh-ring 2.2s var(--ease) infinite;
+}
+@keyframes sh-ring {
+  70% { box-shadow: 0 0 0 7px rgba(20, 184, 166, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(20, 184, 166, 0); }
+}
+.sh-preview-name {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(38px, 6vw, 68px);
+  font-weight: 700;
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  color: var(--color-ink);
+}
+.sh-preview-role {
+  margin: 10px 0 0;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: var(--color-accent);
+}
+.sh-preview-tagline {
+  margin: 26px 0 0;
+  font-family: var(--font-display);
+  font-size: clamp(20px, 2.4vw, 26px);
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.015em;
+  background: linear-gradient(90deg, var(--color-ink) 0%, var(--color-ink) 40%, var(--color-accent) 50%, var(--color-ink) 60%, var(--color-ink) 100%);
+  background-size: 250% 100%;
+  background-position: 100% 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: sh-shimmer 3.2s var(--ease) 600ms 1 both;
+}
+@keyframes sh-shimmer {
+  from { background-position: 100% 0; }
+  to { background-position: 0% 0; }
+}
+.sh-preview-lead {
+  margin: 16px 0 0;
+  max-width: 64ch;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--color-ink-2);
+}
+.sh-preview-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 28px;
+}
+.sh-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+  padding: 0 16px;
+  border-radius: 8px;
+  border: 1px solid var(--color-border-strong);
+  background: var(--color-panel-2);
+  color: var(--color-ink) !important;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none !important;
+  border-bottom-width: 1px !important;
+  cursor: pointer;
+  transition:
+    transform 260ms var(--ease-spring),
+    border-color 200ms var(--ease),
+    box-shadow 200ms var(--ease);
+}
+.sh-btn:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-1px);
+}
+.sh-btn:active {
+  transform: translateY(0) scale(0.98);
+}
+.sh-btn.is-primary {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-bg) !important;
+}
+.sh-btn.is-primary:hover {
+  box-shadow: 0 8px 28px -8px rgba(20, 184, 166, 0.7);
+}
+.sh-copychip {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 40px;
+  padding: 0 14px;
+  border-radius: 8px;
+  border: 1px dashed var(--color-border-strong);
+  background: transparent;
+  color: var(--color-ink-2);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  cursor: pointer;
+  transition: color 200ms var(--ease), border-color 200ms var(--ease);
+}
+.sh-copychip:hover {
+  color: var(--color-ink);
+  border-color: var(--color-accent);
+}
+.sh-copychip-toast {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 6px);
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: var(--color-accent);
+  color: var(--color-bg);
+  font-size: 11px;
+  transform: translate(-50%, 4px);
+  opacity: 0;
+  transition: opacity 160ms var(--ease), transform 260ms var(--ease-spring);
+  pointer-events: none;
+}
+.sh-copychip-toast:not(:empty) {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+.sh-preview-stats {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1px;
+  margin: 40px 0 0;
+  padding: 0;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--color-border);
+}
+.sh-preview-stats li {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px 18px;
+  background: var(--color-panel);
+}
+.sh-preview-stats .v {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-ink);
+}
+.sh-preview-stats .v.is-text {
+  font-size: 19px;
+  line-height: 1.6;
+  white-space: nowrap;
+}
+/* A rendered preview has no source lines to number. */
+.sh-main-inner:has(.sh-preview) .sh-gutter {
+  opacity: 0;
+}
+.sh-gutter {
+  transition: opacity 300ms var(--ease);
+}
+.sh-preview-stats .k {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-ink-3);
+}
+.sh-preview-h {
+  margin: 44px 0 14px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-ink-3);
+}
+.sh-preview-verbs {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+.sh-preview-verbs li {
+  display: grid;
+  grid-template-columns: 22px 1fr;
+  column-gap: 10px;
+  row-gap: 2px;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid var(--color-border);
+  color: var(--color-accent);
+}
+.sh-preview-verbs strong {
+  color: var(--color-ink);
+  font-weight: 600;
+}
+.sh-preview-verbs span {
+  grid-column: 2;
+  font-size: 13px;
+  color: var(--color-ink-2);
+}
+.sh-preview-timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-left: 1px solid var(--color-border-strong);
+}
+.sh-preview-timeline li a {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 2px 16px;
+  padding: 12px 0 12px 20px;
+  text-decoration: none !important;
+  border-bottom: 0 !important;
+  color: inherit;
+}
+.sh-preview-timeline li a::before {
+  content: "";
+  position: absolute;
+  left: -4px;
+  top: 19px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-bg);
+  border: 1px solid var(--color-ink-3);
+  transition: background 200ms var(--ease), border-color 200ms var(--ease);
+}
+.sh-preview-timeline li:first-child a::before {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+.sh-preview-timeline li a:hover::before {
+  border-color: var(--color-accent);
+}
+.sh-preview-timeline .co {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--color-ink);
+  transition: color 200ms var(--ease);
+}
+.sh-preview-timeline li a:hover .co {
+  color: var(--color-accent);
+}
+.sh-preview-timeline .role {
+  grid-column: 1;
+  font-size: 13px;
+  color: var(--color-ink-2);
+}
+.sh-preview-timeline .when {
+  grid-row: 1;
+  grid-column: 2;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-ink-3);
+  white-space: nowrap;
+}
+@media (max-width: 600px) {
+  .sh-viewswitch {
+    margin-right: 12px;
+  }
+  .sh-preview-verbs {
+    grid-template-columns: 1fr;
+  }
+  .sh-preview-timeline li a {
+    grid-template-columns: 1fr;
+  }
+  .sh-preview-timeline .when {
+    grid-row: auto;
+    grid-column: 1;
+  }
+  .sh-copychip-text {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 

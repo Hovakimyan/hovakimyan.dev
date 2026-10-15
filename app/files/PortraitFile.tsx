@@ -23,13 +23,13 @@ export default function PortraitFile() {
           </li>
           <li>
             <span className="k">path</span>
-            <span className="v">public/images/sergey-portrait.jpg</span>
+            <span className="v">public/images/sergey-portrait-1200.jpg</span>
           </li>
         </ul>
       </header>
       <figure className="sh-image-preview-figure">
         <Image
-          src="/images/sergey-portrait.jpg"
+          src="/images/sergey-portrait-1200.jpg"
           alt="Sergey Hovakimyan — black-and-white studio portrait"
           width={1200}
           height={1200}

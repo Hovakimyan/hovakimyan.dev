@@ -9,6 +9,8 @@ import StatusBar from "./StatusBar";
 import Inspector from "./Inspector";
 import Terminal from "./Terminal";
 import TerminalToggle from "./TerminalToggle";
+import CommandPalette from "./CommandPalette";
+import ScrollProgress from "./ScrollProgress";
 import { IdeProvider } from "./IdeContext";
 
 const BookingModal = dynamic(() => import("./BookingModal"), { ssr: false });
@@ -36,6 +38,7 @@ export default function IdeShell({
         <Sidebar />
         <Tabs />
         <section className="sh-main" id="main" aria-label="Open file">
+          <ScrollProgress />
           {children}
         </section>
         <Inspector />
@@ -43,6 +46,7 @@ export default function IdeShell({
         <StatusBar />
       </div>
       <TerminalToggle />
+      <CommandPalette />
       <BookingModal />
     </IdeProvider>
   );

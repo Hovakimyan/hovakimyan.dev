@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     url: "https://hovakimyan.dev/resume",
     images: [
       {
-        url: "/images/sergey-portrait.jpg",
+        url: "/images/sergey-portrait-1200.jpg",
         width: 1200,
         height: 1200,
         alt: `${SITE.name} — ${SITE.role}`,
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: RESUME_TITLE,
     description: RESUME_DESCRIPTION,
-    images: ["/images/sergey-portrait.jpg"],
+    images: ["/images/sergey-portrait-1200.jpg"],
   },
 };
 
@@ -69,7 +69,7 @@ export default function ResumePage() {
           </p>
         </div>
         <Image
-          src="/images/sergey-portrait.jpg"
+          src="/images/sergey-portrait-480.jpg"
           alt={`Portrait of ${SITE.name}`}
           width={240}
           height={240}

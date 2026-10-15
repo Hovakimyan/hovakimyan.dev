@@ -1,27 +1,30 @@
 import Link from "next/link";
+import ProjectsOverview from "@/app/components/ProjectsOverview";
 
 /**
- * ventures.md — rendered as styled markdown. Heavy linking: internal
+ * projects.md — rendered as styled markdown. Heavy linking: internal
  * routes are real <Link>s, external URLs open in new tabs.
  *
  * Ashoon is two distinct apps under the same brand:
  *   - ashoon.com   → the AI customer-messaging SaaS (the product)
  *   - ashoon.online → Ashoon Studio, the web-design agency
  */
-export default function VenturesFile() {
+export default function ProjectsFile() {
   return (
     <article className="sh-content sh-md sh-md-rich">
       <h1>
-        Ventures <em>/</em> personal work
+        Projects <em>/</em> built on my own time
       </h1>
       <p>
         Things I build outside of my engineering day-job. Two shipped
         products, three agent products in development, a web-design studio,
         and this site.
       </p>
+      <ProjectsOverview />
+
       <hr />
 
-      <h2>
+      <h2 id="ashoon">
         <span className="num">01</span>
         Ashoon
       </h2>
@@ -56,7 +59,7 @@ export default function VenturesFile() {
 
       <hr />
 
-      <h2>
+      <h2 id="kamui">
         <span className="num">02</span>
         Kamui
       </h2>
@@ -99,9 +102,9 @@ export default function VenturesFile() {
 
       <hr />
 
-      <h2>
+      <h2 id="ashoon-assistant">
         <span className="num">03</span>
-        Ashoon Assistant <span style={{ opacity: 0.5 }}>· in development</span>
+        Ashoon Assistant <span className="sh-badge is-dev">in development</span>
       </h2>
       <blockquote>
         A company assistant in Slack that only answers with what everyone
@@ -140,9 +143,9 @@ export default function VenturesFile() {
 
       <hr />
 
-      <h2>
+      <h2 id="hivehall">
         <span className="num">04</span>
-        HiveHall <span style={{ opacity: 0.5 }}>· in development</span>
+        HiveHall <span className="sh-badge is-dev">in development</span>
       </h2>
       <blockquote>
         From a ticket to linked, reviewable draft PRs across repositories.
@@ -173,9 +176,9 @@ export default function VenturesFile() {
 
       <hr />
 
-      <h2>
+      <h2 id="deskmate">
         <span className="num">05</span>
-        DeskMate <span style={{ opacity: 0.5 }}>· in development</span>
+        DeskMate <span className="sh-badge is-dev">in development</span>
       </h2>
       <blockquote>
         An installable AI delivery team. Describe the outcome; a Manager gets
@@ -207,7 +210,7 @@ export default function VenturesFile() {
 
       <hr />
 
-      <h2>
+      <h2 id="ashoon-studio">
         <span className="num">06</span>
         Ashoon Studio
       </h2>
@@ -259,7 +262,7 @@ export default function VenturesFile() {
 
       <hr />
 
-      <h2>
+      <h2 id="hovakimyan-dev">
         <span className="num">07</span>
         hovakimyan.dev
       </h2>
@@ -268,15 +271,15 @@ export default function VenturesFile() {
         Built from scratch as a showcase of the practice. Every file in the
         explorer is a real route. The terminal at the bottom is fully
         functional — try typing <code>help</code>, <code>cd /work</code>, or{" "}
-        <code>schedule</code>. The hex prism in the inspector pane (on{" "}
-        <Link href="/">index.tsx</Link>) is a live Three.js scene with
-        mouse-parallax.
+        <code>schedule</code>, or press <code>⌘P</code> to jump to any
+        file. The home page opens as a rendered preview; switch it to code
+        to read it as the <Link href="/">index.tsx</Link> it really is.
       </p>
 
       <h3>Stack</h3>
       <p>
         <code>Next.js 16</code> · <code>React 19</code> ·{" "}
-        <code>Tailwind v4</code> · <code>Three.js</code> ·{" "}
+        <code>Tailwind v4</code> ·{" "}
         <code>OpenNext</code> · <code>Cloudflare Workers</code> ·{" "}
         <code>react-calendly</code>
       </p>
@@ -294,24 +297,11 @@ export default function VenturesFile() {
 
       <hr />
 
-      <h2>
-        <span className="num">08</span>
-        cryptoeye.eu <span style={{ opacity: 0.5 }}>· archived</span>
-      </h2>
-      <blockquote>Cryptocurrency candles for traders.</blockquote>
-      <p>
-        Built the Node.js layer that produced the OHLC candle data behind the
-        cryptoeye.eu dashboard. Shipped alongside the Cloud Fleet Manager
-        work at apolloBytes (2017–2018).
-      </p>
-
-      <hr />
-
-      <h2>In the bench</h2>
+      <h2 id="bench">In the bench</h2>
       <ul>
         <li>Cross-page LLM agent for project discovery</li>
         <li>An accessibility-audit toolkit (in design)</li>
-        <li>More ventures coming</li>
+        <li>More on the way</li>
       </ul>
 
       <hr />

@@ -22,7 +22,7 @@ const HELP_LINES = [
   "  cat <file>          Print a file (try: cat about.md)",
   "  cd <route>          Navigate to a route (try: cd /work)",
   "  open <route>        Same as cd",
-  "  work | ventures | writing | about | contact | readme | portrait",
+  "  work | projects | about | contact | readme | portrait",
   "  schedule            Open the Calendly modal",
   "  email               Compose an email",
   "  linkedin            Open LinkedIn in a new tab",
@@ -36,8 +36,7 @@ const HELP_LINES = [
 const FILE_ROUTES: Record<string, string> = {
   "about.md": "/about",
   "work.md": "/work",
-  "ventures.md": "/ventures",
-  "writing.md": "/writing",
+  "projects.md": "/projects",
   "contact.sh": "/contact",
   "index.tsx": "/",
   "readme.md": "/readme",
@@ -49,12 +48,13 @@ const NAV_ALIASES: Record<string, string> = {
   index: "/",
   work: "/work",
   about: "/about",
-  ventures: "/ventures",
-  writing: "/writing",
+  projects: "/projects",
   contact: "/contact",
   readme: "/readme",
   portrait: "/portrait",
 };
+
+const MIN_H = 96;
 
 export default function Terminal() {
   const router = useRouter();
@@ -71,6 +71,52 @@ export default function Terminal() {
   const [input, setInput] = useState("");
   const [history, setHistory] = useState<string[]>([]);
   const [historyIdx, setHistoryIdx] = useState<number | null>(null);
+
+  // Drag-to-resize, VS Code style. Height lives in a CSS custom
+  // property written straight to the element (no React state, so no
+  // hydration mismatch and no re-render per pointer move).
+  const panelRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    try {
+      const saved = Number(localStorage.getItem("sh-terminal-h"));
+      if (saved >= MIN_H) panelRef.current?.style.setProperty("--term-h", `${saved}px`);
+    } catch {
+      // Storage blocked (private mode, previews): keep the CSS default.
+    }
+  }, []);
+
+  const onSashDown = (e: React.PointerEvent<HTMLDivElement>) => {
+    const panel = panelRef.current;
+    if (!panel) return;
+    e.preventDefault();
+    const startY = e.clientY;
+    const startH = panel.getBoundingClientRect().height;
+    const maxH = window.innerHeight * 0.7;
+    let h = startH;
+    panel.classList.add("is-dragging");
+    const move = (ev: PointerEvent) => {
+      h = Math.min(maxH, startH + (startY - ev.clientY));
+      panel.style.setProperty("--term-h", `${Math.max(h, 40)}px`);
+    };
+    const up = () => {
+      window.removeEventListener("pointermove", move);
+      window.removeEventListener("pointerup", up);
+      panel.classList.remove("is-dragging");
+      if (h < MIN_H) {
+        // Dragged past the floor: collapse, and reopen at the old size.
+        panel.style.setProperty("--term-h", `${startH}px`);
+        closeTerminal();
+        return;
+      }
+      try {
+        localStorage.setItem("sh-terminal-h", String(Math.round(h)));
+      } catch {
+        // Not persisted; the size still applies for this visit.
+      }
+    };
+    window.addEventListener("pointermove", move);
+    window.addEventListener("pointerup", up);
+  };
 
   // Autoscroll to bottom on new lines.
   useEffect(() => {
@@ -114,7 +160,7 @@ export default function Terminal() {
         push("stdout", "src/");
         push(
           "stdout",
-          "  index.tsx  work.md  ventures.md  writing.md  about.md  contact.sh",
+          "  index.tsx  work.md  projects.md  about.md  contact.sh",
         );
         push("stdout", "public/");
         push("stdout", "  portrait.jpg");
@@ -155,8 +201,7 @@ export default function Terminal() {
       case "home":
       case "work":
       case "about":
-      case "ventures":
-      case "writing":
+      case "projects":
       case "contact":
       case "readme":
       case "portrait": {
@@ -242,9 +287,18 @@ export default function Terminal() {
 
   return (
     <div
-      className={`sh-terminal${terminalOpen ? " is-open" : " is-closed"}`}
+      ref={panelRef}
+      className={`sh-terminal${
+        terminalOpen === null ? " is-auto" : terminalOpen ? " is-open" : " is-closed"
+      }`}
       aria-label="Integrated terminal"
     >
+      <div
+        className="sh-terminal-sash"
+        onPointerDown={onSashDown}
+        aria-hidden="true"
+        title="Drag to resize"
+      />
       <div className="sh-terminal-head">
         <span className="sh-terminal-tab is-active">
           <Icon name="terminal" size={12} />

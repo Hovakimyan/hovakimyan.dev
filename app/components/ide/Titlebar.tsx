@@ -4,7 +4,8 @@ import Icon from "@/app/components/Icon";
 import { useIde } from "./IdeContext";
 
 export default function Titlebar() {
-  const { activeFile, openBooking, toggleSidebar, toggleTerminal } = useIde();
+  const { activeFile, openBooking, openPalette, toggleSidebar, toggleTerminal } =
+    useIde();
 
   return (
     <div className="sh-titlebar" role="banner">
@@ -35,6 +36,17 @@ export default function Titlebar() {
         </span>
       </span>
       <span className="sh-titlebar-actions">
+        <button
+          type="button"
+          className="sh-titlebar-search"
+          aria-label="Go to file or run a command"
+          title="Go to file (⌘P)"
+          onClick={openPalette}
+        >
+          <Icon name="search" size={13} />
+          <span className="label">Go to file</span>
+          <kbd>⌘P</kbd>
+        </button>
         <a
           href="/resume"
           target="_blank"

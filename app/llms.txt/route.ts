@@ -60,8 +60,7 @@ remote engagements.
 
 - /                      Home — profile data as a TypeScript declaration
 - /work                  Selected case studies (BuildOps, EPAM, Renderforest, Cloud Fleet Manager)
-- /ventures              Ventures — Ashoon (AI SaaS), Kamui (retail POS), Ashoon Studio, hovakimyan.dev
-- /writing               Published articles (Medium)
+- /projects              Projects — Ashoon (AI SaaS), Kamui (retail POS), Ashoon Assistant, HiveHall, DeskMate, Ashoon Studio, hovakimyan.dev
 - /about                 Story, leadership philosophy, AI engineering, career git log
 - /contact               Schedule a call or email directly
 - /readme                Site navigation guide
@@ -234,7 +233,7 @@ ENGAGEMENT AREAS (currently open to)
   - AI-augmented development workflows
   - Team development & mentorship
 
-VENTURES
+PROJECTS
   Ashoon — AI customer-messaging SaaS that auto-replies to
            Instagram, Facebook Messenger, WhatsApp, and website
            DMs. Multi-tenant, RAG-powered, 30 languages. Built on
